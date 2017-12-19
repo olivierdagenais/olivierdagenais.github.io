@@ -4,7 +4,7 @@ A book summary by Olivier Dagenais
 
 Preface
 -------
-> (p. xv) «[The teams] are trying very hard, but at the end of the day, because of schedule pressure, __the weight of history__, or a lack of any better code to comapre their efforts to, many people are writing legacy code.»
+> (p. xv) «[The teams] are trying very hard, but at the end of the day, because of schedule pressure, __the weight of history__, or a lack of any better code to compare their efforts to, many people are writing legacy code.»
 
 > (p. xvi) «To me, legacy code is simply code without tests.»
 
