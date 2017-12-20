@@ -53,3 +53,52 @@ p. 16 gives an example of **Primitive Parameter (385)**
 > (p. 20) «Remember that the things I describe in these chapters are "baby steps."»
 
 > (p. 20) «Often the simplest things, [such as breaking down a large class just to make it easier to work with] can make a significant difference in applications, despite being somewhat mechanical.»
+
+Chapter 3: Sensing and Separation (p. 21)
+---------------------------------
+> (p. 21) «Generally, when we want to get tests in place, there are two reasons to break dependencies: sensing and separation.»
+
+### Faking Collaborators (p. 23)
+
+p. 23 Fake Objects
+
+p. 27 Mock Objects
+
+Chapter 4: The Seam Model (p. 29)
+-------------------------
+
+### A Huge Sheet of Text (p. 29)
+
+### Seams (p. 30)
+
+> (p. 31) «A seam is a place where you can alter behavior in your program without editing in that place.»
+
+### Seam Types (p. 33)
+
+> (p. 36) «Every seam has an enabling point, a place where you can make the decision to use one behavior or another.»
+
+> (p. 44) «I like to reserve preprocessing seams and link seams for cases where dependencies are pervasive and there are no better alternatives.»
+
+Chapter 5: Tools (p. 45)
+----------------
+
+### Automated Refactoring Tools (p. 45)
+
+> (p. 45) «Refactoring (n.). A change made to the interval structure of software to make it easier to understand and cheaper to modify without changing its existing behavior.»
+
+> (p. 46) «A change is a refactoring only if it doesn't change behavior.»
+
+### Mock Objects (p. 47)
+
+> (p. 47) «The web site www.mock-objects.com is a good place to find references for most of [the freely-available mock object libraries].»
+
+### Unit-Testing Harnesses (p. 48)
+
+> (p. 52) «If you need to find an xUnit port for your platform or language, go to www.xprogramming.com and look in the Downloads section.»
+
+### General Test Harnesses (p. 53)
+
+(p. 53) Framework for Integrated Tests (FIT)
+> «FIT accepts HTML, runs tests defined in HTML tables in it, and produces HTML output.»
+
+> «There is more information about FIT at http://fit.c2.com»
