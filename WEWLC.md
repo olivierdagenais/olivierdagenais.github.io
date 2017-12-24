@@ -102,3 +102,41 @@ Chapter 5: Tools (p. 45)
 > «FIT accepts HTML, runs tests defined in HTML tables in it, and produces HTML output.»
 
 > «There is more information about FIT at http://fit.c2.com»
+
+PART II: Changing Software (p. 55)
+==========================
+
+Chapter 6: I Don't Have Much Time and I Have to Change It (p. 57)
+---------------------------------------------------------
+
+> (p. 57) «You don't know how long that work might have taken you if you hadn't written the tests.  You also don't know how much time it would've taken you to debug if you made a mistake, time you could have saved if you had tests in place.»
+
+(p. 58) An experiment where a team spends an iteration with tests covering every change. «Ultimately, this is going to make your work go faster...»
+
+(p. 59) «Pay now or pay more later.»
+
+### Sprout Method (p. 59)
+
+Write feature as new, tested method and call the new method as needed.
+
+> (p. 62) «It is far preferable to adding code inline.»
+
+> (p. 62) «When [**Pass Null (111)**] won't work [because constructor has a lot of arguments], consider making the sprout a public static method.  You might have to pass in instance variables of the source class as arguments, but it will allow you to make your change.»
+
+### Sprout Class (p. 63)
+
+Useful when **Sprout Method (59)** wouldn't work because there are many outputs.
+
+### Wrap Method (p. 67)
+
+Kind of like "extract method" refactoring & **Sprout Method (59)** so that the old code is in a new method alongside the new method for the new code and both new methods are called from the original method, in sequence.
+
+### Wrap Class (p. 71)
+
+Also known as Decorator Pattern.
+
+(p. 75) Compares **Sprout Method (59)** to **Wrap Method (67)**, when you would use each.
+
+### Summary (p. 76)
+
+> (p. 76) «Yes, it is [more complicated] for now.  But when you really start to break out those 10 or 15 responsibilities in that wrapped class, it will look far more appropriate.»
