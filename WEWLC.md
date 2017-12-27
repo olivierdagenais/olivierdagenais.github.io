@@ -140,3 +140,20 @@ Also known as Decorator Pattern.
 ### Summary (p. 76)
 
 > (p. 76) «Yes, it is [more complicated] for now.  But when you really start to break out those 10 or 15 responsibilities in that wrapped class, it will look far more appropriate.»
+
+Chapter 7: It Takes Forever to Make a Change (p. 77)
+============================================
+
+### Understanding (p. 77)
+
+### Lag Time (p. 78)
+
+> (p. 78) «Systems that are broken up into small, well-named and understandable pieces enable faster work.»
+
+### Breaking Dependencies (p. 79)
+
+> (p. 80) «When we have these clusters of classes under test, we have the option of changing the physical structure of out project to make builds easier.  We do this by moving the clusters off to a new package or library.  Builds do become more complex when we do this, but here is the key:  As we break dependencies and section off classes into new packages or libraries, the overall cost of a rebuild of the entire system grows slightly, but the average time for a build can decrease dramatically.»
+
+### Summary (p. 85)
+
+Most of the chapter centers on introducing interfaces to speed up compilation time for platforms that support incremental compilation.
