@@ -157,3 +157,25 @@ Chapter 7: It Takes Forever to Make a Change (p. 77)
 ### Summary (p. 85)
 
 Most of the chapter centers on introducing interfaces to speed up compilation time for platforms that support incremental compilation.
+
+Chapter 8: How Do I Add a Feature? (p. 87)
+==================================
+
+> «In general, it's better to confront the beast than hide from it.  If we can get code under test, we can use the techniques in this chapter to move forward in a good way.»
+
+### Test-Driven Development (p. 88)
+
+- the algorithm omits small commits
+    - this is difficult w/o DVCS but even TFVC has tfgit!
+
+> (p. 92) «Often, when we want to add features to particularly awful code, it's easier to understand our modifications if we put them in some new place and can see them side by side with the old code.»
+
+> (p. 93) «Remove Duplication»
+
+Make the tests pass first, then make the code better without changing behaviour, something that's easier to do w/TDD because all your behaviour is tested.
+
+> (p. 94) «[with TDD] we are either writing code or refactoring; we are never doing both at once.»
+
+### Programming by Difference (p. 94)
+
+### Summary (p. 104)
