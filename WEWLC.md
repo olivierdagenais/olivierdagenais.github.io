@@ -142,7 +142,7 @@ Also known as Decorator Pattern.
 > (p. 76) «Yes, it is [more complicated] for now.  But when you really start to break out those 10 or 15 responsibilities in that wrapped class, it will look far more appropriate.»
 
 Chapter 7: It Takes Forever to Make a Change (p. 77)
-============================================
+--------------------------------------------
 
 ### Understanding (p. 77)
 
@@ -159,7 +159,7 @@ Chapter 7: It Takes Forever to Make a Change (p. 77)
 Most of the chapter centers on introducing interfaces to speed up compilation time for platforms that support incremental compilation.
 
 Chapter 8: How Do I Add a Feature? (p. 87)
-==================================
+----------------------------------
 
 > «In general, it's better to confront the beast than hide from it.  If we can get code under test, we can use the techniques in this chapter to move forward in a good way.»
 
