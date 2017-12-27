@@ -179,3 +179,53 @@ Make the tests pass first, then make the code better without changing behaviour,
 ### Programming by Difference (p. 94)
 
 ### Summary (p. 104)
+
+Chapter 9: I Can't Get This Class into a Test Harness (p. 105)
+-----------------------------------------------------
+
+### The Case of the Irritating Parameter (p. 106)
+
+(p. 108) Refers to **Extract Interface (362)**
+
+> (p. 110) «The FakeConnection class is a little weird.» (It's a tool)
+
+(p. 111) Refers to **Pass Null (111)**
+
+(p. 112) Refers to **Null Object Pattern** and **Subclass and Override Method (401)**
+
+### The Case of the Hidden Dependency (p. 113)
+
+- **Parameterize Constructor (379)** & **Preserve Signatures (312)**
+- **Extract and Override Getter (352)**
+- **Extract and Override Factory Method (350)**
+- **Supersede Instance Variable (404)**
+
+### The Case of the Construction Blob (p. 116)
+
+- **Extract and Override Factory Method (350)**
+- **Supersede Instance Variable (404)**
+
+### The Case of the Irritating Global Dependency (p. 118)
+
+- (p. 122) **Introduce Static Setter (372)**
+- Relax Singleton property, enforce unique instance w/o private constructor
+- (p. 124) Protected constructor is an excellent trade-off
+- (p. 125) **Extract Interface (362)**
+- **Subclass and Override Method (401)**
+- Eliminate global variables
+
+### The Case of the Horrible Include Dependencies (p. 127)
+
+C++-specific; include hell
+
+### The Case of the Onion Parameter (p. 130)
+
+- **Pass Null (111)**
+- **Extract Interface (362)**
+
+### The Case of the Aliased Parameter (p. 133)
+
+- **Extract Interface (362)**
+- **Subclass and Override Method (401)**
+
+> (p. 136) «In many languages, we can create classes "on the fly" like this in methods.  Although I don't like to do it often in production code, it is very convenient when we are testing.  We can make special cases very easily.»
