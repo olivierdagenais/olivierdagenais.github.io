@@ -229,3 +229,39 @@ C++-specific; include hell
 - **Subclass and Override Method (401)**
 
 > (p. 136) «In many languages, we can create classes "on the fly" like this in methods.  Although I don't like to do it often in production code, it is very convenient when we are testing.  We can make special cases very easily.»
+
+Chapter 10: I Can't Run This Method in a Test Harness (p. 137)
+-----------------------------------------------------
+
+> (p. 137) «If the method doesn't use much instance data, we can use **Expose Static Method (345)** to get access to the code.»
+
+> (p. 137) «If the method is pretty long and difficult to deal with, we can use **Break Out Method Object (330)** to move the code to a class that we can instantiate more easily.»
+
+### The Case of the Hidden Method (p. 138)
+
+> (p. 138) «If we need to test a private method, we should make it public.»
+
+(p. 138) An idea is to move private methods to a new class, as public methods.  Keep an instance of that new class as a semi-private field in the original class.
+
+> (p. 139) «Good design is testable, and design that isn't testable is bad.»
+
+(p. 140) Another idea is to increase the visibility from private to protected, then subclass for testing.
+
+> (p. 141) «It might sound kind of sadistic, but the pain that we feel working in a legacy code base can be an incredible impetus to change.»
+
+### The Case of the "Helpful" Language Feature (p. 141)
+
+A collection of a sealed/final class means we need **Adapt Parameter (326)** or **Skin and Wrap the API (205)**.
+
+(p. 143) «The only annoyance...» might be avoided with `IEnumerable<IHttpPostedFile>` and some LINQ extension methods.
+
+### The Case of the Undetectable Side Effect (p. 144)
+
+> (p. 145) «Perform a set of **Extract Method (415)** refactorings to divide up the work in this method.»
+
+#### Command/Query Separation (p. 147)
+> (p. 147) «A method should be a command or a query, but not both.  A command is a method that can modify the state of the object but that doesn't return a value.  A query is a method that returns a value but that does not modify the object.»
+
+> (p. 148) «After those extractions, we can **Subclass and Override Method (401)**.»
+
+> (p. 150) «Remember that it is okay to extract methods with poor names or poor structure to get tests in place.  Safety first.  After the tests are in place, you can make the code much cleaner.»
