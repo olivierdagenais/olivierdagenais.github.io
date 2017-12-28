@@ -265,3 +265,35 @@ A collection of a sealed/final class means we need **Adapt Parameter (326)** or 
 > (p. 148) «After those extractions, we can **Subclass and Override Method (401)**.»
 
 > (p. 150) «Remember that it is okay to extract methods with poor names or poor structure to get tests in place.  Safety first.  After the tests are in place, you can make the code much cleaner.»
+
+Chapter 11: I Need to Make a Change. What Methods Should I Test? (p. 151)
+----------------------------------------------------------------
+
+### Reasoning About Effects (p. 151)
+
+> (p. 155) «Effect Sketches»
+
+### Reasoning Forward (p. 157)
+
+The effect sketches will help identify sense points (queries) and actions (commands) for our tests.
+
+> (p. 157) «figuring out where change can be detected»
+
+### Effect Propagation (p. 163)
+
+> (p. 165) «Effects propagate in code in three basic ways: (...)»
+
+> (p. 165) «Here is a heuristic that I use when looking for effects: (...)»
+
+### Tools for Effect Reasoning (p. 165)
+
+- private vs. protected/package/public for fields in Java/C#
+- const vs. mutable in C++
+
+### Learning from Effect Analysis (p. 167)
+
+> (p. 168) «In general, programming gets easier as we narrow effects in a program.»
+
+### Simplifying Effect Sketches (p. 168)
+
+> (p. 171) «When we remove tiny pieces of duplication, we often end up getting effect sketches with a smaller set of endpoints.  This often translates into easier testing decisions.»
