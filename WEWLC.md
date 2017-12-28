@@ -297,3 +297,31 @@ The effect sketches will help identify sense points (queries) and actions (comma
 ### Simplifying Effect Sketches (p. 168)
 
 > (p. 171) «When we remove tiny pieces of duplication, we often end up getting effect sketches with a smaller set of endpoints.  This often translates into easier testing decisions.»
+
+Chapter 12: I Need to Make Many Changes in One Area (p. 173)
+---------------------------------------------------
+(Do I have to break dependencies for all the classes involved?)
+
+> (p. 173) «We can write tests at a single public method for changes in a number of privates methods (...) the structure of code below the tests can change radically as long as the tests pin down its behaviour.»
+
+> (p. 174) «Higher-level tests can be useful in refactoring. (...) In fact, changes are often easier than you would expect because you can make changes to the tests and then make changes to the code, moving the structure along in small safe increments.»
+
+> (p. 174) «Higher-level tests (...) shouldn't be a substitute for unit tests.»
+
+### Interception Points (p. 174)
+
+> (p. 174) «a point in your program where you can detect the effects of a particular change.»
+
+> (p. 180) «A _pinch point_ is a narrowing in an **effect sketch (155)**, a place where it is possible to write tests to cover a wide set of changes.»
+
+### Judging Design with Pinch Points (p. 182)
+
+> (p. 183) «Using effect sketches to find hidden classes.»
+
+> (p. 183) «Writing tests at pinch points is an ideal way to start some invasive work in part of a program. (...) After you write your **Characterization tests (186)**, you can make changes with impunity.»
+
+### Pinch Point Traps (p. 184)
+
+- unit tests that become integration tests
+
+> (p. 184) «When you start to notice that your tests are too large, you should break down the class you are testing, to make smaller independent pieces that can be tested more easily.»
