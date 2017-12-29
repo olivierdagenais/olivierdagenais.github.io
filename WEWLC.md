@@ -409,3 +409,28 @@ Chapter 15: My Application Is All API Calls (p. 199)
 2. Responsibility-based extraction
     1. API is more complicated
     2. You have a tool that provides a safe extract method support, or you feel confident that you can do the extractions safely by hand
+
+Chapter 16: I Don't Understand the Code Well Enough to Change It (p. 209)
+----------------------------------------------------------------
+
+### Notes/Sketching (p. 210)
+
+> (p. 210) «When reading through code gets confusing, it pays to start drawing pictures and making notes.»
+
+### Listing Markup (p. 211)
+
+Drawing on a code printout.
+
+#### Separating Responsibilities
+
+#### Understanding Method Structure
+
+#### Extract Methods
+
+#### Understand the Effects of a change
+
+### Scratch Refactoring (p. 212)
+
+Mess with code to understand it, then revert changes.
+
+### Delete Unused Code (p. 213)
