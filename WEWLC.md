@@ -375,3 +375,12 @@ Will the tests sense «any problems that we can cause?»
 ### A Heuristic for Writing Characterization Tests (p. 195)
 
 Write enough tests to convince yourself you understand the current code under test and the changes you're about to make.
+
+Chapter 14: Dependencies on Libraries Are Killing Me (p. 197)
+----------------------------------------------------
+
+> (p. 197) «Avoid littering direct calls to library classes in your code.  You might think that you'll never change them, but that can become a self-fulfilling prophecy.»
+
+> (p. 197) «...sometimes the best thing you can do is write a thin wrapper over the classes that you need to separate out.»
+
+(p. 198) prefer virtual methods, for easier testing (pretend it's non-virtual in production)
