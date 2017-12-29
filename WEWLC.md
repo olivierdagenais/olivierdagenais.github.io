@@ -325,3 +325,53 @@ Chapter 12: I Need to Make Many Changes in One Area (p. 173)
 - unit tests that become integration tests
 
 > (p. 184) «When you start to notice that your tests are too large, you should break down the class you are testing, to make smaller independent pieces that can be tested more easily.»
+
+Chapter 13: I Need to Make a Change, but I Don't Know What Tests to Write (p. 185)
+-------------------------------------------------------------------------
+
+> (p. 185) «The way to win is to concentrate effort on not putting bugs into code in the first place.»
+
+> (p. 185) «In the natural flow of development, tests that _specify_ become tests that _preserve_.»
+
+> (p. 185) «(...) bolster the area we want to change with tests to provide some kind of safety net.»
+
+### Characterization Tests (p. 186)
+
+> (p. 186) «[Characterization Tests] document the actual current behaviour of the system (...)»
+
+> (p. 186) «In nearly every legacy system, what the system does is more important than what it is supposed to do.»
+
+> (p. 186) «...our goal right now is to get tests in place that help us make changes more deterministically.»
+
+#### Algorithm
+1. Use a piece of code in a test harness.
+2. Write an assertion that you know will fail. (i.e. `expected == "fred"`)
+3. Let the failure tell you what the [actual current] behaviour is.
+4. [change the expected to match actual]
+5. Repeat
+
+> (p. 188) «...write tests until we are satisfied we understand it.»
+
+Will the tests sense «any problems that we can cause?»
+
+#### The Method Use Rule (p. 189)
+
+> (p. 189) «Before you use a method in a legacy system, check to see if there are tests for it.  If there aren't, write them.»
+
+### Characterizing Classes (p. 189)
+
+1. «If you don't understand an area of code, consider introducing a **Sensing variable (301)** to characterize it.»
+2. «...stop to make a _list of things that can go wrong_.  See if you can formulate tests that trigger them.»
+
+> (p. 190) «Make sure you document the important things that you discover as tests.»
+
+#### When you find bugs (p. 190)
+> (p. 190) «[While characterizing legacy code] what should you do when you find a bug?  Code is new?  Fix it.  Code is deployed?  Someone could be relying on the defect.  Document it, find out.»
+
+### Targeted Testing (p. 190)
+
+> (p. 190) «When you write a test for a branch, ask yourself whether there is any other way that the test could pass, aside from executing that branch.  If you are not sure, use a **Sensing variable (301)** or the debugger to find out whether the test is hitting it.»
+
+### A Heuristic for Writing Characterization Tests (p. 195)
+
+Write enough tests to convince yourself you understand the current code under test and the changes you're about to make.
