@@ -384,3 +384,28 @@ Chapter 14: Dependencies on Libraries Are Killing Me (p. 197)
 > (p. 197) «...sometimes the best thing you can do is write a thin wrapper over the classes that you need to separate out.»
 
 (p. 198) prefer virtual methods, for easier testing (pretend it's non-virtual in production)
+
+Chapter 15: My Application Is All API Calls (p. 199)
+-------------------------------------------
+
+> (p. 199) «There are many different things to consider when choosing to integrate code we can't change easily.»
+
+(p. 200) Mailing List Server example
+
+> (p. 203) «The first step is to identify the computational core of code.»
+
+> (p. 205) «When we have a system that looks like it is nothing but API calls, it helps to imagine that it is just one big object and then apply the responsibility-separation heuristics in Chapter 20 [Class Is Too Big]»
+
+#### How do we move forward? (p. 205)
+1. Skin and wrap the API
+2. Responsibility-based extraction
+
+#### How do we choose between [the two]? (p. 206)
+1. Skin and wrap the API
+    1. API is relatively small
+    2. You want to completely separate out dependencies on a third-party library
+    3. You don't have tests, and you can't write them because you can't test through the API
+    4. More work, but very useful to isolate from 3rd-party libraries
+2. Responsibility-based extraction
+    1. API is more complicated
+    2. You have a tool that provides a safe extract method support, or you feel confident that you can do the extractions safely by hand
