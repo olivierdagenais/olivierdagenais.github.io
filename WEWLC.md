@@ -434,3 +434,32 @@ Drawing on a code printout.
 Mess with code to understand it, then revert changes.
 
 ### Delete Unused Code (p. 213)
+
+Chapter 17: My Application Has No Structure (p. 215)
+-------------------------------------------
+
+> (p. 216) «The brutal truth is that architecture is too important to be left exclusively to a few people.»
+
+### Telling the Story of the System (p. 216)
+
+Explain architecture with few words; it tends to suggest a simpler architecture.
+
+> (p. 217) «...it helps everyone understand what would've been ideal and what things are expediencies.»
+
+> (p. 217) «...having a simple story of how a system works just serves as a roadmap[, a way of getting your bearing as you search for the right places to add features.]»
+
+#### What is the architecture of JUnit?
+
+### Naked CRC (p. 220)
+
+Class Responsibility Collaborations
+
+Explain something with blank cards using pointing and motion.
+
+> (p. 223) «There are just two guidelines in Naked CRC
+> 1. Cards represent instances, not classes.
+> 2. Overlap cards to show a collection of them.»
+
+### Conversation Scrutiny (p. 224)
+
+> (p. 224) «Listen to conversations about your design.»
