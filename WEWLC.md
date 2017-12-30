@@ -463,3 +463,17 @@ Explain something with blank cards using pointing and motion.
 ### Conversation Scrutiny (p. 224)
 
 > (p. 224) «Listen to conversations about your design.»
+
+Chapter 18: My Test Code Is in the Way (p. 227)
+--------------------------------------
+
+### Class Naming Conventions (p. 227)
+
+> (p. 227) «...it makes sense to make the unit test class name a variation of the class name. (...) I like the `Test` suffix convention. (...) each class lines up next to its test class.»
+
+* fake classes «use the prefix `Fake`»
+* testing subclasses use the prefix `Testing`
+
+### Test Location (p. 228)
+
+(p. 229) The Java example encourages the same package; we might want to override the default namespace for .NET test projects to achieve the same effect.
