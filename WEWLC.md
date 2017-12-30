@@ -477,3 +477,40 @@ Chapter 18: My Test Code Is in the Way (p. 227)
 ### Test Location (p. 228)
 
 (p. 229) The Java example encourages the same package; we might want to override the default namespace for .NET test projects to achieve the same effect.
+
+Chapter 19: My Project Is Not Object Oriented.  How Do I Make Safe Changes? (p. 231)
+---------------------------------------------------------------------------
+
+> (p. 231) «get a large chunk of the code under test before doing anything else and then use those tests to get some feedback while developing.»
+
+> (p. 231) «look for a **Pinch Point (180)** and then use the **Link Seam (36)** to break dependencies well enough to get the code in a test harness.»
+
+### An Easy Case (p. 232)
+
+`Set-WriteTime` C code from Linux
+
+### A Hard Case (p. 232)
+
+`scan_packets` C code calls 3rd-party `ksr_notify()`
+* **Link Seam (36)**
+* use macro preprocessor
+
+### Adding New Behavior (p. 236)
+
+* Use **Test-Driven Development (88)**
+> (p. 236) «Often the work of trying to formulate a test for each piece of code that we're thinking of writing leads us to alter its design in good ways.»
+
+(p. 237) `send_command` vs. `form_command`
+* kind of like applying **Command/Query Separation (147)**
+
+(p. 238) Use function pointers on a struct to create an abstraction/seam
+
+### Taking Advantage of Object Orientation (p. 239)
+
+* **Encapsulate Global References (339)**
+* **Preserve Signatures (312)**
+* **Parameterize Constructor (379)**
+
+### It's All Object Oriented (p. 242)
+
+> (p. 244) «The old C system was, in reality, just one big object.»
