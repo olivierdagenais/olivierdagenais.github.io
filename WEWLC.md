@@ -514,3 +514,74 @@ Chapter 19: My Project Is Not Object Oriented.  How Do I Make Safe Changes? (p. 
 ### It's All Object Oriented (p. 242)
 
 > (p. 244) «The old C system was, in reality, just one big object.»
+
+Chapter 20: This Class Is Too Big and I Don't Want It to Get Any Bigger  (p. 245)
+-----------------------------------------------------------------------
+
+TL;DR: Big classes happen.  Break them up.  Why?  Single Responsibility Principle (SRP).  Otherwise: confusion, conflicts & concealment.  Starts off with SRP and an example class called `RuleParser`, which, it turns out, has 4 responsibilities.
+
+(p. 246) **Sprout Class (63)** and **Sprout Method (59)** help prevent making it worse.
+
+> (p. 246) «The key remedy for big classes is refactoring.»
+
+#### Single Responsibility Principle (SRP) (p. 246)
+
+> (p. 246) «Every class should have a single responsibility; it should have a single purpose in the system, and there should be only one reason to change it.»
+
+#### `RuleParser` class (p. 247)
+
+### Seeing Responsibilities (p. 249)
+
+#### Heuristic #1: Group Methods (p. 249)
+> «Look for similar method names. (...) try to find ones that seem to go together.»
+
+#### Heuristic #2: Look at Hidden Methods (p. 250)
+> «If a class has many [private and protected methods], it often indicates that there is another class dying to get out.»
+
+> (p. 250) «...if you have the urge to test a private method, the method shouldn't be private...»
+
+#### Heuristic #3: Look for Decisions that can change (p. 251)
+> «...extract methods that reflect what you intend at a high level.»
+
+* method grouping is probably easier
+
+#### Heuristic #4: Look for internal relationships (p. 251)
+> «Are certain instance variables used by some methods and not others?»
+
+* Suggests clusters of methods that could be extracted.  Try _sketching_ it out.
+
+> (p. 252) «Usually there is some sort of "lumping" in a class.»
+
+#### Heuristic #5: Look for the primary responsibility (p. 260)
+
+#### Interface Segregation Principle (ISP) (p. 263)
+
+* Extract interfaces out of big classes
+
+#### Heuristic #6: When All Else Fails, Do Some Scratch Refactoring (p. 264)
+
+> (p. 264) «If you are having a lot of trouble seeing responsibilities in a class, do some scratch refactoring.»
+
+#### Heuristic #7: Focus on the Current Work (p. 265)
+> «Pay attention to what you have to do right now.  If you are providing a different way of doing anything, you might have identified a responsibility that you should extract and then allow substitution for.»
+
+### Other Techniques (p. 265)
+
+Read.  Read books, read other people's code.
+
+### Moving Forward (p. 265)
+
+#### Strategy (p. 266)
+> (p. 266) «The best approach to breaking down big classes is to identify the responsibilities, make sure that everyone else on the team understands them, and then break down the class on as-needed basis.  When you do that, you spread out the risk of the changes and can get other work done as you go.»
+
+#### Tactics (p. 266)
+* SRP at implementation level, then SRP at interface level
+* But first, tests!
+    * look at fields & methods to get an idea of what tests to write
+    * Chapter 9: I Can't Get This Class into a Test Harness (p. 105)
+    * Chapter 10: I Can't Run This Method in a Test Harness (p. 137)
+
+(p. 267) How to extract a class without tests
+
+### After Extract Class (p. 268)
+«In practice, the biggest danger for teams extracting classes from a big class is getting overambitious.»
