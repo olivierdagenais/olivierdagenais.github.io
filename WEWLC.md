@@ -585,3 +585,49 @@ Read.  Read books, read other people's code.
 
 ### After Extract Class (p. 268)
 «In practice, the biggest danger for teams extracting classes from a big class is getting overambitious.»
+
+Chapter 21: I'm Changing the Same Code All Over the Place (p. 269)
+---------------------------------------------------------
+
+Example is a Java-based networking system.
+
+### First Steps (p. 272)
+
+> (p. 272) «Removing small pieces of duplication helps, and it makes it easier to see larger areas of duplication later.»
+
+(p. 272) extract `writeField()`
+
+(p. 274) introduce a superclass (`Command`)
+
+(p. 275) extract `writeBody()`
+
+> (p. 275) «When two methods look roughly the same, extract the differences to other methods.  When you do that, you can often make them exactly the same and get rid of one.»
+
+(p. 276) pull up common fields
+
+(p. 276) introduce abstract `getCommandChar()` (I would have used an abstract constructor parameter to set a read-only field)
+
+(p. 277) introduce abstract `writeBody()`
+
+(p. 279) extract and make abstract `getBodySize()`
+
+(p. 280) extract `getFieldSize()`
+
+(p. 281) introduce a `List` of fields to avoid skew between `getBodySize()` and `writeBody()`
+
+#### Abbreviations (p. 284)
+
+Avoid if possible.
+
+(p. 285) Motivates the duplication removal
+
+> (p. 285) «When you remove duplication across classes, you end up with very small, focused methods.  Each of them does something that no other method does, and that gives us an incredible advantage: orthogonality.»
+
+> (p. 285) «If you want to change existing behavior in your code and there is exactly one place you have to go to make that change, you've got orthogonality.»
+
+> (p. 286) «When behavior is localized in single methods, it's easy to replace it or add to it.»
+
+> (p. 286) «One of the startling things that you discover when you start removing duplication zealously is that designs emerge.»
+
+#### Open/Closed Principle (p. 287)
+> «When we remove duplication, our code often naturally starts to fall in line with the _Open/Closed Principle_.»
