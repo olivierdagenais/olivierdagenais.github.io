@@ -631,3 +631,97 @@ Avoid if possible.
 
 #### Open/Closed Principle (p. 287)
 > «When we remove duplication, our code often naturally starts to fall in line with the _Open/Closed Principle_.»
+
+Chapter 22: I Need to Change a Monster Method and I Can't Write Tests for It (p. 289)
+----------------------------------------------------------------------------
+
+> (p. 289) «One of the hardest things about working in legacy code is dealing with large methods.»
+
+You can avoid refactoring via **Sprout Method (59)** and **Sprout Class (p. 63)**, but don't!
+
+> (p. 289) «A monster method is a method that is so long and so complex that you really don't feel comfortable touching it.»
+
+### Varieties of Monsters (p. 290)
+
+> (p. 290) «...aren't necessarily distinct...»
+
+#### Bulleted Methods (p. 290)
+
+> (p. 290) «...with nearly no indentation (...) that reminds you of a bulleted list.»
+
+#### Snarled Methods (p. 292)
+
+> (p. 292) «...dominated by a single large, indented section.»
+
+> (p. 294) «Nearly every refactoring tool supports the _extract method_ refactoring because there is an incredible amount of leverage in that support.»
+
+### Tackling Monsters with Automated Refactoring Support (p. 294)
+
+> (p. 294) «To use refactoring tools effectively with large methods, it pays to make a series of changes solely with the tool and to avoid all other edits to the source. (...) it gives you a clean separation between changes that are known to be safe and changes that aren't.»
+
+> (p. 294) «When you do your extractions these should be your key goals:
+> 1. To separate logic from awkward dependencies.
+> 2. To introduce seams that make it easier to get tests in place for more refactoring.»
+
+> (p. 295) «...we can start to name high-level pieces of the method and break dependencies at the same time.»
+
+(p. 296) allows use of **Subclass and Override Method (401)**
+
+> (p. 297) « ...do a lot of coarse work safely and handle the details after you get other tests in place.  Don't be concerned about methods that seem like they don't fit the class.  Often they point toward the need to extract a new class later.  See **Chapter 20: This Class Is Too Big and I Don't Want It to Get Any Bigger  (p. 245)**»
+
+### The Manual Refactoring Challenge (p. 297)
+
+> (p. 297) «When you don't have a refactoring tool, correctness is something that you have to work to maintain, and tests are the strongest tool around.»
+
+(p. 297) List of things that can go wrong with manual method extraction
+1. Forget to pass a variable in new method.
+2. New method name hides or overrides existing method.
+3. Mistake in parameters or return values.
+
+> (p. 297) «The techniques in this section can help make extraction less risky.»
+
+#### Introduce Sensing Variable (p. 298)
+
+* Temporarily add a field that's checked by a specially-crafted test.  Refactor, make sure tests still pass, then remove field/variable + test. (Could also refactor tests to target extracted methods)
+
+#### Extract What You Know (p. 301)
+
+> (p. 301) «Start small and find little pieces of code that we can extract confidently without tests, and then add tests to cover them.»
+
+* Minimize _coupling count_: «number of values that pass into and out of the method you are extracting»
+* Consider extracting methods for code with coupling count of 0!!
+
+> (p. 302) «After you extract, write a few tests for the method you extracted.»
+
+#### Gleaning Dependencies (p. 303)
+
+* Focus testing & refactoring on the primary logic of a method, especially if breaking it would not be obviously detected.
+* Preserve key behaviour!
+
+#### Break Out a Method Object (p. 304)
+
+* You can't always use sensing variables, especially if the state you want to sense is in local variables.  Solution?  Create a class just to perform the work of the method, where parameters become fields (initialized in constructor), allowing more variables to be promoted to fields without interfering with original class.
+
+### Strategy (p. 304)
+
+#### Skeletonize Methods (p. 304)
+* Conditional statement: extract condition & body together OR separately
+* Separately means it's easier to reorganize logic later
+
+#### Find Sequences (p. 304)
+* Conditional statement: extract condition & body together OR separately
+* Together means it's easier to identify a common sequence of operations
+
+(p. 306) (text missing in 1st paragraph)
+
+#### Extract to the Current Class First (p. 306)
+
+* Don't try to perform two refactors at the same time: extract method, test, commit, move method, test, commit.  Less error prone.
+
+#### Extract Small Pieces (p. 306)
+
+Start extracting small methods, even if it does not feel like progress.
+
+#### Be Prepared to Redo Extractions (p. 307)
+
+> (p. 307) «Sometimes the best way to move forward is to undo an extraction or two and re-extract.»
