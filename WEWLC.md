@@ -764,3 +764,20 @@ Chapter 23: How Do I Know That I'm Not Breaking Anything? (p. 309)
 > (p. 316) «It is a remarkably good way to increase quality and spread knowledge around a team.»
 
 > (p. 317) «Let's face it, working in legacy code is surgery, and doctors never operate alone.»
+
+Chapter 24: We Feel Overwhelmed. It Isn't Going to Get Any Better (p. 319)
+-----------------------------------------------------------------
+
+> (p. 319) «It is possible to connect with what is fun about programming.»
+
+> (p. 320) «The key to thriving in legacy code is finding what motivates you.»
+
+> (p. 320) «...there really isn't much that can replace working in a good environment with people you respect who know how to have fun at work.»
+
+> (p. 320) «Another thing that helps is to connect with the larger community.»
+
+> (p. 320) «The attitude we bring to the work is important.»
+
+> (p. 320) «TDD some code outside of work.  Program for fun a little bit.»
+
+> (p. 320) «If morale is low on your team, (...) pick the ugliest most obnoxious set of classes in the project and get them under test.  When you've tackled the worst problem as a team, you'll feel in control of your situation.»
