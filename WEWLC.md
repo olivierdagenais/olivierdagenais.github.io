@@ -725,3 +725,42 @@ Start extracting small methods, even if it does not feel like progress.
 #### Be Prepared to Redo Extractions (p. 307)
 
 > (p. 307) «Sometimes the best way to move forward is to undo an extraction or two and re-extract.»
+
+Chapter 23: How Do I Know That I'm Not Breaking Anything? (p. 309)
+---------------------------------------------------------
+
+> (p. 309) «...we discuss a variety of ways to reduce risk when we edit [code].»
+
+### Hyperaware Editing (p.310)
+
+> (p. 310) «[Every] keystroke either changes the behaviour of the software or it doesn't.»
+
+> (p. 310) «...anything that helps us know - really know - how we are affecting software when we tpe can help us reduce bugs.  **Test-Driven Development (p. 88)** is very powerful in this way.  When you can get your code in a test harness and run tests against it in less than a second, you can run tests whenever you need to incredibly fast and really know what the effects of a change are.»
+
+### Single-Goal Editing (p. 311)
+
+> (p. 312) «Programming is the art of doing one thing at a time.»
+
+> (p. 312) «...[work] very deliberately and really [know] what your code does.»
+
+### Preserve Signatures (p. 312)
+
+> (p. 312) «In general, the way to handle [avoiding making mistakes when editing code] is to write tests.  When we have tests in place, we're able to catch many of the errors that we make when we change code.»
+
+> (p. 312) «...in many systems, we have to refactor a bit just to make the system testable enough to refactor more.»
+
+* Do one thing at a time.  One extract method, one extract class, etc. to reduce the chance of «making foolish mistakes, and with no tests to catch them, often they were found for later than they needed to be.»
+
+### Lean on the Compiler (p. 315)
+
+* Break the code, compile & fix the errors identified by compiler.  More precise than "Find in files", although these days we have a "Find All References" feature.
+
+> (p. 316) «If your builds take a long time, it might be more practical to search for the places where you need to make changes.»
+
+* Doesn't always work, such as inheritance.
+
+#### Pair Programming (p. 316)
+
+> (p. 316) «It is a remarkably good way to increase quality and spread knowledge around a team.»
+
+> (p. 317) «Let's face it, working in legacy code is surgery, and doctors never operate alone.»
