@@ -1,0 +1,63 @@
+* {
+	text-shadow: none !important;
+	box-shadow: none !important;
+	-moz-box-shadow: none !important;
+	-webkit-box-shadow: none !important;
+	-webkit-text-stroke: 0 !important;
+	-webkit-text-stroke-color: rgb(0, 0, 0) !important;
+	font-family: Verdana !important;
+}
+
+#title-and-status-holder, #viewer-header {
+	display: none !important; 
+}
+
+body#com-atlassian-confluence div#likes-and-labels-container > div#likes-section {
+	display: none !important;
+}
+
+body#com-atlassian-confluence form#quick-search select#quick-search-sharepoint-option, body#com-atlassian-confluence div#chatbar {
+	display: none !important;
+}
+
+pre, pre *, tt, code, textarea {
+	font-family: Courier New !important;
+}
+
+* code, code * {
+	font-family: Courier New !important;
+}
+
+/* GitHub diffs */
+table.file-code tr.file-diff-line td.diff-line-code, table.file-code tr.file-diff-line td.diff-line-code *, td.blob-code, td.blob-code *
+{
+	font-family: Courier New !important;
+}
+
+/* VSTS/TFS diffs */
+div.code-line span {
+	font-family: Courier New !important;
+}
+
+/* GitHub editor, also Jenkins Groovy editor */
+div#ace-editor *, div#ace_editor *, div#ace_content, .ace_editor *, .ace_scroller *, .ace_text-input * {
+	font-family: Courier New !important;
+}
+
+/* Fix Confluence's line numbers for code blocks */
+div.codeContent td.gutter div.line, div.codeContent td.code div.line {
+	font-family: Courier New !important;
+	height: 17px !important;
+}
+
+/* Fix XP-Dev.com's markup editor to be larger and use a monospace font */
+textarea.markItUpEditor {
+	height: 800px;
+	width: 1280px;
+	font-family: Courier New !important;
+}
+
+/* MSDN library's default min-width is too large for half-HD */
+html body div#page {
+	min-width:900px !important;
+}
