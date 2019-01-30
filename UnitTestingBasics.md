@@ -140,3 +140,10 @@ The first step to testing without a file system is to refactor the code to opera
 The second step is to add  test data as [embedded] resources, meaning the test data ends up _compiled_ with the test code, such that the test code can then open a read-only stream to the test data (for example, the JRE has `ClassLoader#getResourceAsStream()` whereas .NET has `Assembly.GetManifestResourceStream()`).  No need to worry about locked files, what the current directory is or having to clean up a temporary folder!
 
 The third step is to use a virtual/mock file system, where all file system calls go through an abstraction that's mockable or can be provided an implementation that is completely in-memory.  Again, clean-up is trivial and your code could be provided a new file system provider that opens new functionality with few to no changes.
+
+### Network
+
+The first step to testing without a network is to refactor the code to operate on generic streams, which opens the door to supplying an in-memory stream instance (usually backed by a byte array) during test runs.
+
+The second step is to use a test/mock server.  In the JVM world, there's [WireMock](http://wiremock.org) (available via Maven with coordinates `com.github.tomakehurst:wiremock`) while the .NET world has [WireMock.Net](https://github.com/WireMock-Net/WireMock.Net) (availble via NuGet as `WireMock.Net`).
+
