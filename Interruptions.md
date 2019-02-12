@@ -22,11 +22,24 @@ As insinuated in the previous section, you may want to plan your day such that y
 Establish a culture of focus
 ----------------------------
 
-TODO: indicators, explicit (status) and implicit (headphones, door)
-TODO: self-sufficiency, searching knowledge base, online, using tools appropriately
+This is probably the hardest part:  convincing friends, family and/or colleagues that long stretches of uninterrupted time provide the ideal conditions for getting great work done, whereas interruptions involve costly context-switching.
 
-### Communication media, ranked
-This may vary by organization, culture and resources, but the general idea remains the same: determine how people can reach you depending on the urgency and/or importance of the situation.
+### Indicate your status
+
+One way of establishing figurative boundaries might be as simple as setting your status as busy or do-not-disturb in your chat client, or blocking off time in your calendar.
+
+As for the real world, assuming you don't have a door or [one of those orbs that light up automatically](https://www.busylight.com/en/about), one idea is to use the presence/absence of headphones as an indicator of being in the zone.  Another idea a colleague once told me about was hanging a "gone fishing" poster when they needed to concentrate and avoid interruptions.
+
+### Teach resourcefulness
+
+One skill you might have to teach others is resourcefulness: the ability to get unstuck by yourself, also known as "teaching how to fish".
+
+Whether it is by suggesting web search keywords, recommending books or encouraging techniques such as [rubber duck debugging](https://rubberduckdebugging.com/) (which also works without a duck; the very act of composing an e-mail might result in the answer being discovered before finishing the e-mail), there are plenty of opportunities to lead someone through an answer rather than just giving it to them.  Yes, this takes more time and effort, but think of it as an investment.  You might have to suggest [How To Ask Questions The Smart Way](http://catb.org/~esr/faqs/smart-questions.html).
+
+
+### Prioritize the available communication media
+
+This may vary by organization, culture and resources, but the general idea remains the same: determine how people can and should reach each other depending on the urgency and/or importance of the situation.  Here's an example ranking based on turnaround time:
 
 | Turnaround time  | Medium                        |
 | ---------------- | ----------------------------- |
@@ -37,15 +50,17 @@ This may vary by organization, culture and resources, but the general idea remai
 | Within a minute  | Phone call or in-person visit |
 
 
-An interruption happens
------------------------
+Respond to an interruption
+--------------------------
 
 Now that you understand your priorities, have planned your day and started on your tasks, someone wants your attention.  Don't panic!
 
 ### Respond assertively
-TODO
-
+TODO: spectrum: aggressive, assertive, passive
 
 ### Understand their priorities
-TODO
+TODO: ask 1 or 2 questions about what they need and the context
 
+### Think Win-Win
+TODO: [The 7 Habits of Highly Effective People
+](https://en.wikipedia.org/wiki/The_7_Habits_of_Highly_Effective_People) (you might be interested in this [7-minute Animated Book Review on YouTube](https://www.youtube.com/watch?v=jy8XE5h8qGM))
