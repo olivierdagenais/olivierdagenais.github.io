@@ -41,13 +41,13 @@ Whether it is by suggesting web search keywords, recommending books or encouragi
 
 This may vary by organization, culture and resources, but the general idea remains the same: determine how people can and should reach each other depending on the urgency and/or importance of the situation.  Here's an example ranking based on turnaround time:
 
-| Turnaround time  | Medium                        |
-| ---------------- | ----------------------------- |
-| With a day or 2  | Knowledge base                |
-| With a day       | E-mail                        |
-| Within 2-3 hours | Group chat                    |
-| Within an hour   | Direct/instant message        |
-| Within a minute  | Phone call or in-person visit |
+| Turnaround time   | Medium                        |
+| ----------------- | ----------------------------- |
+| Within a day or 2 | Knowledge base                |
+| Within a day      | E-mail                        |
+| Within 2-3 hours  | Group chat                    |
+| Within an hour    | Direct/instant message        |
+| Within a minute   | Phone call or in-person visit |
 
 
 Respond to an interruption
