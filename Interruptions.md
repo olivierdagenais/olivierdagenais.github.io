@@ -56,11 +56,24 @@ Respond to an interruption
 Now that you understand your priorities, have planned your day and started on your tasks, someone wants your attention.  Don't panic!
 
 ### Respond assertively
-TODO: spectrum: aggressive, assertive, passive
 
-### Understand their priorities
-TODO: ask 1 or 2 questions about what they need and the context
+There's a spectrum of possible responses.  We all know what an aggressive response might look like (hint: it might be followed by a visit from your manager or even HR) but did you know an inability to say "no" is at the other end of the spectrum?  Somewhere between aggressive and passive responses lies a third type of response: an assertive one.  It's neither an automatic/definitive "no" nor "yes", but rather about answering a question:  when is the best time for us to work together?
+
+### Understand each other's priorities
+
+State what you're working on & when it's due and then ask about what they need your help with and by when.  Context matters!  Both parties must understand the relative impact and business value of each task. A good way to help gauge this is by establishing who the stakeholders are in both situations.
+
 
 ### Think Win-Win
-TODO: [The 7 Habits of Highly Effective People
-](https://en.wikipedia.org/wiki/The_7_Habits_of_Highly_Effective_People) (you might be interested in this [7-minute Animated Book Review on YouTube](https://www.youtube.com/watch?v=jy8XE5h8qGM))
+
+The best take on assertive responses I've learned about was from [The 7 Habits of Highly Effective People
+](https://en.wikipedia.org/wiki/The_7_Habits_of_Highly_Effective_People) (you might be interested in this [7-minute Animated Book Review on YouTube](https://www.youtube.com/watch?v=jy8XE5h8qGM)), where every interaction is an opportunity for both parties to benefit.
+
+In that paradigm, an aggressive response to a request would be considered Win-Lose; the responder "Wins" by not being interrupted but the requester "Loses" by not getting help.  Conversely, a passive response is Lose-Win, with the roles reversed.  In both cases, someone loses and neither situation is good in the long term.  This is where an assertive response comes in: it's about Win-Win and thus each party looks for a way to help the other to maximize the potential value of the interaction.
+
+### Example
+
+This is what an assertive response that tries to understand priorities and is framed in terms of win-win might look like:
+> "I am working on this report that's due to X by 15:00.  Let me understand what you need so we can find the best time for us to work together."
+
+The requester can then explain what they need, who it's for and by when such that the conversation can be steered toward what's more important to complete first and when the best time to collaborate is, keeping in mind that the requester (continuing with the example) might be able to help complete the report that's due at 15:00.
