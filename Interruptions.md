@@ -66,8 +66,7 @@ State what you're working on & when it's due and then ask about what they need y
 
 ### Think Win-Win
 
-The best take on assertive responses I've learned about was from [The 7 Habits of Highly Effective People
-](https://en.wikipedia.org/wiki/The_7_Habits_of_Highly_Effective_People) (you might be interested in this [7-minute Animated Book Review on YouTube](https://www.youtube.com/watch?v=jy8XE5h8qGM)), where every interaction is an opportunity for both parties to benefit.
+The best take on assertive responses I've learned about was from [The 7 Habits of Highly Effective People](https://en.wikipedia.org/wiki/The_7_Habits_of_Highly_Effective_People) (you might be interested in this [7-minute Animated Book Review on YouTube](https://www.youtube.com/watch?v=jy8XE5h8qGM)), where every interaction is an opportunity for both parties to benefit.
 
 In that paradigm, an aggressive response to a request would be considered Win-Lose; the responder "Wins" by not being interrupted but the requester "Loses" by not getting help.  Conversely, a passive response is Lose-Win, with the roles reversed.  In both cases, someone loses and neither situation is good in the long term.  This is where an assertive response comes in: it's about Win-Win and thus each party looks for a way to help the other to maximize the potential value of the interaction.
 
