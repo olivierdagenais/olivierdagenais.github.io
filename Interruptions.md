@@ -1,23 +1,22 @@
 How to mitigate and reduce interruptions
 ========================================
-Strategies to maximize your time to focus.
 
+Strategies to maximize your time to focus.
 
 Understand your own priorities
 ------------------------------
 
 Our daily activities can often be classified along two axis:
+
 1. Important vs. non-important
 2. Urgent vs. non-urgent
 
 Most of your day will likely consist of important tasks, presumably starting with the urgent ones and then moving on to the non-urgent ones.  Being aware of where tasks fall can help establish the context necessary when unexpected demands of your time are requested and should also help you plan your day.
 
-
 Plan your day
 -------------
 
 As insinuated in the previous section, you may want to plan your day such that you can organize your activities for your most productive times and around any fixed blocks of time (such as meetings or other activities).  Make a schedule, however preliminary, as a starting point.  Start with the urgent and important tasks, allocating extra time for surprises and potential interruptions.
-
 
 Establish a culture of focus
 ----------------------------
@@ -36,7 +35,6 @@ One skill you might have to teach others is resourcefulness: the ability to get 
 
 Whether it is by suggesting web search keywords, recommending books or encouraging techniques such as [rubber duck debugging](https://rubberduckdebugging.com/) (which also works without a duck; the very act of composing an e-mail might result in the answer being discovered before finishing the e-mail), there are plenty of opportunities to lead someone through an answer rather than just giving it to them.  Yes, this takes more time and effort, but think of it as an investment.  You might have to suggest [How To Ask Questions The Smart Way](http://catb.org/~esr/faqs/smart-questions.html).
 
-
 ### Prioritize the available communication media
 
 This may vary by organization, culture and resources, but the general idea remains the same: determine how people can and should reach each other depending on the urgency and/or importance of the situation.  Here's an example ranking based on turnaround time:
@@ -48,7 +46,6 @@ This may vary by organization, culture and resources, but the general idea remai
 | Within 2-3 hours  | Group chat                    |
 | Within an hour    | Direct/instant message        |
 | Within a minute   | Phone call or in-person visit |
-
 
 Respond to an interruption
 --------------------------
@@ -62,7 +59,6 @@ There's a spectrum of possible responses.  We all know what an aggressive respon
 ### Understand each other's priorities
 
 State what you're working on & when it's due and then ask about what they need your help with and by when.  Context matters!  Both parties must understand the relative impact and business value of each task. A good way to help gauge this is by establishing who the stakeholders are in both situations.
-
 
 ### Think Win-Win
 
