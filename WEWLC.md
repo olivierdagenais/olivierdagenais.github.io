@@ -1,9 +1,11 @@
 Working Effectively With Legacy Code
 ====================================
+
 A book summary by Olivier Dagenais
 
 Preface
 -------
+
 > (p. xv) «[The teams] are trying very hard, but at the end of the day, because of schedule pressure, __the weight of history__, or a lack of any better code to compare their efforts to, many people are writing legacy code.»
 
 > (p. xvi) «To me, legacy code is simply code without tests.»
@@ -20,9 +22,9 @@ Chapter 1: Changing Software (p. 3)
 
 ### Risky Change (p. 7)
 
-
 Chapter 2: Working with Feedback (p. 9)
 --------------------------------
+
 > (p. 11) «A few minutes ago, we made a mistake and inverted the logic on a condition, but a test failed and we recovered in about a minute. (...) Do you want your feedback in a minute or overnight?»
 
 ### What Is Unit Testing? (p. 12)
@@ -44,6 +46,7 @@ p. 16 gives an example of **Primitive Parameter (385)**
 > (p. 17) «The trick is to do these initial refactorings very conservatively.»
 
 ### The Legacy Code Change Algorithm (p. 18)
+
 > 1. Identify change points
 > 2. Find test points
 > 3. Break dependencies
@@ -56,6 +59,7 @@ p. 16 gives an example of **Primitive Parameter (385)**
 
 Chapter 3: Sensing and Separation (p. 21)
 ---------------------------------
+
 > (p. 21) «Generally, when we want to get tests in place, there are two reasons to break dependencies: sensing and separation.»
 
 ### Faking Collaborators (p. 23)
@@ -94,14 +98,14 @@ Chapter 5: Tools (p. 45)
 
 ### Unit-Testing Harnesses (p. 48)
 
-> (p. 52) «If you need to find an xUnit port for your platform or language, go to www.xprogramming.com and look in the Downloads section.»
+> (p. 52) «If you need to find an xUnit port for your platform or language, go to <http://www.xprogramming.com> and look in the Downloads section.»
 
 ### General Test Harnesses (p. 53)
 
 (p. 53) Framework for Integrated Tests (FIT)
 > «FIT accepts HTML, runs tests defined in HTML tables in it, and produces HTML output.»
 
-> «There is more information about FIT at http://fit.c2.com»
+> «There is more information about FIT at <http://fit.c2.com>»
 
 PART II: Changing Software (p. 55)
 ==========================
@@ -260,6 +264,7 @@ A collection of a sealed/final class means we need **Adapt Parameter (326)** or 
 > (p. 145) «Perform a set of **Extract Method (415)** refactorings to divide up the work in this method.»
 
 #### Command/Query Separation (p. 147)
+
 > (p. 147) «A method should be a command or a query, but not both.  A command is a method that can modify the state of the object but that doesn't return a value.  A query is a method that returns a value but that does not modify the object.»
 
 > (p. 148) «After those extractions, we can **Subclass and Override Method (401)**.»
@@ -300,6 +305,7 @@ The effect sketches will help identify sense points (queries) and actions (comma
 
 Chapter 12: I Need to Make Many Changes in One Area (p. 173)
 ---------------------------------------------------
+
 (Do I have to break dependencies for all the classes involved?)
 
 > (p. 173) «We can write tests at a single public method for changes in a number of privates methods (...) the structure of code below the tests can change radically as long as the tests pin down its behaviour.»
@@ -344,6 +350,7 @@ Chapter 13: I Need to Make a Change, but I Don't Know What Tests to Write (p. 18
 > (p. 186) «...our goal right now is to get tests in place that help us make changes more deterministically.»
 
 #### Algorithm
+
 1. Use a piece of code in a test harness.
 2. Write an assertion that you know will fail. (i.e. `expected == "fred"`)
 3. Let the failure tell you what the [actual current] behaviour is.
@@ -366,6 +373,7 @@ Will the tests sense «any problems that we can cause?»
 > (p. 190) «Make sure you document the important things that you discover as tests.»
 
 #### When you find bugs (p. 190)
+
 > (p. 190) «[While characterizing legacy code] what should you do when you find a bug?  Code is new?  Fix it.  Code is deployed?  Someone could be relying on the defect.  Document it, find out.»
 
 ### Targeted Testing (p. 190)
@@ -397,10 +405,12 @@ Chapter 15: My Application Is All API Calls (p. 199)
 > (p. 205) «When we have a system that looks like it is nothing but API calls, it helps to imagine that it is just one big object and then apply the responsibility-separation heuristics in Chapter 20 [Class Is Too Big]»
 
 #### How do we move forward? (p. 205)
+
 1. Skin and wrap the API
 2. Responsibility-based extraction
 
 #### How do we choose between [the two]? (p. 206)
+
 1. Skin and wrap the API
     1. API is relatively small
     2. You want to completely separate out dependencies on a third-party library
@@ -446,9 +456,13 @@ Explain architecture with few words; it tends to suggest a simpler architecture.
 
 > (p. 217) «...it helps everyone understand what would've been ideal and what things are expediencies.»
 
-> (p. 217) «...having a simple story of how a system works just serves as a roadmap[, a way of getting your bearing as you search for the right places to add features.]»
+> (p. 217) «...having a simple story of how a system works just serves as a roadmap [, a way of getting your bearing as you search for the right places to add features.]»
+
+<!-- markdownlint-disable MD026 -->
 
 #### What is the architecture of JUnit?
+
+<!-- markdownlint-enable MD026 -->
 
 ### Naked CRC (p. 220)
 
@@ -457,6 +471,7 @@ Class Responsibility Collaborations
 Explain something with blank cards using pointing and motion.
 
 > (p. 223) «There are just two guidelines in Naked CRC
+>
 > 1. Cards represent instances, not classes.
 > 2. Overlap cards to show a collection of them.»
 
@@ -471,8 +486,8 @@ Chapter 18: My Test Code Is in the Way (p. 227)
 
 > (p. 227) «...it makes sense to make the unit test class name a variation of the class name. (...) I like the `Test` suffix convention. (...) each class lines up next to its test class.»
 
-* fake classes «use the prefix `Fake`»
-* testing subclasses use the prefix `Testing`
+- fake classes «use the prefix `Fake`»
+- testing subclasses use the prefix `Testing`
 
 ### Test Location (p. 228)
 
@@ -492,24 +507,27 @@ Chapter 19: My Project Is Not Object Oriented.  How Do I Make Safe Changes? (p. 
 ### A Hard Case (p. 232)
 
 `scan_packets` C code calls 3rd-party `ksr_notify()`
-* **Link Seam (36)**
-* use macro preprocessor
+
+- **Link Seam (36)**
+- use macro preprocessor
 
 ### Adding New Behavior (p. 236)
 
-* Use **Test-Driven Development (88)**
+- Use **Test-Driven Development (88)**
+
 > (p. 236) «Often the work of trying to formulate a test for each piece of code that we're thinking of writing leads us to alter its design in good ways.»
 
 (p. 237) `send_command` vs. `form_command`
-* kind of like applying **Command/Query Separation (147)**
+
+- kind of like applying **Command/Query Separation (147)**
 
 (p. 238) Use function pointers on a struct to create an abstraction/seam
 
 ### Taking Advantage of Object Orientation (p. 239)
 
-* **Encapsulate Global References (339)**
-* **Preserve Signatures (312)**
-* **Parameterize Constructor (379)**
+- **Encapsulate Global References (339)**
+- **Preserve Signatures (312)**
+- **Parameterize Constructor (379)**
 
 ### It's All Object Oriented (p. 242)
 
@@ -533,22 +551,26 @@ TL;DR: Big classes happen.  Break them up.  Why?  Single Responsibility Principl
 ### Seeing Responsibilities (p. 249)
 
 #### Heuristic #1: Group Methods (p. 249)
+
 > «Look for similar method names. (...) try to find ones that seem to go together.»
 
 #### Heuristic #2: Look at Hidden Methods (p. 250)
+
 > «If a class has many [private and protected methods], it often indicates that there is another class dying to get out.»
 
 > (p. 250) «...if you have the urge to test a private method, the method shouldn't be private...»
 
 #### Heuristic #3: Look for Decisions that can change (p. 251)
+
 > «...extract methods that reflect what you intend at a high level.»
 
-* method grouping is probably easier
+- method grouping is probably easier
 
 #### Heuristic #4: Look for internal relationships (p. 251)
+
 > «Are certain instance variables used by some methods and not others?»
 
-* Suggests clusters of methods that could be extracted.  Try _sketching_ it out.
+- Suggests clusters of methods that could be extracted.  Try _sketching_ it out.
 
 > (p. 252) «Usually there is some sort of "lumping" in a class.»
 
@@ -556,13 +578,14 @@ TL;DR: Big classes happen.  Break them up.  Why?  Single Responsibility Principl
 
 #### Interface Segregation Principle (ISP) (p. 263)
 
-* Extract interfaces out of big classes
+- Extract interfaces out of big classes
 
 #### Heuristic #6: When All Else Fails, Do Some Scratch Refactoring (p. 264)
 
 > (p. 264) «If you are having a lot of trouble seeing responsibilities in a class, do some scratch refactoring.»
 
 #### Heuristic #7: Focus on the Current Work (p. 265)
+
 > «Pay attention to what you have to do right now.  If you are providing a different way of doing anything, you might have identified a responsibility that you should extract and then allow substitution for.»
 
 ### Other Techniques (p. 265)
@@ -572,18 +595,21 @@ Read.  Read books, read other people's code.
 ### Moving Forward (p. 265)
 
 #### Strategy (p. 266)
+
 > (p. 266) «The best approach to breaking down big classes is to identify the responsibilities, make sure that everyone else on the team understands them, and then break down the class on as-needed basis.  When you do that, you spread out the risk of the changes and can get other work done as you go.»
 
 #### Tactics (p. 266)
-* SRP at implementation level, then SRP at interface level
-* But first, tests!
-    * look at fields & methods to get an idea of what tests to write
-    * Chapter 9: I Can't Get This Class into a Test Harness (p. 105)
-    * Chapter 10: I Can't Run This Method in a Test Harness (p. 137)
+
+- SRP at implementation level, then SRP at interface level
+- But first, tests!
+    - look at fields & methods to get an idea of what tests to write
+    - Chapter 9: I Can't Get This Class into a Test Harness (p. 105)
+    - Chapter 10: I Can't Run This Method in a Test Harness (p. 137)
 
 (p. 267) How to extract a class without tests
 
 ### After Extract Class (p. 268)
+
 «In practice, the biggest danger for teams extracting classes from a big class is getting overambitious.»
 
 Chapter 21: I'm Changing the Same Code All Over the Place (p. 269)
@@ -630,6 +656,7 @@ Avoid if possible.
 > (p. 286) «One of the startling things that you discover when you start removing duplication zealously is that designs emerge.»
 
 #### Open/Closed Principle (p. 287)
+
 > «When we remove duplication, our code often naturally starts to fall in line with the _Open/Closed Principle_.»
 
 Chapter 22: I Need to Change a Monster Method and I Can't Write Tests for It (p. 289)
@@ -660,6 +687,7 @@ You can avoid refactoring via **Sprout Method (59)** and **Sprout Class (p. 63)*
 > (p. 294) «To use refactoring tools effectively with large methods, it pays to make a series of changes solely with the tool and to avoid all other edits to the source. (...) it gives you a clean separation between changes that are known to be safe and changes that aren't.»
 
 > (p. 294) «When you do your extractions these should be your key goals:
+>
 > 1. To separate logic from awkward dependencies.
 > 2. To introduce seams that make it easier to get tests in place for more refactoring.»
 
@@ -674,6 +702,7 @@ You can avoid refactoring via **Sprout Method (59)** and **Sprout Class (p. 63)*
 > (p. 297) «When you don't have a refactoring tool, correctness is something that you have to work to maintain, and tests are the strongest tool around.»
 
 (p. 297) List of things that can go wrong with manual method extraction
+
 1. Forget to pass a variable in new method.
 2. New method name hides or overrides existing method.
 3. Mistake in parameters or return values.
@@ -682,41 +711,43 @@ You can avoid refactoring via **Sprout Method (59)** and **Sprout Class (p. 63)*
 
 #### Introduce Sensing Variable (p. 298)
 
-* Temporarily add a field that's checked by a specially-crafted test.  Refactor, make sure tests still pass, then remove field/variable + test. (Could also refactor tests to target extracted methods)
+- Temporarily add a field that's checked by a specially-crafted test.  Refactor, make sure tests still pass, then remove field/variable + test. (Could also refactor tests to target extracted methods)
 
 #### Extract What You Know (p. 301)
 
 > (p. 301) «Start small and find little pieces of code that we can extract confidently without tests, and then add tests to cover them.»
 
-* Minimize _coupling count_: «number of values that pass into and out of the method you are extracting»
-* Consider extracting methods for code with coupling count of 0!!
+- Minimize _coupling count_: «number of values that pass into and out of the method you are extracting»
+- Consider extracting methods for code with coupling count of 0!!
 
 > (p. 302) «After you extract, write a few tests for the method you extracted.»
 
 #### Gleaning Dependencies (p. 303)
 
-* Focus testing & refactoring on the primary logic of a method, especially if breaking it would not be obviously detected.
-* Preserve key behaviour!
+- Focus testing & refactoring on the primary logic of a method, especially if breaking it would not be obviously detected.
+- Preserve key behaviour!
 
 #### Break Out a Method Object (p. 304)
 
-* You can't always use sensing variables, especially if the state you want to sense is in local variables.  Solution?  Create a class just to perform the work of the method, where parameters become fields (initialized in constructor), allowing more variables to be promoted to fields without interfering with original class.
+- You can't always use sensing variables, especially if the state you want to sense is in local variables.  Solution?  Create a class just to perform the work of the method, where parameters become fields (initialized in constructor), allowing more variables to be promoted to fields without interfering with original class.
 
 ### Strategy (p. 304)
 
 #### Skeletonize Methods (p. 304)
-* Conditional statement: extract condition & body together OR separately
-* Separately means it's easier to reorganize logic later
+
+- Conditional statement: extract condition & body together OR separately
+- Separately means it's easier to reorganize logic later
 
 #### Find Sequences (p. 304)
-* Conditional statement: extract condition & body together OR separately
-* Together means it's easier to identify a common sequence of operations
+
+- Conditional statement: extract condition & body together OR separately
+- Together means it's easier to identify a common sequence of operations
 
 (p. 306) (text missing in 1st paragraph)
 
 #### Extract to the Current Class First (p. 306)
 
-* Don't try to perform two refactors at the same time: extract method, test, commit, move method, test, commit.  Less error prone.
+- Don't try to perform two refactors at the same time: extract method, test, commit, move method, test, commit.  Less error prone.
 
 #### Extract Small Pieces (p. 306)
 
@@ -749,15 +780,15 @@ Chapter 23: How Do I Know That I'm Not Breaking Anything? (p. 309)
 
 > (p. 312) «...in many systems, we have to refactor a bit just to make the system testable enough to refactor more.»
 
-* Do one thing at a time.  One extract method, one extract class, etc. to reduce the chance of «making foolish mistakes, and with no tests to catch them, often they were found for later than they needed to be.»
+- Do one thing at a time.  One extract method, one extract class, etc. to reduce the chance of «making foolish mistakes, and with no tests to catch them, often they were found for later than they needed to be.»
 
 ### Lean on the Compiler (p. 315)
 
-* Break the code, compile & fix the errors identified by compiler.  More precise than "Find in files", although these days we have a "Find All References" feature.
+- Break the code, compile & fix the errors identified by compiler.  More precise than "Find in files", although these days we have a "Find All References" feature.
 
 > (p. 316) «If your builds take a long time, it might be more practical to search for the places where you need to make changes.»
 
-* Doesn't always work, such as inheritance.
+- Doesn't always work, such as inheritance.
 
 #### Pair Programming (p. 316)
 
