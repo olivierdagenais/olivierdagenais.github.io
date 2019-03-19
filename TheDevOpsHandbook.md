@@ -150,3 +150,79 @@ Lean principles:
 #### Toyota kata (p. 5)
 
 > (p. 5) «...the improvement kata requires creating structure for the daily, habitual practice of improvement work, because daily practice is what improves outcomes.»
+
+Chapter 1: Agile, continuous delivery, and the three ways (p. 7)
+---------------------------------------------------------
+
+### The manufacturing value stream (p. 7)
+
+> (p. 7) «value stream [is defined as] "the sequence of activities an organization undertakes to deliver upon a customer request"»
+
+- fast & predictable lead times:
+    - small batch sizes
+    - reducing work in progress
+    - preventing rework
+    - constantly optimizing our system
+
+### The technology value stream (p. 8)
+
+> (p. 8) «...the process required to convert a business hypothesis into a technology-enabled service that delivers value to the customer.»
+
+#### Focus on deployment lead time (p. 8)
+
+(p. 9) The earliest we can possibly test is with TDD, helping "build quality into every part of our value stream"
+
+##### Defining lead time vs. processing time (p. 9)
+
+```text
+                     lead time
+ ________________________/\____________________________________
+/                                                              \
+|------------------------------|--------------------------------|
+ticket                       work                            work
+created                     started                     completed
+                               \________________ ______________/
+                                                V
+                                          process time
+```
+
+#### The common scenario: deployment lead times requiring months (p. 10)
+
+> (p. 10) «This is especially common in large, complex organizations that are working with tightly-coupled, monolithic applications, often with scarce integration test environments, long test and production environment lead times, high reliance on manual testing, and multiple required approval processes.»
+
+#### Our DevOps ideal: deployment lead times of minutes (p. 10)
+
+> (p. 11) «This is most easily achieved when we have architecture that is modular, well encapsulated, and loosely-coupled so that small teams are able to work with high degrees of autonomy, with failures being small and contained, and without causing global disruptions.»
+
+#### Observing "% C/A" as a measure of rework
+
+- [percent complete and accurate] ... reflects the quality of the output of each step in our value stream
+
+### The three ways: the principles underpinning DevOps (p. 11)
+
+> (p. 11) «The First Way enables fast left-to-right flow of work from Development to Operations to the customer.»
+
+- visible
+- frequent
+- optimize globally
+- small batches
+- quality
+
+(p. 12) Practices:
+
+- continuous build, integration, test & deployment
+- creating environments on demand
+- limiting work in progress
+- building systems & organizations that are safe to change
+
+> (p. 12) «The Second Way enables the fast and constant flow fo feedback from right to left at all stages of our value stream.»
+
+=> shorten & amplify feedback loops
+
+> (p. 12) «The Third Way enables the creation of a generative, high-trust culture that supports a dynamic, disciplined, and scientific approach to experimentation and risk-taking, facilitating the creation of organizational learning, both from our successes and failures.»
+
+### Conclusion (p. 13)
+
+- value streams
+- lead time
+- The Three Ways
