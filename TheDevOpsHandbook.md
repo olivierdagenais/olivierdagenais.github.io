@@ -106,3 +106,47 @@ Mostly measured in deploys per day.
 ### The DevOps Handbook: An essential Guide (p. xxxvi)
 
 A summary of the 6 parts
+
+PART I: The Three Ways (p. 1)
+======================
+
+Part 1: Introduction (p. 3)
+--------------------
+
+### A brief history (p. 3)
+
+> (p. 3) «...the "convergence of DevOps"»
+
+#### The lean movement (p. 4)
+
+Value stream mapping, Kanban boards and total productive maintenance
+
+- Manufacturing lead time => quality, customer satisfaction, employee happiness
+- Small batch sizes of work => short lead times
+
+Lean principles:
+
+- constancy of purpose
+- scientific thinking
+- flow
+- pull
+- quality at the source
+- leading with humility
+- respecting every individual
+
+#### The Agile Manifesto (p. 4)
+
+- light-weight
+- deliver frequently
+- small batch sizes
+- incremental releases
+- small self-motivated teams
+- high-trust
+
+#### Agile infrastructure and velocity movement (p. 5)
+
+#### The continuous delivery movement a.k.a. continuous deployment (p. 5)
+
+#### Toyota kata (p. 5)
+
+> (p. 5) «...the improvement kata requires creating structure for the daily, habitual practice of improvement work, because daily practice is what improves outcomes.»
