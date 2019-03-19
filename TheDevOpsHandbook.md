@@ -86,3 +86,23 @@ Introduction (p. xxi)
 - blameless post-mortems
 - Netflix "chaos Monkey"-like
 - "everyone has ownership in their work"
+
+#### The business value of DevOps (p. xxxii)
+
+- Better performance when using DevOps practices
+
+> (p. xxxiii) «...high performers had lead times measured in minutes or hours...»
+
+> (p. xxxiii) «They also had higher employee job satisfaction, lower rates of employee burnout, and their employees were 2.2 times more likely to recommend their organization to friends as a great place to work.»
+
+#### DevOps helps scale developer productivity (p. xxxiii)
+
+Mostly measured in deploys per day.
+
+#### The universality of the solution (p. xxxv)
+
+> (p. xxxv) «In the remainder of this book, we will describe how to replicate the transformation described in The Phoenix Project, as well as provide many case studies of how other organizations have used DevOps principles and practices to replicate those outcomes.»
+
+### The DevOps Handbook: An essential Guide (p. xxxvi)
+
+A summary of the 6 parts
