@@ -226,3 +226,77 @@ created                     started                     completed
 - value streams
 - lead time
 - The Three Ways
+
+Chapter 2: The First Way: The Principles of Flow (p. 15)
+------------------------------------------------
+
+> (p. 15) «...to deliver value to customers quickly.»
+
+> (p. 15) «By speeding up the flow (...), we reduce the lead time required to fulfill internal and external customer requests, further increasing the quality of our work while making us more agile and able to out-experiment the competition.»
+
+### Make our work visible (p. 15)
+
+> (p. 15) «We cannot easily see where flow is being impeded or where work is piling up in front of constrained work centers.»
+
+> (p. 16) «Ideally, our Kanban board will span the entire value stream, defining work as completed only when it reaches the right side of the board.  Work is not done when Development completes the implementation of a feature - rather it is only done when our application is running successfully in production, delivering value to the customer.»
+
+### Limit work in process (WIP) (p. 17)
+
+> (p. 17) «However, interrupting technology workers is easy, because the consequences are invisible to almost everyone, even though the negative impact to productivity may be far greater than in manufacturing.»
+
+-> limit WIP for each "column"
+
+> (p. 18) «Nothing can be worked on until it is represented first in a work card, reinforcing that all work must be made visible.»
+
+> (p. 18) «[If blocked], a far better action would be to find out what is causing the delay and help fix that problem.» (Facebook's motto)
+
+> (p. 18) «Stop starting. Start finishing.»
+
+### Reduce Batch Sizes (p. 18)
+
+> (p. 19) «The result [of large batch sizes] is long lead times and poor quality - if a problem is found in one body panel, the entire batch has to be scrapped.»
+
+-> how do you deal with changeover costs???
+
+> (p. 20) «Small batch sizes result in less WIP, faster lead times, faster detection of errors, and less rework.»
+
+=> Single piece flow -> continuous deployment
+
+### Reduce the number of handoffs (p. 21)
+
+> (p. 21) «Each of these steps is a potential queue where work will wait when we rely on resources that are shared between different value streams (e.g., centralized operations). The lead times for these requests are often so long that there is a constant escalation to have work performed within the needed timelines.»
+
+> (p. 21) «...reduce the number of handoffs, either by automating significant portions of the work or by reorganizing teams to they can deliver value to the customer themselves instead of having to be constantly dependent on others.»
+
+### Continually identify and elevate our constraints (p. 21)
+
+> (p. 22) «...there is always one and only one constraint; any improvement not made at that constraint is an illusion.»
+
+Typical transformations constraint progression:
+
+1. Environment creation
+2. Code deployment
+3. Test setup & run
+4. Overly tight architecture
+
+> (p. 23) «After all these constraints have been broken, our constraint will likely be Development or the product owners.  Because (...) small teams (...), this is where we want our constraint to be.»
+[High performers]
+-> maximize developer productivity
+
+### Eliminate hardships and waste in the value stream (p. 23)
+
+(p. 24) Categories of waste and hardship
+
+- Partially done work (loses value w/time)
+- Extra processes (do not add value)
+- Extra features ("gold plating")
+- Task switching (context switching)
+- Waiting (any delay)
+- Motion (i.e. handoffs)
+- Defects (the longer the time to resolve, the more difficult)
+- Nonstandard or manual work (i.e. snowflakes)
+- Heroics
+
+> (p. 25) «...systematically do what is needed to alleviate or eliminate these burdens and hardships to achieve our goal of fast flow.»
+
+### Conclusion (p. 25)
