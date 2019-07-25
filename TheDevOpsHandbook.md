@@ -300,3 +300,70 @@ Typical transformations constraint progression:
 > (p. 25) «...systematically do what is needed to alleviate or eliminate these burdens and hardships to achieve our goal of fast flow.»
 
 ### Conclusion (p. 25)
+
+Chapter 3: The Second Way: the Principles of Feedback (p. 27)
+-----------------------------------------------------
+
+> (p. 27) «We make our system of work safer by creating fast, frequent, high-quality information flow throughout our value stream and our organization, which includes feedback and feedforward loops.»
+
+### Working safely within complex systems (p. 27)
+
+> (p. 28) «...because failure is inherent and inevitable in complex systems, we must design a safe system of work (...) where we can perform work without fear, confident that any errors will be detected quickly...»
+
+Safer when:
+
+- complex work is managed ... reveal problems
+- problems are swarmed and solved
+- new local knowledge is exploited globally
+- leaders create other leaders
+
+### See problems as they occur (p. 29)
+
+-> easily invalidate assumptions
+
+> (p. 29) «...every work operation is measured and monitored, and any defects or significant deviations are quickly found and acted upon.»
+
+> (p. 30) «...wherever work is performed, at __all stages of the technology value stream...__»
+
+> (p. 30) «...telemetry... \[for\] production environment(s) ... \[to\] detect when they are not operating as expected... \[and to\] measure our intended goals...»
+
+### Swarm and solve problems to build new knowledge (p. 30)
+
+> (p. 30) Goal: «contain problems before they \[can\] spread \[and then prevent them\]»
+
+> (p. 31) «Instead of working around the problem or scheduling a fix "when we have more time", we swarm to fix it immediately...»
+
+- prevent downstream spread (cost + effort go up)
+- prevent new work that might mean new errors (i.e. don't push on top of broken build)
+- prevent recurrence (cost + effort go up)
+
+-> swarming => learning
+
+### Keep pushing quality closer to the source (p. 32)
+
+Ineffective quality controls:
+
+- handoff for manual tasks (instead of self-service automation)
+- approvals from people not participating
+- extensive documentation
+- handoff of large batches of work
+
+> (p. 33) «...push quality (...) to where the work is performed...»
+
+Via:
+
+- peer reviews
+- automated quality checking (such as code analysis)
+- running tests on demand
+
+> (p. 34) «...make quality everyone's responsibility...»
+
+### Enable optimizing for downstream work centers (p. 34)
+
+-> make it difficult/impossible to get it wrong
+
+> (p. 34) «According to Lean, our most important customer is our next step downstream.»
+
+-> the real customer (external) should be next!
+
+### Conclusion (p. 35)
