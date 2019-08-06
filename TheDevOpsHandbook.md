@@ -367,3 +367,104 @@ Via:
 -> the real customer (external) should be next!
 
 ### Conclusion (p. 35)
+
+Chapter 4: The third way: The principles of continual learning and experimentation (p. 37)
+-------------------------------------------------------------------------------------
+
+> (p. 37) «...with systemic quality and safety problems, work is typically rigidly defined and enforced.»
+
+> (p. 37) «...there is also often a culture of fear and low trust...»
+
+> (p. 37) «In contrast (...) performing experiments (...) to generate new improvements...»
+
+> (p. 37) «By applying a scientific approach to both process improvement and product development, we learn from our successes and failures...»
+
+> (p. 38) «We reserve time for the improvement of daily work and to further accelerate and ensure learning. (...) to force continual improvement.  We even simulate and inject failures in our production services under controlled conditions to increase our resilience.»
+
+-> Netflix chaos monkey!
+
+### Enabling organizational learning and a safety culture (p. 38)
+
+safety culture -> just culture
+
+culture of fear => stop reporting problems => downward spiral
+
+##### 3 types of culture (p. 39)
+
+- pathological (fear and threat)
+- bureaucrative (rules and processes)
+- generative (actively seeking and sharing information)
+
+> (p. 40) «When accidents and failures occur, instead of looking for human error we look for how we can redesign the system to prevent the accident from happening again.»
+
+##### blameless post-mortem (p. 40)
+
+- how it occurred
+- best countermeasures to improve system
+- ideally preventing it
+- enable faster detection & recovery
+
+### Institutionalize the improvement of daily work (p. 40)
+
+> (p. 40) «...when we avoid fixing our problems, relying on daily workarounds, our problems and technical debt accumulates until all we are doing is performing workarounds (...) with no cycles left for doing productive work.»
+
+> (p. 41) «Even more important than daily work is the improvement of daily work.»
+
+> (p. 41) «Kaizen blitzes: periods when engineers self-organize into teams to work on fixing any problem they want»
+
+-> virtuous cycle: fix more and more problems, earlier & cheaper
+
+### Transform local discoveries into global improvements (p. 42)
+
+> (p. 42) «The \[Naval Reactors\] is known for their intense commitment to scripted procedures and standardized work and the need for _incident reports for any departure from procedure or normal operations_ to accumulate learnings, no matter how minor the signal - they constantly update procedures and system designs based on these learnings.»
+
+-> deviations from checklists, DRY, SOLID, TDD, etc. identified in code reviews
+
+##### Create global knowledge (p. 43)
+
+- searchable blameless post-mortem reports
+- shared libraries for best code
+
+### Inject resilience patterns into our daily work (p. 43)
+
+> (p. 43) «...relentless and constant experimentation in their daily work [to increase capacity and identify vulnerabilities]»
+
+> (p. 44) «...improvement rituals not only \[improve\] performance but also \[improve\] resilience...»
+
+-> anti-fragility
+
+introduce tension
+
+- reduce deployment lead times
+- increase test coverage
+- decrease test execution times
+- increase developer productivity
+- "game day exercises" (disaster recovery practice)
+
+### Leaders reinforce a learning culture (p. 44)
+
+> (p. 44) «...the leader's role is to create the conditions so their team can discover greatness in their daily work.»
+
+> (p. 45) «Leaders must elevate the value of learning and disciplined problem-solving.»
+
+1. State True North goals
+2. Create iterative, shorter term goals
+3. Establish target conditions at the value stream
+4. Frame the scientific experiment from conditions
+    1. State problem
+    2. Hypothesis re: countermeasure solving problem
+    3. How to test hypothesis
+    4. Interpret results
+    5. Inform the next iteration
+
+### Conclusion (p. 46)
+
+- organizational learning
+- high trust
+- accept that failures occur
+- talk about problems safely
+- improve daily work
+- convert local learning to global
+- inject tension into daily work ("don't get comfy")
+
+### Part I Conclusion (p. 46)
