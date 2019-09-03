@@ -468,3 +468,71 @@ introduce tension
 - inject tension into daily work ("don't get comfy")
 
 ### Part I Conclusion (p. 46)
+
+PART II: Where to start (p. 47)
+=======================
+
+Part 2: Introduction (p. 49)
+--------------------
+
+> (p. 49) «...we will walk you through the process of initiating a DevOps transformation.»
+
+### Chapter 5: Selecting which value stream to start with (p. 51)
+
+> (p. 51) «...we must carefully pick and then protect those improvement projects that will most improve the state of our organization.» (Etsy)
+
+> (p. 52) (Nordstrom) «Instead, they wanted to focus on very specific areas of the business so that they could experiment and learn. Their goal was to demonstrate early wins, which would give everyone confidence that these improvements could be replicated in other areas of the organization.»
+
+> (p. 52) «They created a dedicated product [mobile application] team (...) they would no longer have to depend on and coordinate with scores of other teams (...)»
+
+> (p. 53) «Over the following year, they eliminated testing as a separate phase of work, instead integrating it into everyone's daily work. [The practice of relying on a stabilization or hardening phase at the end of a project often has very poor outcomes, because it means problems are not being found and fixed as part of daily work and are left unaddressed, potentially snowballing into larger issues.] They doubled the features being delivered per month and halved the number of defects - creating a successful outcome.»
+
+#### Greenfield vs. brownfield services (p. 54)
+
+- greenfield: new, few constraints
+- brownfield: previously established
+
+> (p. 54) (National Instruments) «An example of a greenfield DevOps project is the Hosted LabVIEW product in 2009 at N.I., a thirty-year-old organization (...) a new team was created and allowed to operate outside of the existing IT processes (...) they were able to deliver Hosted LabVIEW to market in half the time of their normal product introductions.»
+
+> (p. 55) «Brownfield projects often come with significant amounts of technical debt, such as having no test automation or running on supported platforms.»
+
+> (p. 55) «...what predicted performance was whether the application was architected (or could be re-architected) for testability and deployability.»
+
+> (p. 56) (Examples of brownfield transformations)
+
+- CSG (2013)
+- Etsy (2009)
+
+#### Consider both systems of record and systems of engagement (p. 56)
+
+- System of record: slower, regulatory, Type 1, "doing it right"
+- System of engagement: faster, experimentation, Type 2, "doing it fast"
+
+> (p. 57) «...high performing organizations are able to simultaneously deliver higher levels of throughput and reliability.»
+
+> (p. 57) «By making these downstream systems safer to change, we help the entire organization more quickly and safely achieve its goals.»
+
+#### Start with the most sympathetic and innovative groups (p. 57)
+
+> (p. 58) «...we will focus our energy on creating successes with less risk-averse groups and build out our base from there...»
+
+#### Expanding DevOps across our organization (p. 58)
+
+> (p. 58) «...we must demonstrate early wins and broadcast our successes.  We do this by breaking up our larger improvement goals into small, incremental steps. This not only creates our improvements faster, it also enables us [to fail fast and retry].»
+
+> (p. 59) «Ideal phases used by change agents to build and expand support:
+>
+> 1. Find innovators and early adopters
+> 2. Build critical mass and silent majority
+> 3. Identify the holdouts
+>
+> »
+
+#### Conclusion (p. 60)
+
+> (p. 60) Peter Drucker: «little fish learn to be big fish in little ponds.»
+
+- start small to de-risk (early + quick wins)
+- build support
+- earn right to expand
+- iterate to keep growing
