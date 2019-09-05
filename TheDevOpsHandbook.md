@@ -536,3 +536,102 @@ Part 2: Introduction (p. 49)
 - build support
 - earn right to expand
 - iterate to keep growing
+
+Chapter 6: Understanding the work in our value stream, making it visible, and expanding it across the organization (p. 61)
+-----------------------------------------------------
+
+> (p. 61) «...\[Nordstrom\] learned that one of the most efficient ways to start improving any value stream is to conduct a workshop with all the major stakeholders and perform a value stream mapping exercise ... to help capture ll the steps required to create value.»
+
+-> (p. 62) Nordstrom's workshop about the Cosmetics Business Office revealed that the COBOL/Mainframe portion was NOT what would improve the UX the most: «Processing time was further reduced to seconds» once they moved to an iPad app with the streamlined fields, performing a global optimization only possible with a 10 000-foot view, through experimentation.
+
+#### Identifying the teams supporting our value stream (p. 63)
+
+Potential members (contributors to value stream)
+
+- product owner
+- development
+- QA
+- operations
+- infosec
+- release managers
+- technology executives or value stream manager
+
+#### Create a value stream map to see the work (p. 63)
+
+> (p. 64) «Our goal is... to sufficiently understand the areas in our value stream that are jeopardizing our goals of fast flow, short lead times and reliable customer outcomes. Ideally, we have assembled those people with the authority to change their portion of the value stream.»
+
+> (p. 64) «...we should focus our investigation and scrutiny on the following areas:
+>
+> - places where work must wait [a long time]
+> - places where significant rework is generated or received
+>
+> »
+
+- (p. 65) start w/«high-level process blocks»
+    - lead time
+    - process time
+    - % C/A (percent complete + accurate, based on consumer)
+- pick metrics to improve & understand problem
+- draw ideal value stream map (3-12 month target)
+- experiment & iterate
+
+#### Creating a dedicated transformation team (p. 66)
+
+Need:
+
+- "disruptive innovation" to improve the status quo
+- [dedicated team] "that is able to operate outside of the rest of the organization that is responsible for daily operations"
+- "clearly defined, measurable, system-level result"
+- sole focus, not partial commitment
+- generalists
+- connected people
+- separate physical space
+
+##### Agree on a shared goal (p. 68)
+
+- 6-24 months
+- an agile-like process is described for iterative progress & value
+
+##### Keep our improvement planning horizon short
+
+- measurable improvements within weeks
+- flexibility
+- short feedback loop, virtuous cycle
+- learn faster
+- easier start
+- faster sharing
+- less risk of being cancelled due to lack of visible progress
+
+##### Reserve 20% of cycles for non-functional requirements and reducing technical debt (p. 69)
+
+- refactoring
+- automation
+- non-functional requirements
+
+(p. 70) Figure 11: Positive-negative value vs. visible-invisible
+
+Marty Cagan and the "20% tax".
+
+##### Case Study: Operation InVersion at LinkedIn (2011) (p. 71)
+
+> (p. 71) «...where they stopped all feature development for two months in order to overhaul their computing environments, deployments, and architecture.»
+
+> (p. 72) «...have a series of automated systems examine the code for any bugs...»
+
+- "safer system of work"
+- "your job ... is to help your company win"
+
+##### Increase the visibility of work (p. 73)
+
+#### Use tools to reinforce desired behaviour (p. 73)
+
+- Dev & Ops
+    - shared goals
+    - common backlog
+    - shared vocabulary
+    - work prioritized globally
+- "...instead of each silo using a different \[work queue\] (e.g. Development uses JIRA while Operations uses Service Now)"
+- "...it will be obvious when ongoing incidents should halt other work..."
+- encourages technical debt in backlog, almost separate
+- chat rooms for sharing & searching
+    - be careful of interruptions
