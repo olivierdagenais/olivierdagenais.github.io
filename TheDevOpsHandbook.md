@@ -635,3 +635,106 @@ Marty Cagan and the "20% tax".
 - encourages technical debt in backlog, almost separate
 - chat rooms for sharing & searching
     - be careful of interruptions
+
+Chapter 7: How to design our organization and architecture with Conway's Law in mind (p. 77)
+------------------------------------------------------------------------------------------
+
+> (p. 77) Conway's Law: «organizations which design systems ... are constrained to produce designs which are copies of the communication structures of these organizations...»
+
+-> flexibility is inversely proportional to organization size
+
+> (p. 78) «Done poorly [organizing our teams work work], Conway's Law will prevent teams from working safely and independently...»
+
+"Sprouter" at Etsy tightly-coupled the front-end, middle and back-end teams such that they were often blocked on one another.
+
+(p. 79) They moved business logic to the application layer "removing the need for Sprouter".
+
+- decreased handoffs & coordinations
+- increased speed & success of deployments & productivity
+
+### Organizational Archetypes (p. 80)
+
+3 structures of orgs: (Roberto Fernandez)
+
+1. Functional: optimize for expertise & cost
+2. Matrix: combine functional & market
+3. Market: optimize for quick response
+
+### Problems often caused by overly functional orientation ("Optimizing for cost") (p. 81)
+
+> (p. 81) «In traditional IT operations, organizations...»
+>
+> - have «long lead times» due to handoffs
+> - often have «little visibility or understanding of how their work relates to any value stream goals...»
+
+> (p. 81) «In addition to long queues and long lead times, this situation results in poor handoffs, large amounts of re-work, quality issues, bottlenecks, and delay.»
+
+> (p. 82) «However, as we increase the number of Development teams and their deployment and release frequencies, must functionally-oriented organizations will have difficulty keeping up and delivering satisfactory outcomes, especially when their work is being performed manually.»
+
+### Enable market-oriented teams ("Optimizing for speed") (p. 82)
+
+> (p. 82) «...to achieve DevOps outcomes, we need to reduce the effects of functional orientation and enable market orientation so we can have many small teams working safely and _independently_, quickly delivering value to the customer.»
+
+> (p. 82) «...we won't do a large, top-down reorganization... Instead, we will embed the functional engineers and skills into each service team, or provide their capabilities [via self-service].»
+
+### Making functional orientation work (p. 83)
+
+> (p. 84) «Many of the most admired DevOps organizations retain functional orientation of Operations including Etsy, Google, and GitHub.»
+
+> (p. 84) Mike Rother: «Toyota's success \[lies\] in developing capability and habits in its people.»
+
+### Testing, operations, and security as everyone's job, every day (p. 84)
+
+> (p. 84) «In high-performing organizations, everyone within the team shares a common goal - quality, availability, and security aren't the responsibility of individual departments but are a part of everyone's job, every day.»
+
+(p. 85) Facebook improved deployments via on-call duty rotation for _everybody_.
+
+### Enable every team member to be a generalist (p. 85)
+
+> (p. 85) «In extreme cases of a functionally-oriented (...) \[over-specialization\] causes siloization (...)) then requires multiple handoffs and queues between the different areas of the infrastructure, leading to longer lead times...»
+
+> (p. 85) «We don't want to create specialists who are "frozen in time", only understanding and able to contribute to that one area of the value stream.»
+
+> (p. 86) «...\[provide\] opportunities for engineers to learn all the skills necessary to build and run the systems they are responsible for, and regularly rotating people through different roles.»
+
+> (p. 86) «...generalists can do orders of magnitude more work than their specialist counterparts, and it also improves our overall flow of work by removing queues and wait time.»
+
+> (p. 87) «the business benefits of \[generalists\] enabling faster flow are overwhelming.»
+
+> (p. 87) «Investing in cross-training is the right thing for \[employees'\] career growth, and makes everyone's work more fun.»
+
+- also in line with growth mindset!
+- invest in people you already have
+
+### Fund not projects, but services and products (p. 87)
+
+> (p. 87) «create stable service teams with ongoing funding to execute their own strategy and road map of initiatives.  (...) see the long-term consequences of decisions they make (a form of feedback)»
+
+> (p. 88) «Our goal with a product-based funding model is to value the achievement of organizational and customer outcomes, such as revenue, customer lifetime value, or customer adoption rate...»
+
+### Design team boundaries in accordance with Conway's Law (p. 88)
+
+> (p. 88) «Ideally, our software architecture should enable small teams to be independently-productive, sufficiently decoupled from each other so that work can be done without excessive or unnecessary communication and coordination.»
+
+### Create loosely-coupled architectures to enable developer productivity and safety (p. 89)
+
+> (p. 89) «Having architecture that is loosely coupled means that services can update in production independently, without having to update other services.»
+
+> (p. 89) «Bounded contexts: \[independent\] services interact with their peers strictly through APIs and thus don't share data structures, database schemata, or other internal representations of objects (...) also enables easier testing.»
+
+### Keep team sizes small (the "two-pizza team" rule) (p. 90)
+
+-> 5-10 people
+
+1. reduce communication
+2. limits growth rate for product/service
+3. enables autonomy, maximizing key business metric
+4. failure is OK (safe environment)
+
+(p. 90) Case study: API enablement at Target (2015)
+
+> (p. 92) «...we wanted people with kickass engineering skills...»
+
+### Conclusion (p. 93)
+
+Align software architecture with organizational structure
