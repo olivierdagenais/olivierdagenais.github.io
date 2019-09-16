@@ -807,3 +807,80 @@ PART III: Introduction (p. 109)
 Continuous delivery: automated tests, merge daily (continuous integration), low-risk releases
 
 -> integrate the objectives of QA & Ops into daily work
+
+Chapter 9: Create the foundations of our deployment pipeline (p. 111)
+------------------------------------------------------------
+
+> (p. 111) «...we must ensure that we always use production-like environments at every stage of the value stream.»
+
+-> created automatically, self-service & on-demand, from version control
+
+Large Australian telecom, 10 streams, using waterfall.  Agile attempts didn't help much.
+
+> (p. 112) During retrospective: «improve availability of environments» (took up to eight weeks)
+
+Environments didn't match what was in source control!
+
+### Enable on-demand creation of dev, test and production environment (p. 113)
+
+> (p. 113) «In this step, we want developers to run production-like environments on their own workstations, created on demand and self-serviced.»
+
+> (p. 114) «All our requirements are embedded, not in documents or as knowledge in someone's head, but codified in our automated environment build process.»
+
+> (p. 114) «Because we've carefully defined all aspects of the environment ahead of time, we are not only able to create new environments quickly, but also ensured that these environments will be stable, reliable, consistent, and secure.  This benefits everyone.»
+
+-> what if some of the customers/users are unable (or unwilling) to adopt the environments as-is? (i.e. can't or won't use containers, conflicting security practices, substantial investments required, etc.)
+
+> (p. 115) «Designing our systems for testability, to include the ability to discover most defects using a non-integrated virtual environment on a development workstation, is a key part of creating an architecture that supports fast flow and feedback.»
+
+### Create our single repository of truth for the entire system (p. 115)
+
+> (p. 115) «...version control is for everyone in our value stream...»
+
+p. 116 enumerates all sorts of possible artifacts
+
+> (p. 117) «We may have multiple repositories for different types of objects and services, where they are labelled and tagged alongside our source code.»
+
+- "artifact repositories"
+- "docker registries"
+
+> (p. 117) «...we must be able to re-create the entire pre-production and build processes as well. (...) In future steps, we will also \[commit\] to version control all the supporting infrastructure we build, such as the automated test suites and our continuous integration and deployment pipeline infrastructure.»
+
+> (p. 117) «In fact, whether Ops used version control was a higher predictor for both IT performance and organizational performance than whether Dev used version control.»
+
+> (p. 118) «...having Development, QA, Infosec, and Operations able to see each other's changes helps reduce surprises, creates visibility in to each other's work, and helps build and reinforce trust.»
+
+### Make infrastructure easier to rebuild than to repair (p. 118)
+
+Bill Baker (Microsoft) regarding servers:
+
+Before: treated like pets; named them, nursed them.
+Now: treated like cattle; number them, shoot/replace them.
+
+- easily scale horizontally
+- trivial disaster recovery
+
+-> The argument is made for configuration management ("automated configuration systems"), driven by version control.
+
+> (p. 119) «..._immutable infrastructure_, where manual changes to the production environment are no longer allowed - the only way production changes can be made is to put the changes into version control and re-create the code and environments from scratch. By doing this, no variance is able to creep into production.»
+
+-> update early and often to catch problems sooner
+
+### Modify our definition of development "Done" to include running in production-like environments (p. 119)
+
+> (p. 119) «In general, the longer the interval between deployment, the worse the outcomes.»
+
+> (p. 120) «...ideally, \[development work\] runs under a production-like load with a production-like dataset long before the end of a sprint.»
+
+> (p. 120) «...the majority of the work to successfully integration our code and environments happens during our daily work, instead of at the end of the release.»
+
+-> deploy early and often to reduce risks
+
+> (p. 120) «Ideally, we use the same tools, such as monitoring, logging, and deployment, in our pre-production environments as we do in production.»
+
+### Conclusion (p. 121)
+
+- production-like environments on-demand
+- run in production-like is part of definition of done
+- "single source of truth"
+- easier to rebuild than to repair
