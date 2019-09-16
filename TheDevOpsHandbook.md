@@ -738,3 +738,65 @@ Chapter 7: How to design our organization and architecture with Conway's Law in 
 ### Conclusion (p. 93)
 
 Align software architecture with organizational structure
+
+Chapter 8: How to get great outcomes by integrating operations into the daily work of development (p. 95)
+---------------------------------------------------------------------------------------------------
+
+> (p. 95) «Our goal is to enable market-oriented outcomes where many small teams can quickly and independently deliver value to the customer.»
+
+> (p. 95) «We can \[do this\] by better integrating Ops capabilities into Dev teams, making both more efficient and productive.»
+
+Big Fish Games used to have centralized Ops and they extended into Dev teams via "Ops liaison".
+
+(p. 96) 3 strategies:
+
+1. Self-service capabilities
+2. Embed Ops in service teams
+3. Assign Ops liaisons otherwise
+
+### Create shared services to increase developer productivity (p. 97)
+
+a.k.a.: platform, toolchain
+
+> (p. 97) «In almost all cases, we will not mandate that internal teams use these platforms and services...» (they have to compete w/external vendors)
+
+> (p. 97) Netflix: «It's okay for people to be dependent on our tools, but it's important that they don't become dependent on us.»
+
+### Embed Ops engineers into our service teams (p. 99)
+
+Disney mixed ops, dev, test and infosec.
+
+> (p. 99) «It has totally changed the dynamics of how we work.»
+
+> (p. 100) «\[Embedded ops engineers\] will take part in all of the Dev team rituals, such as planning meetings, daily standups, and demonstrations where the team shows off new features and decides which ones to ship.»
+
+Also great for cross-training & automation.
+
+### Assign an Ops liaison to each service team (p. 100)
+
+a.k.a. "designated ops", might be shared between teams, acts as a consultant/advocate.  Also attends meetings, etc.
+
+### Integrate Ops into Dev rituals (p. 101)
+
+Match the methodology, such as agile.
+
+#### Invite Ops to our Dev standups (p. 102)
+
+#### Invite Ops to our Dev retrospectives (p. 102)
+
+> (p. 102) «This is one of the primary mechanisms where organizational learning and the development of countermeasures occurs, with resulting work implemented immediately or added to the team's backlog.»
+
+-> feedback
+
+> (p. 104) «We must remind everyone that improvement of daily work is more important than daily work itself, and that all teams must have dedicated capacity for this (...)»
+
+-> pay down technical & process debt
+
+#### Make relevant Ops work visible on shared kanban boards (p. 104)
+
+- transparency to identify critical paths (such as blocked work) and work necessary to deliver value (i.e. deploy code) developed earlier
+- visibility!
+
+### Conclusion (p. 104)
+
+### Part II conclusion (p. 105)
