@@ -800,3 +800,10 @@ Match the methodology, such as agile.
 ### Conclusion (p. 104)
 
 ### Part II conclusion (p. 105)
+
+PART III: Introduction (p. 109)
+======================
+
+Continuous delivery: automated tests, merge daily (continuous integration), low-risk releases
+
+-> integrate the objectives of QA & Ops into daily work
