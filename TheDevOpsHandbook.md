@@ -884,3 +884,135 @@ Now: treated like cattle; number them, shoot/replace them.
 - run in production-like is part of definition of done
 - "single source of truth"
 - easier to rebuild than to repair
+
+Chapter 10: Enable fast and reliable automated testing (p. 123)
+------------------------------------------------------
+
+> (p. 123) «Without automated testing, the more code we write, the more time and money is required to test our code...»
+
+-> unscalable!
+
+-> Google Web Server (GWS) team
+
+-> fear of making changes
+
+> (p. 124) «hard line: no changes would be accepted into GWS without accompanying automated tests»
+
+-> "testing grouplet" to spread automated testing culture
+
+> (p. 125) «What enables this system to work at Google is engineering professionalism and a high-trust culture that assumes everyone wants to do a good job, as well as the ability to detect and correct issues quickly.»
+
+-> monorepo
+
+### Continuously build, test, and integrate our code and environments (p. 126)
+
+> (p. 126) «Our goal is to build quality into our product, even at the earliest stages, by having developers build automated tests as part of their daily work.»
+
+-> find & fix quickly
+
+CI+: like "continuous integration" of branches to trunk, plus running on production-like environments and passing acceptance & integration tests
+
+> (p. 127) «The deployment pipeline» from Jez Humble & David Farley «Continuous Delivery: reliable software releases through build, test, and deployment automation»
+
+-> Jenkins' stages should be used to represent deployments, not portions of the build.
+
+(Figure 13 on page 127)
+
+1. The "commit" stage: must be able to run on workstation.
+    - builds & packages software
+    - runs automated unit tests
+    - static code analysis, duplication & coverage analysis
+    - checking style
+2. The "acceptance" stage: use containers to run on workstation
+    - deploys to production-like environments
+    - runs automated accepted tests
+
+Continuous Integration Practices:
+
+1. Comprehensive & reliable tests: deployable?
+2. Fail the build on test failure
+3. Work in small batches
+
+### Build a fast and reliable automated validation test suite (p. 129)
+
+> (p. 130) «...slow and periodic feedback kills.»
+
+-> downward spiral
+
+Categories (fastest to slowest)
+
+- unit (isolation, stateless)
+- acceptance (test application as a whole)
+- integration (interactions with other applications/services)
+
+-> (p. 132) use code coverage to expose code added w/o tests
+
+> (p. 132) Fowler: «a ten-minute build [and test process] is perfectly within reason...»
+
+#### Catch errors as early in our automated testing as possible (p. 132)
+
+> (p. 132) «Whenever we find an error with an acceptance or integration test, we should create a unit test that could find the error faster, earlier, and cheaper.»
+
+> (p. 133) «If we find that unit or acceptance tests are too difficult and expensive to write and maintain, it's likely that we have an architecture that is too tightly coupled, where strong separation between our module boundaries no longer exist...»
+
+> (p. 133) «Acceptance test suites for even the most complex applications that run in minutes are possible.»
+
+#### Ensure tests run quickly (in parallel, if necessary) (p. 133)
+
+> (p. 133) «...potentially across many different servers.»
+
+#### Write our automated tests before we write the code (p. 134)
+
+-> Test-Driven Development
+
+-> red-green-refactor
+
+(p. 135) -> tests are in VCS, alongside code under test
+
+#### Automate as many of our manual tests as possible (p. 135)
+
+-> don't waste humans' time
+
+-> be careful about automating: unreliable tests are worse
+
+(p. 136) -> start small and grow
+
+#### Integrate performance testing into our test suite (p. 136)
+
+-> detect earlier - cheaper
+
+(p. 137) -> run acceptance tests in parallel to verify performance
+
+-> build performance testing environment early
+
+-> establish (rolling) baseline and fail if > 2% deviation
+
+#### Integrate non-functional requirements testing into our test suite (p. 137)
+
+-> availability, scalability, capacity, security, etc.
+
+-> often driven by configuration
+
+(p.138) -> infrastructure as code (Puppet, etc.) w/ S.C.A.
+
+### Pull our Andon Cord when the deployment pipeline breaks (p. 138)
+
+> (p. 138) «Whenever someone introduces a change that causes our build or automated tests to fail, no new work is allowed to enter the system until the problem is fixed.»
+
+> (p. 139) «If the problem was due to an automated test generating a false positive error, the offending test should either be rewritten or removed.»
+
+> (p. 139) «Every member of the team should be empowered to roll back the commit to get back into a green state.»
+
+> (p. 139) «...if we discover a defect in our acceptance tests, we should write a unit test to catch the problem.»
+
+-> increase the visibility of automated test failures
+
+#### Why we need to pull the Andon Cord (p. 140)
+
+If you don't fix it right away, it becomes harder to fix [the longer you wait] -> water-scrum-fall anti-pattern/downward spiral.
+
+### Conclusion (p. 140)
+
+Green => all tests passing and deployable
+
+Not Green => everybody panic & fix it
