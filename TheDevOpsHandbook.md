@@ -1063,3 +1063,155 @@ Jeff Atwood's observations on branching strategies optimize along the spectrum o
 ### Conclusion (p. 151)
 
 > (p. 151) «Trunk-based development is likely the most controversial practice discussed in this book. (...) \[it\] predicts higher throughput and better stability, and even higher job satisfaction and lower rates of burnout.»
+
+Chapter 12: Automate and enable low-risk releases (p. 153)
+-------------------------------------------------
+
+Facebook's daily release: canary strategy
+
+(p. 154) Kent Beck is a technical coach at Facebook?!
+
+-> manual, time-consuming deployments reinforce the downward spiral of infrequent releases, which become more time-consuming, etc.
+
+### Automate our deployment process (p. 155)
+
+> (p. 156) «Where possible, we will re-architect to remove steps, particularly those that take a long time to complete.»
+
+Requirements:
+
+1. Deploying the same way to every environment
+2. Smoke testing our deployments (quick end-to-end check)
+3. Ensure we maintain consistent environments
+
+(p. 157) Because deployment is part of the pipeline, any failure is a panic & swarm to fix ASAP.
+
+### Case Study: CSG International (2013) (p. 157)
+
+-> divergences between dev & prod (Dev & Ops teams)
+
+-> solved with Shared Operations Team, performing daily deployments & managing all the environments
+
+(p. 158) -> daily deployments => daily feedback
+
+-> environments converged => improved architecture
+
+-> DB troubles due to handoffs & unrealistic tests
+
+Fixed with:
+
+1. Cross-training (no more handoffs)
+2. Realistic tests, using sanitized customer data
+3. Automated & frequent schema migrations
+
+> (p. 158) «Their results were astonishing.»
+
+#### Enable automated self-service deployments (p. 159)
+
+- who deploys (Dev or Ops) to production doesn't affect the change success rate
+- make it possible for anybody to do it!
+- control can be achieved with reviews & tests
+
+> (p. 160) «To better enable fast flow, we want a code promotion process (...) without any manual steps or handoffs.»
+
+Steps:
+
+1. Build (compile & package from SCM)
+2. Test (anyone can run tests)
+3. Deploy (anyone can deploy anywhere)
+
+#### Integrate code deployment into the deployment pipeline (p. 160)
+
+Required capabilities:
+
+- verify CI outputs suitable for production
+- readiness of production environments
+- self-service deployment to production
+- audit who, what, when & where automatically
+- smoke tests
+- provide fast feedback
+
+> (p. 161) «Puppet Labs' 2014 State of DevOps report (...) high performers had deployment lead times measured in minutes or hours, while lowest performers ... measured in months.»
+
+### Case Study: Etsy (2014) (p. 162)
+
+- max 11 minutes for deployment tests
+- tests are run in parallel on 10 machines
+- deploy process at Etsy outlined
+
+### Decouple deployments from releases (p. 164)
+
+-> nightmare scenario of failed deployment with either rollback or "fix forward" in production
+
+-> solved by separating the two, such that releasing can be done w/o deploying or changing code
+
+(p. 165) 2 categories of release patterns
+
+- environment-based
+- application-based
+
+#### Environment-based release patterns (p. 166)
+
+-> decoupling means deployments during business hours
+
+##### The Blue-Green Deployment Pattern (p. 166)
+
+-> driven by request router, can be configured at machine level (different ports), at cluster level (different machines) or at datacenter level
+
+###### Dealing with database changes (p. 167)
+
+1. Create two databases (blue & green); rollback is tricky
+2. Decouple DB changes from App changes; only additive changes ("expand/contract pattern"); OSS DBDeploy
+
+### Case Study: Dixons Retail - Blue-Green for Point-Of-Sale (p. 168)
+
+- server had old + new versions deployed side-by-side
+- client software was rolled out ahead of time
+- store managers could upgrade clients at their leisure
+
+##### The canary and cluster immune system release patterns (p. 164)
+
+> (p. 169) «The _Canary release pattern_ automates the release process of promoting to successively larger and more critical environments as we confirm that the code is operating as designed.»
+
+> (p. 170) «When something appears to be going wrong \[i.e. the canary dies\], we roll back; otherwise we deploy to the next environment.»
+
+Figure 21 shows how Facebook deploys, which is a lot like Azure DevOps' "rings".
+
+> (p. 171) «The cluster immune system... \[automates\] the roll back of code when the user-facing performance of the production system deviates outside of a predefined expected range...»
+
+#### Application-based patterns to enable safer releases (p. 171)
+
+Contrasted against environment-based patterns, usually implemented @ infrastructure level.
+
+##### Implement feature toggles (p. 172)
+
+Enable/disable features without deployment, sometimes per customer/group.
+
+(p. 173) Enable:
+
+- easy roll-back
+- graceful performance degradation - turn off resource-intensive features (lower quality) during peak hours (increased quantity)
+- also turn off features that rely on a broken remote service (i.e. "circuit breakers")
+
+> (p. 173) «...our automated acceptance tests should run with all feature toggles on.»
+
+##### Perform dark launches (p. 173)
+
+Great for evaluating new features under load via feature-toggle-like mechanism such that new feature is turned on but invisible, just like Github's Scientist Ruby library.
+
+You can use the canary pattern for a slow roll-out, seeing what the performance is like in production.  If it's terrible, stop the roll-out.
+
+#### Case Study: Dark Launch of Facebook Chat (p. 174)
+
+- took a year
+- users unknowingly participated in load testing
+- progressively deployed/enabled to 70 000 000 users
+
+### Survey of continuous delivery and continuous deployment in practice (p. 175)
+
+> (p. 176) «...deployments should be low-risk, push-button events we can perform on demand.»
+
+> (p. 176) «...continuous delivery (deploy on-demand) is the prerequisite for continuous deployment (deploy on commit/push).»
+
+### Conclusion (p. 177)
+
+> (p. 177) «...releases and deployments do not have to be high-risk, high-drama affairs...»
