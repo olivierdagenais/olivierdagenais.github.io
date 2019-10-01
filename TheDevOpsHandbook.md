@@ -1016,3 +1016,50 @@ If you don't fix it right away, it becomes harder to fix [the longer you wait] -
 Green => all tests passing and deployable
 
 Not Green => everybody panic & fix it
+
+Chapter 11: Enable and practice continuous integration (p. 143)
+------------------------------------------------------
+
+long-lived feature branches -> downward spiral
+
+> (p. 143) «...when merging code is painful, we tend to do it less often, making future merges even worse.»
+
+(p. 144) Gary Gruver @ HP's LaserJet Firmware division
+
+> (p. 144) «Gruver estimated that only 5% of their time was spent creating new features...»
+
+(p. 145)
+
+- move to common code, XML config file replacing #ifdefs
+- took 4 years to migrate(!) to trunk-based development
+- invested in printer simulators
+
+(p. 146) -> unit tests in 3 minutes
+
+> (p. 146) «The resulting business benefits were astonishing...»
+
+### Small batch development and what happens when we commit code to trunk infrequently (p. 147)
+
+Jeff Atwood's observations on branching strategies optimize along the spectrum of individual vs. team productivity
+
+> (p. 148) «...when merging is difficult, we become less able and motivated to improve and refactor our code, because refactorings are more likely to cause rework for everyone else.»
+
+### Adopt trunk-based development practices (p. 148)
+
+> (p. 148) «...where all developers check in their code to trunk at least once per day.»
+
+-> where is the code review?
+
+> (p. 148) «The discipline of daily code commits also forces us to break our work down into smaller chunks while still keeping trunk in a working, releasable state.»
+
+> (p. 149) «By keeping our code in a deployable state, we are able to eliminate the common practice of having a separate test and stabilization phase at the end of the project.»
+
+### Case study: CI @ Bazaarvoice (2012) (p. 149)
+
+> (p. 150) «In the six weeks that followed, developers stopped doing feature work to focus instead on writing automated testing suites.»
+
+> (p. 150) «The improvements...were startling.»
+
+### Conclusion (p. 151)
+
+> (p. 151) «Trunk-based development is likely the most controversial practice discussed in this book. (...) \[it\] predicts higher throughput and better stability, and even higher job satisfaction and lower rates of burnout.»
