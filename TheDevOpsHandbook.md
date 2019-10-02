@@ -1215,3 +1215,52 @@ You can use the canary pattern for a slow roll-out, seeing what the performance 
 ### Conclusion (p. 177)
 
 > (p. 177) «...releases and deployments do not have to be high-risk, high-drama affairs...»
+
+Chapter 13: Architect for low-risk releases (p. 179)
+-------------------------------------------
+
+(p. 180) -> the _strangler application_ pattern: put existing functionality behind an API and write new functionality with new architecture, calling API; help migrate to new architecture
+
+-> overly tight architectures are paralyzing!
+
+> (p. 180) «These all contribute to an extremely unsafe system of work, where small changes have seemingly unknowable and catastrophic consequences.  It also often contributes to a fear of integrating and deploying our code, and the self-reinforcing downward spiral of deploying less frequently.»
+
+### An architecture that enables productivity, testability, and safety (p. 181)
+
+> (p. 181) «A loosely-coupled architecture with well-defined interfaces that enforce how modules connect with each other promotes productivity and safety.»
+
+> (p. 182) «This kind of service-oriented architecture allows small teams to work on smaller and simpler units of development that each team can deploy independently, quickly, and safely.»
+
+### Architectural archetypes: monoliths vs. microservices (p. 182)
+
+(p. 183) Table 3: Architectural archetypes
+
+#### Case Study: Evolutionary architecture at Amazon (2002) (p. 184)
+
+Werner Vogel's lessons @ Amazon:
+
+1. Strict service orientation -> isolation, ownership & control
+2. Prohibit direct DB access for flexibility in scaling & reliability
+3. Dev & Ops benefit from S.O.A.
+
+### Use the strangler application pattern to safely evolve our enterprise architecture (p. 185)
+
+-> build _versioned services_ or _immutable services_
+
+> (p. 186) «If the services we call do not have cleanly defined APIs, we should build them or at least hide the complexity of communicating with such systems within a client library that has a cleanly defined API.»
+
+#### Case Study: strangler pattern at Blackboard Learn (p. 186)
+
+(p. 188) "Building Blocks" allowed extraction of small, (independent?) modules (out of the monolithic codebase)
+
+> (p. 188) «...where they could work with more autonomy and freedom and safety.»
+
+[DOES14: Keep your head in the clouds by David Ashman](https://www.youtube.com/watch?v=SSmixnMpsI4)
+
+> (p. 188) «The new Building Blocks codebase allowed developers to be more productive, and they made the work safer because mistakes resulted in small, local failures instead of major catastrophes that impacted the global system.»
+
+### Conclusion (p. 189)
+
+-> we don't have to be stuck w/legacy architectures if the organizational goals have changed and we can migrate incrementally
+
+### Part III Conclusion (p. 189)
