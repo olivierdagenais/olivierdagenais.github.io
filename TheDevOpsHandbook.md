@@ -1264,3 +1264,155 @@ Werner Vogel's lessons @ Amazon:
 -> we don't have to be stuck w/legacy architectures if the organizational goals have changed and we can migrate incrementally
 
 ### Part III Conclusion (p. 189)
+
+PART IV: The second way: the technical practices of feedback (p. 191)
+============================================================
+
+Part 4: Introduction (p. 193)
+--------------------
+
+Chapter 14: Create telemetry to enable seeing and solving problems (p. 195)
+------------------------------------------------------------------
+
+> (p. 195) «High performers used a disciplined approach to solving problems, using production telemetry to understand possible contributing factors to focus their problem-solving, as opposed to lower performers who would blindly reboot servers.»
+
+(p. 196) -> Etsy tracking 800 000 metrics
+
+> (p. 197) «...high performers could resolve production incidents 168 times faster than their peers...»
+
+### Create our centralized telemetry infrastructure (p. 198)
+
+-> log enough for Dev & Ops to understand everything
+
+-> "The Art of Monitoring" => modern monitoring architecture.
+
+Examples:
+
+1. Nagios
+2. Zenoss
+3. Sensu
+4. Zappix
+5. Splunk
+6. LogsStash
+7. Sumo Logic
+8. Datadog
+9. Riemann
+
+(p. 199)
+
+- collect @ business logic, application & environment
+- route events for viz, trending, alerting, anomaly, etc.
+
+-> also collect telemetry from build & deployment pipeline
+
+> (p. 200) «Monitoring is so important that our monitoring systems need to be more available and scalable than the systems being monitored.»
+
+### Create application logging telemetry that helps production (p. 201)
+
+> (p. 201) «...every feature should be instrumented (...) it is certainly important enough to generate enough production telemetry so that we can confirm that it is operating as designed and that the desired outcomes are being achieved.»
+
+(p. 202) Logging levels:
+
+1. DEBUG
+2. INFO
+3. WARN
+4. ERROR
+5. FATAL
+
+Potentially significant application events to log:
+
+- authentication & authorization
+- system & data access
+- system & application changes
+- data changes
+- invalid input (to detect attack attempts)
+- resources, esp. those with limits
+- health & availability
+- startups & shutdowns
+- faults & errors
+- circuit breaker trips
+- delays
+- backup success/failure
+
+-> use categories to help classify
+
+### Use telemetry to guide problem-solving (p. 203)
+
+-> disciplined approach vs. mean time until declared innocent
+
+-> silos/groups create targets for blame and encourage deflection and info-hoarding
+
+(p.204) Contrast to telemetry (public):
+
+1. Evidence of problem?
+2. Relevant events & changes contributing?
+3. Hypotheses linking causes & effects?
+4. Prove hypotheses & apply fix?
+
+### Enable creation of production metrics as part of daily work (p. 204)
+
+-> make it a one-liner
+
+-> StatsD (Etsy OSS) can generate timers and counters (light-weight logging, instead of recording messages, then counting them)
+
+> (p. 205) «When we generate graphs of our telemetry, we will also overlay onto them when production changes occur, because we know that the significant majority of production issues are caused by production changes, which include code deployments.»
+
+-> Also JMX + Codahale metrics, New Relic, AppDynamics, Dynatrace, Munin, Collectd, Splunk, Zabbix, SumoLogic, DataDog, Nagios, Cacti, Sensu, RRDTool, Netflix Atlas, Riemann
+
+### Create self-service access to telemetry (p. 206)
+
+> (p. 206) «By making telemetry fast, easy to get, and sufficiently centralized, everyone in the value stream can share a common view of reality.»
+
+> (p. 206) «By putting information radiators in highly-visible places, we promote responsibility among team members (...) [nothing to hide from outsiders and from members]»
+
+(p. 207) -> Transparency => trust.  Create dashboard w/product or service.
+
+#### Case Study: Creating self-service metrics at LinkedIn (2011) (p. 207)
+
+-> "InGraphs" turned Zenoss into a self-service platform
+
+### Find and fill any telemetry gaps (p. 209)
+
+Application stack _levels_ for which we need telemetry:
+
+1. Business (# sales transactions, revenue, signups, churn rate)
+2. Application (transaction times, response times, app faults)
+3. Infrastructure (web traffic, CPU load, disk usage)
+4. Client (browser/mobile app errors, crashes, timings)
+5. Deployment pipeline (status, lead times, deployment frequencies, _promotions_, environment status)
+
+(p. 210) -> Excellent telemetry, especially around errors can reveal security incidents
+
+-> after incident, add logging/telemetry to detect it faster next time it happens
+
+-> use code review to identify telemetry gaps
+
+#### Application and business metrics (p. 210)
+
+-> telemetry: not just health, but also organization goals (i.e. business success)
+
+> (p. 211) «Our goal is to have every business metric be _actionable_ - these top metrics should help inform how to change our product and be amenable to experimentation and A/B testing.»
+
+-> Drive feature changes based on organization goals and show how metrics collected correspond to changes in those related to organizational goals
+
+-> Chart business events to better schedule or plan operations (i.e. maintenance vs. builds)
+
+#### Infrastructure metrics (p. 212)
+
+> (p. 212) «...if a problem occurs in any environment, we can quickly determine whether infrastructure is a contributing cause of the problem [and, if so,] exactly what...»
+
+-> "Consul" features described in footnote
+
+> (p. 212) «(...) graphing our business metrics alongside our application and infrastructure metrics \[allows\] us to detect when things go wrong.»
+
+#### Overlaying other relevant information onto our metrics (p. 213)
+
+> (p. 213) «To make changes visible, we make work visible by overlaying all production deployment activities on our graphs.»
+
+-> see cache misses spike after restart (and for how long)
+
+-> suppress (or adjust) alerts during maintenance windows
+
+### Conclusion (p. 214)
+
+Better telemetry means we can find and fix problems faster, which results in happier customers AND employees!
