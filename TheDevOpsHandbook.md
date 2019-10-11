@@ -1416,3 +1416,95 @@ Application stack _levels_ for which we need telemetry:
 ### Conclusion (p. 214)
 
 Better telemetry means we can find and fix problems faster, which results in happier customers AND employees!
+
+Chapter 15: Analyze telemetry to better anticipate problems and achieve goals (p. 215)
+----------------------------------------------------------------------------------
+
+> (p. 215) «\[Netflix\] analyzing telemetry to proactively find and fix problems...»
+
+> (p. 215) «1000-node stateless compute cluster»
+
+(p. 216) «Outlier detection» used to remove production nodes that didn't fit the "normal" pattern.
+
+### Use mean and standard deviations to detect potential problems (p. 216)
+
+> (p.216) John Vincent: «Alert fatigue is the single biggest problem we have right now.»
+
+(p. 217) Example of # unauthorized login attempts/day could follow Gaussian distribution (bell curve)
+
+-> alert when # > 3 x STDDEV
+
+### Instrument and alert on undesired outcomes (p. 218)
+
+Tom Limoncelli: only alert on indicators that can/would have predicted outage
+
+-> exercise: review most severe incidents in last 30 days and identify telemetry that could have caught the issues and also confirmed issues had been fixed
+
+-> example: unresponsive web server
+
+-> leading indicators/early warnings:
+
+- application level: increasing page load times
+- OS level: memory running low, disk space
+- DB level: transaction times going up
+- network level: load-balanced nodes disappearing
+
+-> notify when they deviate sufficiently from the mean
+
+-> repeat exercise on weaker signals
+
+=> prevent problems by detecting & correcting quickly
+
+### Problems that arise when our telemetry data has non-gaussian distribution (p. 219)
+
+=> over-alerting!
+
+Dr. Toufic Boubez: "Simple math for anomaly detection"
+
+(p. 220) -> plotting data in histogram, we see non-gaussian
+
+=> might be chi-squared distribution
+
+(p. 221) => under-alerting is just as bad
+
+#### Case study: auto-scaling capacity at Netflix (2012) (p. 221)
+
+"Scryer" compensates/augments Amazon Auto Scaling (AAS) based on historical patterns
+
+-> need to be predictive due to 10-45 min lag in new capacity
+
+> (p. 222) «...consumer viewing patterns were surprisingly consistent and predictable.»
+
+> (p. 222) «Scryer uses a combination of outlier detections to throw out spurious data points and then uses techniques such as Fast Fourier Transfer (FFT) and linear regression to smooth the data while preserving legitimate traffic spikes that recur in their data.»
+
+### Using anomaly detection techniques (p. 222)
+
+-> mix ops and stats
+
+(p. 223) -> use Tableau and R
+
+> (p. 223) «...find variance even earlier, before it causes an even larger variance that could affect our customers.»
+
+Smoothing: averaging each point within time-series data using sliding window (moving or rolling average)
+
+-> could also use weighted moving averages or exponential smoothing
+
+(p. 224) Filtering techniques
+
+- FFT
+- Kolmogorov-Smirnov test (Graphite & Grafana)
+
+> (p. 224) «We can expect that a large percentage of telemetry concerning user data will have periodic/seasonal similarities...»
+
+Tools: Excel, SPSS, SAS, R, Oculus (by Etsy), Opsweekly and Skyline
+
+#### Case study: advanced anomaly detection (2014) (p. 224)
+
+(p. 225) Figure 35: transactions per minute with drop-off event on 4th Monday
+
+(p. 226) Figure 36: K-S filter applied detecting drop-off event on 4th Monday
+
+### Conclusion (p. 226)
+
+- statistical techniques to analyze production telemetry
+- catch & fix problems before they cause outages
