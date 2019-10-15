@@ -1508,3 +1508,90 @@ Tools: Excel, SPSS, SAS, R, Oculus (by Etsy), Opsweekly and Skyline
 
 - statistical techniques to analyze production telemetry
 - catch & fix problems before they cause outages
+
+Chapter 16: Enable feedback so development and operations can safely deploy code (p. 227)
+--------------------------------------------------------------------------------
+
+> (p. 227) Nick Galbreath: «We found that having a separate group for testing, and even deployment, was simply too slow. (...)  Believe it or not, our biggest challenge was getting developers to overcome their fear of deploying their own code!»
+
+> (p. 227) «...providing faster and more frequent feedback to engineers performing deployments (whether dev or ops), as well as reducing the batch size of their work, created safety and then confidence.»
+
+> (p. 228) «...the first production deployment doesn't go smoothly - and because we don't have enough production telemetry, we only find out about the problems when customers tell us.»
+
+> (p. 228) «To fix the problem, our team urgently fixes the code and pushes it into production, but this time with more production telemetry added to our applications and environment.  This way, we can actually confirm that our fix restored service correctly, and we'll be able to detect this type of problem before a customer tells us next time.»
+
+> (p. 228) «And because everyone now knows that the smaller our production changes, the fewer problems we will have, developers start checking ever-smaller increments of code more frequently into the deployment pipeline, ensuring that their change is working successfully in production before moving to their next change.»
+
+> (p. 229) «The Right Media story shows that it is not enough to merely automate the deployment process - we must also integrate the monitoring of production telemetry into our deployment work, as well as establish the _cultural norms_ that everyone is equally responsible for the health of the entire value stream.»
+
+### Use telemetry to make deployments safer (p. 229)
+
+> (p. 229) «...we should never consider our code deployment or production change to be done until it is operating as designed in the production environment.»
+
+> (p. 229) «optimize for Mean Time To Recovery, instead of Mean Time Before Failure»
+
+Restore service:
+
+1. Feature toggle/flags
+2. Fix forward
+3. Roll back
+
+> (p. 230) «...each deployment and change event is overlaid onto our metric graphs...»
+
+### Dev shares pager rotation duties with ops (p. 231)
+
+> (p. 231) «Left unfixed, these [incidents and outages] can cause recurring problems and suffering for ops engineers downstream, especially when these problems are not made visible to the upstream engineers responsible for creating the problem.»
+
+-> Facebook did this in 2009
+
+> (p. 231) (New Relic in 2011) «We found that when we woke up developers at 2 a.m., defects were fixed faster than ever.»
+
+> (p. 231) «Instead, the feature is only done when it is performing as designed in production, without causing excessive escalations or unplanned work for either Development or Operations.»
+
+(p. 232) -> rotation gives feedback, which yields buy-in
+
+### Have developers follow work downstream (p. 232)
+
+-> product team should watch (customers) users/usability studies
+
+-> look for gaps + workarounds, such as copy/paste, paper notes, etc.
+
+-> do the same thing w/internal users
+
+-> discover manual steps we are inflicting
+
+> (p. 233) «UX observation enables the creation of quality at the source and results in far greater empathy for fellow team members in the value stream.»
+
+-> yields non-functional requirements
+
+### Have developers initially self-manage their production service (p. 233)
+
+-> initial deployments to production are often disastrous
+
+=> countermeasure, via Google: developers deploy and manage production for a while before a handoff to ops
+
+-> (p. 235) come up with a launch guidance (ops helping):
+
+1. Defect counts + severity
+2. Type/frequency of pager alerts
+3. Monitoring coverage
+4. System architecture
+5. Deployment process
+6. Production hygiene
+
+=> optimize for easy (fast & frequent) deployment
+
+> (p. 237) «Service handback mechanism» -> ops can return production support responsibility to dev if it gets too fragile
+
+### Case study: the launch and hand-off readiness review at Google (2010) (p. 237)
+
+-> (p. 238) self-managed for 6 months before SRE can be assigned
+
+- LRR: Launch Readiness Review
+- HRR: Hand-off Readiness Review
+
+> (p. 238) «The LRR and HRR checklists are a way to create that organizational memory.»
+
+-> (p. 239) involve SREs as consultants as early as possible for the best outcomes
+
+### Conclusion (p. 240)
