@@ -1595,3 +1595,55 @@ Restore service:
 -> (p. 239) involve SREs as consultants as early as possible for the best outcomes
 
 ### Conclusion (p. 240)
+
+Chapter 17: Integrate hypothesis-driven development and A/B testing into our daily work (p. 241)
+----------------------------------------------------------------------------------------
+
+> (p. 241) «Before we build a feature, we should rigorously ask ourselves, "should we build it, and why?"»
+
+-> Intuit testimonial on running experiments and increasing experiment velocity, even during peak traffic periods.
+
+> (p. 242) «...how quickly we can integrate our feedback depends on our ability to deploy and release software.»
+
+### A brief history of A/B testing (p. 243)
+
+-> direct response marketing: print, mail, wait, repeat.  Despite cost, it was worth it.
+
+> (p. 243) «User research is so inexpensive and easy relative to the effort and cost of building a useless feature in code that, in almost every case, we shouldn't prioritize a feature without some form of validation.»
+
+### Integrating A/B testing into our feature testing (p. 244)
+
+- A - control
+- B - treatment
+
+Select between A & B at random and see which performs better.
+
+Ronny Kohavi (Microsoft) is quoted as saying experiments showed only ~1/3 were successful. The cost/waste isn't just on initial development but also on future/ongoing maintenance because of increased code complexity.
+
+### Integrate A/B testing into our release (p. 245)
+
+-> need quick & easy deployments and feature flags to support experiments
+
+-> use feature toggles to drive experiments
+
+### Integrate A/B testing into our feature planning (p. 245)
+
+> (p. 245) «...product owners \[should\] think of each feature as a hypothesis...»
+
+(p. 246) Barry O'Reilly: frame hypothesis in feature development as:
+
+1. We believe that **X**
+2. Will result in **Y**
+3. We will have confidence to proceed when **Z**
+
+#### Case study: Yahoo! Answers (2010) (p. 246)
+
+- went from one release every six weeks to multiple releases every week.
+
+> (p. 247) Jim Stoneham: «...if experiments are not performed frequently (daily or weekly), the focus of daily work is merely on the feature they're working on as opposed to customer outcomes.»
+
+> (p. 248) «We transformed from a team of employees to a team of owners.»
+
+### Conclusion (p. 248)
+
+> (p. 248) «Success requires us to not only deploy and release software quickly, but also to out-experiment our competition.»
