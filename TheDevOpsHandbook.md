@@ -1647,3 +1647,130 @@ Ronny Kohavi (Microsoft) is quoted as saying experiments showed only ~1/3 were s
 ### Conclusion (p. 248)
 
 > (p. 248) «Success requires us to not only deploy and release software quickly, but also to out-experiment our competition.»
+
+Chapter 18: Create review and coordination processes to increase quality of our current work (p. 249)
+------------------------------------------------------------------------------------------------
+
+> (p. 249) «Our goal in this chapter is to enable Development and Operations to reduce the risk of production changes before they are made.»
+
+-> the best person to review a change is someone close to it
+
+-> GitHub pioneering pull requests
+
+> (p. 250) «At GitHub, pull requests are also the mechanism used to deploy code into production \[via\] "GitHub Flow".»
+
+GitHub Flow
+
+1. Branch off of master
+2. Commit & push often
+3. Open a pull request when ready for feedback
+4. Once approved, merge to master
+5. Once merged to master, deploy to production
+
+-> In 2012, they performed 12602 deployments
+
+### The dangers of change approval processes (p. 251)
+
+-> Knight Capital failure: $440M trading loss
+
+> (p. 252) «The surprising reality is that an environment with low-trust, command-and-control cultures, the outcomes of these types of change control and testing countermeasures often result in an increased likelihood that problems will occur again, potentially with even worse outcomes.»
+
+### Potential dangers of "overly controlling changes" (p. 252)
+
+> (p. 252) «Traditional change controls can lead to unintended outcomes... long lead times, \[reduced\] ... feedback.»
+
+(p. 253) -> Adding controls/checks increases batch size & lead times, reducing velocity and worsening quality
+
+> (p. 253) «The more organizations rely on change approvals, the worse their IT performance in terms of both stability ... and throughput...»
+
+### Enable coordination and scheduling of changes (p. 254)
+
+> (p. 254) «To mitigate \[risks of interference between changes\], we may use chat rooms to announce changes and proactively find collisions that may exist.»
+
+(p. 255) -> when there's more coupling, there's more scheduling and sequencing to minimize accidents
+
+> (p. 255) global infrastructure changes need countermeasures «such as redundancy, failover, comprehensive testing, and (ideally) simulation.»
+
+### Enable peer review of changes (p. 255)
+
+-> Not just for dev. but for everything (servers, networking, databases)
+
+> (p. 255) «The principle of small batch sizes also applies to code reviews.»
+
+> (p. 255) «This is why it's so essential for developers to work in small, incremental steps rather than on long-lived feature branches.»
+
+(p. 256) Guidelines for code reviews
+
+- no exceptions
+- follow all changes
+- define high risk changes requiring additional review
+- too-large changes must be split up
+
+-> ensure no rubber-stamping via audit and sampling
+
+Forms of code review
+
+- pair programming
+- in-person walkthrough
+- on-commit e-mails
+- tool-assisted code review
+
+#### Case study: code reviews at Google 2010 (p. 257)
+
+- readability/style
+- ownership for consistency
+- transparency
+
+(p. 258) Figure 42: size of change vs. lead time
+
+### Potential dangers of doing more manual testing and change freezes  (p. 258)
+
+> (p. 258) «When testing failures occur, our typical reaction is to do more testing. However, if we are merely performing more testing at the end of the project, we may worsen our outcomes.»
+
+(p. 259) manual testing takes longer -> deploy less frequently -> increases batch size -> increases risk
+
+### Enable pair programming to improve all our changes (p. 259)
+
+Patterns:
+
+- driver & navigator (depth vs. breadth)
+- TDD
+
+> (p. 260) Jeff Atwood: «Pairing may be invasive, but it can also force a level of communication that you'd otherwise never achieve.»
+
+> (p. 260) Dr. Laurie Williams (2001): «...paired programmers are 15% slower (...), while 'error-free' code increased from 70% to 85%.»
+
+- fix defects earlier
+- knowledge transfer from experienced people
+
+#### Case study: pair programming replacing broken code review processes at Pivotal Labs (2011) (p. 260)
+
+> (p. 260) Elisabeth Hendrickson: «(...) \[make\] every team responsible for their own quality, as opposed to making separate departments responsible. (...) doing so not only increases quality, but significantly increases the flow of work into production.»
+
+(p. 261) -> many code reviews were not performed fast enough b/c senior people were busy and downplayed/deprioritized changes from junior people
+
+-> switched to only pair programming
+
+-> code reviews work when reviewing code is valued as much as writing code
+
+### Evaluating the effectiveness of pull request processes (p. 261)
+
+-> trace production outages to relevant changes via peer review process
+
+> (p. 262) Ryan Tomayko: «...a bad pull request is one that doesn't have enough context for the reader, having little or no documentation of what the change is intended to do.»
+
+> (p. 262) «a great pull request (...) \[has\] sufficient detail on why the change is being made, how the change was made, as well as any identified risks and resulting countermeasures.»
+
+### Fearlessly cut bureaucratic processes (p. 263)
+
+-> approval processes can increase lead times
+
+=> track # of meetings and work items to perform release
+
+(p. 264) Heather Mickman at Target encountered TEAP-LARB that ended up being useless, so she had it removed
+
+### Conclusion (p. 264)
+
+(p. 265) -> Give responsibility to engineers. Need high-trust culture, but this helps create it.
+
+### Part IV Conclusion (p. 265)
