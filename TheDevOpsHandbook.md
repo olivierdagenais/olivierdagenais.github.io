@@ -1774,3 +1774,166 @@ Patterns:
 (p. 265) -> Give responsibility to engineers. Need high-trust culture, but this helps create it.
 
 ### Part IV Conclusion (p. 265)
+
+PART V: The Third Way (p. 267)
+=====================
+
+The technical practices of continual learning and experimentation.
+
+Part V: Introduction (p. 269)
+--------------------
+
+Rituals
+
+- establish a just culture to make safety possible
+- inject production failures to create resilience
+- convert local discoveries into global improvements
+- reserve time to create organizational improvements and learning
+
+Chapter 19: Enable and inject learning into daily work (p. 271)
+------------------------------------------------------
+
+-> Netflix unaffected by April 2011 AWS US-EAST outage due to:
+
+- loose coupling
+- aggressive timeouts
+- no single point of failure
+- graceful degradation
+
+> (p. 272) «Chaos Monkey (...) constantly and randomly killing production servers.»
+
+-> inject failures & fix them "during normal working hours"
+
+### Establish a just learning culture (p. 273)
+
+-> "unjust" (command, control, procedures, enforce compliance) makes it worse
+
+> (p. 273) Dr. Sidney Dekker: «human error is not our cause of troubles; human error is a consequence of the design of the tools that we gave them.»
+
+> (p. 274) John Allspaw: «Our goal at Etsy is to view mistakes, errors, slips, lapses, and so forth with a perspective of learning.»
+
+-> "reward learning", instead of "punishing failure"
+
+### Schedule blameless post-mortem meetings after accidents occur (p. 274)
+
+Agenda:
+
+1. Construct a timeline and gather details
+2. Empower all engineers to improve safety via sharing details
+3. Encourage people who made mistakes to teach others
+4. Accept space between stimulus & response
+5. Propose countermeasures & commitments for follow-up
+
+(p. 275)
+
+Stakeholders:
+
+1. Decisions that may have contributed
+2. Identified the problem
+3. Responded to the problem
+4. Affected by the problem
+5. Anyone else interested
+
+-> It's probably difficult with 1 or 2 people, but there should be someone taking notes on actions & time to be able to construct a timeline after the fact. => screen recording might help with that!
+
+Record: actions, effects, ideas/theories, etc.
+
+(p. 276) Avoid/disallow counterfactual statements (i.e speculation about alternatives not pursued) b/c they are about imagination and we need reality.
+
+Don't focus on blame, focus on thought process.
+
+> (p. 276) «[Prioritizing countermeasures, giving them an owner and timeline] further demonstrates that we value improvement of our daily work more than daily work itself.»
+
+> (p. 276) Dan Milstein: «We're trying to prepare for a future where we're as stupid as we are today.»
+
+-> avoid "be more careful"; automate the "care" instead via deployment tests, production telemetry, rehearsals, etc.
+
+### Publish our post-mortems as widely as possible (p. 277)
+
+Local learnings and improvements -> global ones
+
+> (p. 277) Randy Shoup (Google): «...at Google everything is searchable. (...) when any group has an incident that sounds similar to something that happened before, these post-mortem documents are among the first documents being read and studied.»
+
+Etsy created a post-mortem documentation tool called Morgue.
+
+(p. 278)
+
+Morge records:
+
+- whether due to scheduled incident or not
+- owner
+- chat logs
+- links to issues tracking corrective actions, with due dates
+- links to customer forum posts
+
+Morgue encouraged documentation of more post-mortems, especially lower severity.
+
+> (p. 278) Dr. Amy C. Edmondson: «...reduce the stigma of failure. [Fail fast and move on]»
+
+### Decrease incident tolerances to find ever-weaker failure signals (p. 279)
+
+> (p. 279) «...\[organizations\] need to decrease the threshold of what constitutes a problem in order to keep learning.»
+
+Alcoa reduced workplace accidents, then focused on near-misses.
+
+> (p. 279) «Safety problems reflected process ignorance... \[which\] would also manifest itself in other problems such as quality, timeliness, and yield versus scrap.»
+
+> (p. 280) «...vigilance \[being careful\] alone will not prevent ambiguous threats \[weak failure signals\] from turning into costly (and sometimes tragic) failures.»
+
+-> treat "techonology value stream" as R&D, not standardized (compliance)
+
+### Redefine failure and encourage risk-taking (p. 280)
+
+> (p. 280) «...we need leaders to continually reinforce that every one should feel comfortable with and responsible for surfacing and learning from failures.»
+
+> (p. 280) Roy Rapoport (Netflix) «...high performing DevOps organizations will fail and make mistakes more often.»
+
+> (p. 281) «Yes, you'll have more failures in production. But that's a good thing, and should not be punished.»
+
+#### Inject production failures to enable resilience and learning (p. 281)
+
+> (p. 281) «...crumple zones in cars absorb impacts and keep passengers safe...»
+
+-> build systems with similar safeguards & failure modes
+
+> (p. 281) «Resilience requires that we first define our failure modes and then perform testing to ensure that these failure modes operate as designed.»
+
+-> inject faults
+
+-> rehearse large-scale failures
+
+Netflix surviving the "Great Amazon Reboot of 2014"
+
+(p. 282) Architectural patterns implemented by Netflix
+
+- fail fasts (via aggressive timeouts)
+- fallbacks (features degrade gracefully)
+- feature removal (sounds like circuit breaker)
+
+### Institute game days to rehearse failures (p. 282)
+
+-> "resilience engineering"
+
+(p. 283) "Game Day"
+
+- plan a catastrophic event
+- prepare for it; create monitoring, failover procedures, etc.
+- execute drills (i.e. failovers)
+- execute planned event
+- see what happens
+
+> (p. 284) Kripa Krishnan (Google): «An often-overlooked area of testing is business process and communications.»
+
+Learnings:
+
+- failover to workstations didn't work
+- conference call bridge difficult/broken
+- backup generators ran out of diesel (how to buy?)
+
+> (p. 284) «One of the outputs of Game Days is that people actually know who to call and know who to talk to...»
+
+### Conclusion (p. 284)
+
+Learn from errors + failures
+
+> (p. 285) Peter Senge: «...learn faster than the competition.»
