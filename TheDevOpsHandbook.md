@@ -1937,3 +1937,93 @@ Learnings:
 Learn from errors + failures
 
 > (p. 285) Peter Senge: «...learn faster than the competition.»
+
+Chapter 20: Convert local discoveries into global improvements (p. 287)
+--------------------------------------------------------------
+
+### Use chat rooms and chat bots to automate and capture organizational knowledge (p. 287)
+
+> (p. 287) "ChatOps" (GitHub): «create transparency and documentation of their work»
+
+-> kind of like [Japanese pointing-and-calling](https://www.atlasobscura.com/articles/pointing-and-calling-japan-trains)
+
+(p. 288) Hubot assisted w/ops
+
+Benefits:
+
+- everyone saw everything (better than e-mail)
+- newbies could learn easily (faster onboarding)
+- people more likely to ask for help
+- faster learning globally
+- no one needs to poll for status
+
+### Automate standardized processes in software for re-use (p. 288)
+
+-> standards that are documented only (instead of automated) are difficult to discover & implement/enforce
+
+> (p. 290) «...we need to transform these documented standards and processes (...) into an executable form that makes them easier to re-use.» (pit of success)
+
+### Create a single, shared source code repository for our entire organization (p. 290)
+
+-> shared library updates propagate downstream
+
+(p.291) -> monorepos, with Google as an example
+
+> (p. 292) Tom Limoncelli (Google): «You have 100% accurate knowledge of who depends on a library; therefore you can refactor it and be 100% sure of who will be affected and who needs to test for breakage.»
+
+-> Nexus & Artifactory
+
+### Spread knowledge by using automated tests as documentation and communities of practice (p. 293)
+
+-> automated tests show others how to use code
+
+> (p. 293) «This benefit will be nearly automatic if we have test-driven development (TDD) practices in place...»
+
+-> ensure only one version in produciton
+
+-> owner helps migrate downstream consumers to newer versions
+
+-> chat room per library/service
+
+### Design for operations through codified non-functional requirements (p. 293)
+
+-> dev. participation in production incident resolution is crucial for ops-oriented design
+
+(p. 294) NFRs to make it easier to deploy, to detect & correct problems, to engineer for graceful degradation
+
+Examples of NFRs:
+
+- telemetry
+- track dependencies
+- resilience/graceful degradation
+- compatibility (forward & backward)
+- archival of data to manage production size
+- esay log search and understanding
+- trace users through services
+- centralized runtime configuration, feature flags
+
+### Build reusable operations user stories into development (p. 294)
+
+When work can't be fully automated, automate as much as possible and document the rest to better plan & resource.
+
+> (p. 295) «...define the handoffs as clearly as possible to reduce lead times and errors.»
+
+-> create ops user stories just live dev user stories
+
+### Ensure technology choices help achieve organizational goals (p. 295)
+
+- while dev teams building isolated services could choose tools to maximize team productivity, it might prevent collaboration & reduce org. productivity
+
+(p. 296) -> optimize technology choices for both dev. & ops., to reduce/remove tech that:
+
+- slows down work
+- causes more work
+- impedes org. goals
+
+### Case study: standardizing a new technology stack at Etsy (2010) (p. 297)
+
+-> moved to PHP & MySQL from MongoDB b/c drawbacks for ops outweiged benefits for devs
+
+### Conclusion (p. 298)
+
+-> share knowledge, make it so everybody could do everything
