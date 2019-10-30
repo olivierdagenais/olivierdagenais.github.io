@@ -2027,3 +2027,62 @@ When work can't be fully automated, automate as much as possible and document th
 ### Conclusion (p. 298)
 
 -> share knowledge, make it so everybody could do everything
+
+Chapter 21: Reserve time to create organizational learning and improvement (p. 299)
+-------------------------------------------------------------------------------
+
+-> Toyota has "improvement blitzes", kind of like a swarm hackathon
+
+-> Target has  "Monthly Challenge" program: 2-day sprints, 30 days, with coaches
+
+(p. 300) -> Target also has "Flash Builds" (1-3 days): build & ship MVP
+
+### Institutionalize rituals to pay down technical debt (p. 300)
+
+> (p. 300) «...schedule and conduct day- or week-long improvement blitzes, where everyone (...) self-organizes to fix problems they care about - no feature work is allowed.»
+
+> (p. 301) «Our goal during these blitzes is not to simply experiment and innovate for the sake of testing out new technologies, but to improve our daily work, such as solving our daily workarounds.»
+
+> (p. 301) «...we are empowering those closest to the work to continually identify and solve their own problems.»
+
+(p. 302) F-book's hackathon yielded HipHop (PHP -> C++). Later, HipHop compiler was replaced with HHVM.
+
+### Enable everyone to teach and learn (p. 303)
+
+> (p. 303) «...it is becoming more important for all Operations and Test engineers to be familier with Development techniques, rituals, and skills, such as version control, automated testing, deployment pipelines, configuration management, and creating automation.»
+
+-> joint code reviews
+
+(p. 304) -> help ops automate smoke tests
+
+### Share your experiences from DevOps conferences (p. 304)
+
+-> DevOpsDays
+
+#### Case Study: Internal Technology COnferences at Nationwide Insurance, Capital One and Target (2014) (p. 304)
+
+(p. 305) Nationwide Insurance created their own (internal) technology conference.  Capital One too.
+
+Target holds DevOpsDays
+
+### Create internal consulting and coaches to spread practices (p. 306)
+
+- SMEs could hold "office hours"
+- Google's "testing grouplet"
+    - Testing on the toilet (TotT)
+    - Test certified -> Levels 1, 2, 3
+    - Test mercenaries
+    - Fixit grouplet/blitz
+
+### Conclusion (p. 308)
+
+> (p. 308) «rituals that help reinforce (...) that we are lifelong learners and that we value the improvement of daily work over daily work itself.»
+
+- reserve time to pay technical debt
+- create forums
+- experts help by coaching or consulting hours or office hours
+
+### Conclusion to Part V (p. 308)
+
+- culture of learning & experimentation
+- share learnings to everybody
