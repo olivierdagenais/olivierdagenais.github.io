@@ -477,7 +477,8 @@ Part 2: Introduction (p. 49)
 
 > (p. 49) «...we will walk you through the process of initiating a DevOps transformation.»
 
-### Chapter 5: Selecting which value stream to start with (p. 51)
+Chapter 5: Selecting which value stream to start with (p. 51)
+-----------------------------------------------------
 
 > (p. 51) «...we must carefully pick and then protect those improvement projects that will most improve the state of our organization.» (Etsy)
 
