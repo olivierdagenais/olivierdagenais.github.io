@@ -2087,3 +2087,51 @@ Target holds DevOpsDays
 
 - culture of learning & experimentation
 - share learnings to everybody
+
+PART VI: The Technical Practices of Integrating Information Security, Change Management, and Compliance (p. 309)
+=======================================================================================================
+
+Part 6: Introduction (p. 310)
+--------------------
+
+-> extend DevOps to DevSecOps; confidentiality, integrity, and availability of our services and data
+
+> (p. 310) «...integrate security controls into the daily work of Development and Operations, so that security is part of everyone's job, every day.»
+
+-> automate security controls for easier auditing
+
+Chapter 22: Information Security as Everyone's Job, Every Day (p. 313)
+-------------------------------------------------------------
+
+Ratio is often 100 Dev : 10 Ops : 1 Sec
+
+Integrating Sec w/DevOps: "Rugged DevOps" or maybe DevOpsSec
+
+### Integrate security into development iteration demonstrations (p. 314)
+
+- invite to sprint demos
+- integrate with teams
+
+### Integrate security into defect tracking and post-mortems (p. 315)
+
+- track security work the same way Dev & Ops work is tracked, so it is visible & prioritized the same way
+
+-> Etsy conducts post-mortem for every security issue to share knowledge and help prevent issue from re-occurring
+
+### Integrate preventative security controls into shared source code repositories and shared services (p. 315)
+
+-> source code repositories provide an opportunity to share security knowledge the same way we share knowledge about other features/capabilities
+
+(p. 316) -> shared services should package up modules/templates for easier project start around authn, authz, encryption, logging
+
+-> InfoSec consultants can participate in design/code reviews
+
+Ideas:
+
+- libraries and configurations: 2FA, hashing for passwords, logging
+- secret management (connection settings, keys): Vault, Sneaker, Keywhiz, Credstash, Trousseau, Red October
+- OS packages & builds (templates) w/monitoring and logging built-in, especially around security
+- apps w/secure configurations
+
+### Integrate security into our deployment pipeline (p. 317)
+
