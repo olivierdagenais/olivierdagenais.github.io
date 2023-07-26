@@ -141,3 +141,62 @@ Regarding upgrades to dependencies, such as compilers and libraries...
 > - Be aware of the trade-offs of working in isolation.
 > - Acknowledge the amount of time that you and your team spend communicating and in interpersonal conflict. A small investment in understanding personalities and working styles of yourself and others can go a long way toward improving productivity.
 > - If you want to work effectively with a team or a large organization, be aware of your preferred working style and that of others.
+
+## [Chapter 3: Knowledge Sharing](https://abseil.io/resources/swe-book/html/ch03.html)
+
+> Most importantly, however, your organization needs a _culture of learning_, and that requires creating the psychological safety that permits people to admit to a lack of knowledge.
+
+### Challenges to Learning
+
+> - Lack of psychological safety
+> - Information islands
+>     - Information fragmentation
+>     - Information duplication
+>     - Information skew
+> - Single point of failure (SPOF)
+> - All-or-nothing expertise
+> - Parroting
+> - Haunted graveyards
+
+### Philosophy
+
+> Every expert was once a novice: an organization's success depends on growing and investing in its people.
+> Written knowledge has scaling advantages, but so does targeted human help. A human expert can synthesize their expanse of knowledge. They can assess what information is applicable to the individual's use case, determine whether the documentation is still relevant, and know where to find it. Or, if they don't know where to find the answers, they might know who does.
+
+### Setting the Stage: Psychological Safety
+
+#### Mentorship
+#### Psychological Safety in Large Groups
+
+### Growing Your Knowledge
+
+#### Ask Questions
+#### Understand Context
+
+### Scaling Your Questions: Ask the Community
+
+#### Group Chats
+#### Mailing Lists
+#### YAQS: Question-and-Answer Platform
+
+### Scaling Your Knowledge: You Always Have Something to Teach
+
+#### Office Hours
+#### Tech Talks and Classes
+#### Documentation
+#### Code
+
+### Scaling Your Organization's Knowledge
+
+#### Cultivating a Knowledge-Sharing Culture
+#### Establishing Canonical Sources of Information
+#### Staying in the Loop
+
+### Readability: Standardized Mentorship Through Code Review
+
+#### What Is the Readability Process?
+#### Why Have This Process?
+
+### Conclusion
+
+### TL;DRs
