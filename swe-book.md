@@ -200,3 +200,85 @@ Regarding upgrades to dependencies, such as compilers and libraries...
 ### Conclusion
 
 ### TL;DRs
+
+## [Chapter 5: How to Lead a Team](https://abseil.io/resources/swe-book/html/ch05.html)
+
+> Although this chapter is about people management and technical leadership, it is still worth a read if you're an individual contributor because it will likely help you understand your own leaders a bit better.
+
+### Managers and Tech Leads (and Both)
+
+#### The Engineering Manager
+
+> Google decided early on, however, that its software engineering managers should have an engineering background.
+
+#### The Tech Lead
+
+> Most TLs are also individual contributors, which often forces them to choose between doing something quickly themselves or delegating it to a team member to do (sometimes) more slowly. The latter is most often the correct decision for the TL as they grow the size and capability of their team. 
+
+#### The Tech Lead Manager
+
+> The job of TLM is a tricky one and often requires the TLM to learn how to balance individual work, delegation, and people management.
+
+### Moving from an Individual Contributor Role to a Leadership Role
+
+> We're not here to attempt to convince you to become a manager, but rather to help show why the best leaders work to serve their team using the principles of humility, respect, and trust.
+
+#### The Only Thing to Fear Is...Well, Everything
+
+> Quantifying management work is more difficult than counting widgets you turned out, but just making it possible for your team to be happy and productive is a big measure of your job. Just don't fall into the trap of counting apples when you're growing bananas.
+
+> Even if you're great at writing code, there's still an upper limit to the amount of code you can write. Imagine how much code a team of great engineers could write under your leadership!
+
+#### Servant Leadership
+
+> The cure for the "management" disease is a liberal application of "servant leadership," which is a nice way of saying the most important thing you can do as a leader is to serve your team, much like a butler or majordomo tends to the health and well-being of a household.
+
+### The Engineering Manager
+
+#### Manager Is a Four-Letter Word
+
+> (...) numerous studies [suggest] that the anachronistic carrot and stick is ineffective and harmful to the productivity of creative people.
+
+#### Today's Engineering Manager
+
+> To frame this in the context of humility, respect, and trust: if a manager makes it obvious that they trust their employee, the employee feels positive pressure to live up to that trust. It's that simple.
+
+> If your employees are so uninterested in their job that they actually need traditional-manager babysitting to be convinced to work, _that_ is your real problem.
+
+> A good way to build a culture in which risk taking is accepted is to let your team know that it's OK to fail.
+
+> In addition, it's important to see failure as an opportunity to learn and not to point fingers or assign blame. Failing fast is good because there's not a lot at stake.
+
+> It's alright to fail, but fail as a team and learn from your failures. If an individual succeeds, praise them in front of the team. If an individual fails, give constructive criticism in private.
+
+### Antipatterns
+
+#### Antipattern: Hire Pushovers
+#### Antipattern: Ignore Low Performers
+#### Antipattern: Ignore Human Issues
+#### Antipattern: Be Everyone's Friend
+#### Antipattern: Compromise the Hiring Bar
+#### Antipattern: Treat Your Team Like Children
+
+### Positive Patterns
+
+#### Lose the Ego
+#### Be a Zen Master
+#### Be a Catalyst
+#### Remove Roadblocks
+#### Be a Teacher and a Mentor
+#### Set Clear Goals
+#### Be Honest
+#### Track Happiness
+
+### The Unexpected Question
+
+### Other Tips and Tricks
+
+### People Are Like Plants
+
+#### Intrinsic Versus Extrinsic Motivation
+
+### Conclusion
+
+### TL;DRs
