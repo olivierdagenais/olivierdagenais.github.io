@@ -253,18 +253,60 @@ Regarding upgrades to dependencies, such as compilers and libraries...
 
 ### Antipatterns
 
+> We've observed these destructive patterns in a handful of bad managers that we've encountered in our careers, and in more than a few cases, ourselves.
+
 #### Antipattern: Hire Pushovers
+
+> Even though this will cement your position as the team leader and decision maker, it will mean a lot more work for you. (...) If you build a team of pushovers, you probably can't take a vacation; the moment you leave the room, productivity comes to a screeching halt.
+
 #### Antipattern: Ignore Low Performers
+
+> Google's Site Reliability Engineering (SRE) team has a motto: "Hope is not a strategy." And nowhere is hope more overused as a strategy than in dealing with a low performer. Most team leaders grit their teeth, avert their eyes, and just _hope_ that the low performer either magically improves or just goes away. Yet it is extremely rare that this person does either.
+
 #### Antipattern: Ignore Human Issues
+
+> Now that you're a manager, however, you ignore the human element of your team at your own peril.
+
 #### Antipattern: Be Everyone's Friend
+
+> Don't confuse friendship with leading with a soft touch: when you hold power over someone's career, they might feel pressure to artificially reciprocate gestures of friendship.
+
 #### Antipattern: Compromise the Hiring Bar
+
+> The cost of finding the appropriate person—whether by paying recruiters, paying for advertising, or pounding the pavement for references—pales in comparison to the cost of dealing with an employee who you never should have hired in the first place.
+
 #### Antipattern: Treat Your Team Like Children
+
+> The best way to show your team that you don't trust it is to treat team members like kids (...)
+
+> (...) what about the costs of having a workforce that behaves like children or that has to waste valuable time formally requesting cheap office supplies? Surely  that's more  expensive than the price of a few pens and USB cables.
 
 ### Positive Patterns
 
+> These patterns are not only those that we've had great success implementing, but the patterns that we've always respected the most in the leaders who we follow.
+
 #### Lose the Ego
+
+> You can still have self-confidence and opinions without being an egomaniac.
+
+> Part of "losing the ego" is trust: you need to trust your team. 
+
+> If you have a good team and you let it set the bar for the quality and rate of its work, it will accomplish more than by you standing over team members with a carrot and a stick.
+
+> We can assure you that you will not get everything right, nor will you have all the answers, and if you act like you do, you'll quickly lose the respect of your team.
+
+> Try to appreciate inquiry: when someone questions a decision or statement you made, remember that this person is usually just trying to better understand you.
+
+> The last part of losing the ego is a simple one, but many engineers would rather be boiled in oil than do it: apologize when you make a mistake. (...) You are absolutely going to make mistakes, and whether or not you admit it, your team is going to know you've made a mistake.
+
 #### Be a Zen Master
+
+> 
+
 #### Be a Catalyst
+
+>
+
 #### Remove Roadblocks
 #### Be a Teacher and a Mentor
 #### Set Clear Goals
