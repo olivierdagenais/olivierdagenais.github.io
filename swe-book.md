@@ -301,16 +301,38 @@ Regarding upgrades to dependencies, such as compilers and libraries...
 
 #### Be a Zen Master
 
-> 
+> (...) you would do well to be less vocally skeptical while still letting your team know you're aware of the intricacies and obstacles involved in your work. Mediating your reactions and maintaining your calm is more important as you lead more people (...)
+
+> As a leader, your job is to inspire, but inspiration is a 24/7 job. Your visible attitude about absolutely everything - no matter how trivial - is unconsciously noticed and spreads infectiously to your team.
+
+> The person asking for advice typically doesn't want _you_ to solve their problem, but rather to help them solve it, and the easiest way to do this is to ask this person questions. (...)  try to help the person solve the problem on their own by trying to refine and explore the problem.
 
 #### Be a Catalyst
 
->
+> One of the most common things a team leader does is to build consensus.  This might mean that you drive the process from start to finish, or you just give it a gentle push in the right direction to speed it up.
 
 #### Remove Roadblocks
+
+> jumping in to help the team get moving again (from being stuck due to a roadblock) is a common leadership technique.
+
+> In many cases, knowing the right person is more valuable than knowing the right answer.
+
 #### Be a Teacher and a Mentor
+
+> A good mentor must balance the trade-offs of a mentee's time learning versus their time contributing to their product as part of an effective effort to scale the team as it grows.
+
+> (...) giving your mentee enough information is what you're supposed to be doing, but if you overexplain things or ramble on endlessly, your mentee will probably tune you out rather than politely tell you they got it.
+
 #### Set Clear Goals
+
+> If you're going to get your team moving rapidly in one direction, you need to make sure that every team member understands and agrees on what the direction is. (...)  If you're going to have clear goals, you need to set clear priorities and help your team decide how it should make trade-offs when the time comes.
+
+> The easiest way to set a clear goal and get your team pulling the product in the same direction is to create a concise mission statement for the team.
+
 #### Be Honest
+
+> 
+
 #### Track Happiness
 
 ### The Unexpected Question
