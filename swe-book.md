@@ -331,18 +331,56 @@ Regarding upgrades to dependencies, such as compilers and libraries...
 
 #### Be Honest
 
-> 
+> If a team member approaches you about something you can't share, it's OK to just tell them you know the answer but are not at liberty to say anything. Even more common is when a team member asks you something you don't know the answer to: you can tell that person you don't know.
+
+> We _strongly_ advise against using the compliment sandwich, not because we think you should be unnecessarily cruel or harsh, but because most people won't hear the critical message, which is that something needs to change. (...) kindness and empathy are critical if you want the recipient to hear the criticism and not immediately go on the defensive.
+
+> When you're providing direct feedback or criticism, your delivery is key to making sure that your message is heard and not deflected.
 
 #### Track Happiness
 
+> As a leader, one way you can make your team more productive (and less likely to leave) in the long term is to take some time to gauge their happiness.
+
+> A good simple way to track your team's happiness is to ask the team member at the end of each one-on-one meeting, "What do you need?"
+
 ### The Unexpected Question
+
+> It can also be worthwhile as a leader to pay some attention to your team's happiness outside the office.
+
+> A big part of tracking your team members' happiness is tracking their careers.
+
+> Tracking happiness comes down to not just monitoring careers, but also giving your team members opportunities to improve themselves, be recognized for the work they do, and have a little fun along the way.
 
 ### Other Tips and Tricks
 
+1. Delegate, but get your hands dirty
+    > (...) one of the easiest ways to gain the team's respect and get up to speed on what they're doing is to get your hands dirty—usually by taking on a grungy task that no one else wants to do.
+1. Seek to replace yourself
+    > (...)  if you want a member of your team to replace you, you need to hire people capable of replacing you, which we usually sum up by saying that you need to "hire people smarter than you."
+1. Know when to make waves
+    Don't delay taking action on a difficult situation, especially if there's discomfort to address it.
+1. Shield your team from chaos
+    > (...) the chaos had always been present, but my previous manager had shielded me and the rest of my team from it.
+1. Give your team air cover
+    > Share as much information as you can with your team, but don't distract them with organizational craziness that is extremely unlikely to ever actually affect them.
+1. Let your team know when they're doing well
+    > Just as you let someone know when they screw up, be sure to let them know when they do well, and be sure to let them (and the rest of the team) know when they knock one out of the park.
+1. It's easy to say "yes" to something that's easy to undo
+
 ### People Are Like Plants
+
+> And so your team members are also like plants: some need more light, and some need more water (and some need more…fertilizer). It's your job as their leader to determine who needs what and then give it to them—except instead of light, water, and fertilizer, your team needs varying amounts of motivation and direction.
 
 #### Intrinsic Versus Extrinsic Motivation
 
+> There are two types of motivation: _extrinsic_, which originates from outside forces (such as monetary compensation), and _intrinsic_, which comes from within.  In his book _Drive_, Dan Pink explains that the way to make people the happiest and most productive isn't to motivate them extrinsically (e.g., throw piles of cash at them); rather, you need to work to increase their intrinsic motivation. Dan claims you can increase intrinsic motivation by giving people three things: autonomy, mastery, and purpose.
+
 ### Conclusion
 
+> (...) the most important skills an effective manager brings to the table are social ones. Good managers enable their engineering teams by helping them work well, keeping them focused on proper goals, and insulating them from problems outside the group, all while following the three pillars of humility, trust, and respect.
+
 ### TL;DRs
+
+* Don't "manage" in the traditional sense; focus on leadership, influence, and serving your team.
+* Delegate where possible; don't DIY (Do It Yourself).
+* Pay particular attention to the focus, direction, and velocity of your team.
