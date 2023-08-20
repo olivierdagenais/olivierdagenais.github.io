@@ -384,3 +384,71 @@ Regarding upgrades to dependencies, such as compilers and libraries...
 * Don't "manage" in the traditional sense; focus on leadership, influence, and serving your team.
 * Delegate where possible; don't DIY (Do It Yourself).
 * Pay particular attention to the focus, direction, and velocity of your team.
+
+## [Chapter 12: Unit Testing](https://abseil.io/resources/swe-book/html/ch12.html)
+
+> We use the term _unit test_ to refer to tests of relatively narrow scope, such as of a single class or method. Unit tests are usually small in size, but this isn’t always the case.
+
+Properties of unit tests:
+- small (therefore fast and deterministic)
+- easy to write
+- promote high code coverage
+- easy to understand why the fail
+- useful as documentation & examples
+
+> (...) we encourage engineers to aim for a mix of about 80% unit tests and 20% broader-scoped tests.
+
+### The Importance of Maintainability
+
+Because tests are meant to improce productivity, it is important that they NOT be _brittle_, nor _unclear_.
+
+### Preventing Brittle Tests
+
+> (...) a  brittle test  is one that fails in the face of an unrelated change to production code that does not introduce any real bugs.
+
+#### Strive for Unchanging Tests
+
+> Therefore, _the ideal test is unchanging_: after it’s written, it never needs to change unless the requirements of the system under test change.
+
+> Fundamentally, there are four kinds of changes:
+> 1. Pure refactorings (tests shouldn't change)
+> 2. New features (tests should only be added)
+> 3. Bug fixes (tests should only be added)
+> 4. Behavior changes (tests could need to change)
+
+Only the last one should result in test changes.
+
+#### Test via Public APIs
+
+> If tests work the same way as the system’s users, by definition, change that breaks a test might also break a user.
+
+#### Test State, Not Interactions
+
+### Writing Clear Tests
+
+#### Make Your Tests Complete and Concise
+#### Test Behaviors, Not Methods
+#### Don’t Put Logic in Tests
+#### Write Clear Failure Messages
+
+### Tests and Code Sharing: DAMP, Not DRY
+
+#### Shared Values
+#### Shared Setup
+#### Shared Helpers and Validation
+#### Defining Test Infrastructure
+
+### Conclusion
+
+### TL;DRs
+
+- Strive for unchanging tests.
+- Test via public APIs.
+- Test state, not interactions.
+- Make your tests complete and concise.
+- Test behaviors, not methods.
+- Structure tests to emphasize behaviors.
+- Name tests after the behavior being tested.
+- Don’t put logic in tests.
+- Write clear failure messages.
+- Follow DAMP over DRY when sharing  code for tests.
