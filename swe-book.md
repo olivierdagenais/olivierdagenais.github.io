@@ -387,7 +387,7 @@ Regarding upgrades to dependencies, such as compilers and libraries...
 
 ## [Chapter 12: Unit Testing](https://abseil.io/resources/swe-book/html/ch12.html)
 
-> We use the term _unit test_ to refer to tests of relatively narrow scope, such as of a single class or method. Unit tests are usually small in size, but this isn’t always the case.
+> We use the term _unit test_ to refer to tests of relatively narrow scope, such as of a single class or method. Unit tests are usually small in size, but this isn't always the case.
 
 Properties of unit tests:
 - small (therefore fast and deterministic)
@@ -404,11 +404,13 @@ Because tests are meant to improce productivity, it is important that they NOT b
 
 ### Preventing Brittle Tests
 
-> (...) a  brittle test  is one that fails in the face of an unrelated change to production code that does not introduce any real bugs.
+> (...) a  brittle test is one that fails in the face of an unrelated change to production code that does not introduce any real bugs.
+
+(a flaky test is one that fails intermittently, without any changes to production code)
 
 #### Strive for Unchanging Tests
 
-> Therefore, _the ideal test is unchanging_: after it’s written, it never needs to change unless the requirements of the system under test change.
+> Therefore, _the ideal test is unchanging_: after it's written, it never needs to change unless the requirements of the system under test change.
 
 > Fundamentally, there are four kinds of changes:
 > 1. Pure refactorings (tests shouldn't change)
@@ -420,15 +422,50 @@ Only the last one should result in test changes.
 
 #### Test via Public APIs
 
-> If tests work the same way as the system’s users, by definition, change that breaks a test might also break a user.
+> If tests work the same way as the system's users, by definition, change that breaks a test might also break a user.
+
+> Testing only these contracts means that you're free to do whatever internal refactoring of the system you want without having to worry about making tedious changes to tests.
+
+> Defining an appropriate scope for a unit  and hence what should be considered the public API is more art than science (...)
+
+> At Google, we've found that engineers sometimes need to be persuaded that testing via public APIs is better than testing against implementation details. (...) Testing against public APIs won't completely prevent brittleness, but it's the most important thing you can do to ensure that your tests fail only in the event of meaningful changes to your system.
 
 #### Test State, Not Interactions
 
+> With _state testing_, you observe the system itself to see what it looks like after invoking with it. With i_nteraction testing_, you instead check that the system took an expected sequence of actions on its collaborators in response to invoking it.
+
+The former is preferred because the latter is more brittle.
+
+> (...) we tend to prefer the use of real objects in favor of mocked objects, as long as the real objects are fast and deterministic.
+
 ### Writing Clear Tests
 
+> A clear test is one whose purpose for existing and reason for failing is immediately clear to the engineer diagnosing a failure. (...) Clear tests also bring other benefits, such as documenting the system under test and more easily serving as a basis for new tests.
+
 #### Make Your Tests Complete and Concise
+
+> A test is _complete_ when its body contains all of the information a reader needs in order to understand how it arrives at its result. A test is _concise_ when it contains no other distracting or irrelevant information.
+
+> (...) it can often be worth violating the DRY (Don't Repeat Yourself) principle if it leads to clearer tests.
+
 #### Test Behaviors, Not Methods
-#### Don’t Put Logic in Tests
+
+> (...) rather than writing a test for each method, write a test for each _behavior_. A behavior is any guarantee that a system makes about how it will respond to a series of inputs while in a particular state.
+
+##### Structure tests to emphasize behaviors
+
+> When a test does want to validate each step in a multistep process, it's acceptable to define alternating sequences of when/then blocks. Long blocks can also be made more descriptive by splitting them up with the word "and."
+
+##### Name tests after the behavior being tested
+
+> A good name describes both the actions that are being taken on a system and the expected outcome.
+
+#### Don't Put Logic in Tests
+
+> Clear tests are trivially correct upon inspection (...) if you feel like you need to write a test to verify your test, something has gone wrong!
+
+> (...) in test code, stick to straight-line code over clever logic, and consider tolerating some duplication when it makes the test more descriptive and meaningful.
+
 #### Write Clear Failure Messages
 
 ### Tests and Code Sharing: DAMP, Not DRY
@@ -449,6 +486,6 @@ Only the last one should result in test changes.
 - Test behaviors, not methods.
 - Structure tests to emphasize behaviors.
 - Name tests after the behavior being tested.
-- Don’t put logic in tests.
+- Don't put logic in tests.
 - Write clear failure messages.
 - Follow DAMP over DRY when sharing  code for tests.
