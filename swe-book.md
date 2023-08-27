@@ -468,14 +468,41 @@ The former is preferred because the latter is more brittle.
 
 #### Write Clear Failure Messages
 
+> A good failure message contains much the same information as the test's name: it should clearly express the desired outcome, the actual outcome, and any relevant parameters.
+
+> Good libraries can help make it easier to write useful failure messages.
+
+[Truth - Fluent assertions for Java and Android](https://truth.dev/)
+
 ### Tests and Code Sharing: DAMP, Not DRY
 
+> (...) DRY doesn't have quite as much benefit when it comes to test code.
+
+> (...) test code should often strive to be DAMP—that is, to promote "Descriptive And Meaningful Phrases." A little bit of duplication is OK in tests so long as that duplication makes the test simpler and clearer.
+
+> DAMP is not a replacement for DRY; it is complementary to it.
+
 #### Shared Values
+
+Rather than declaring "constants" of special instances (which might be tricky to name descriptively enough), make it easier to create instances via helper methods, the _Builder_ pattern and/or [AutoValue](https://github.com/google/auto/tree/main/value)/[Record Classes](https://docs.oracle.com/en/java/javase/16/language/records.html).
+
 #### Shared Setup
+
+Beware configuring values in test setup methods that are used in tests.  Only configure default values that aren't used in tests.
+
 #### Shared Helpers and Validation
+
+Beware creating helper methods, used at the end of every test, that assert on many things at once.  They make the tests more brittle and less focused on specific behaviours.  Assertion helpers are OK.
+
 #### Defining Test Infrastructure
 
+> Test infrastructure needs to be treated as its own separate product, and accordingly, _test infrastructure must always have its own tests_.
+
+> A huge number of \[third-party test infrastructure] libraries are available, and standardizing on them within an organization should happen as early and universally as possible.
+
 ### Conclusion
+
+> (...) careless use of unit testing can result in a system that requires much more effort to maintain and takes much more effort to change without actually improving our confidence in said system.
 
 ### TL;DRs
 
