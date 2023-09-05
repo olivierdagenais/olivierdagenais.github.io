@@ -432,7 +432,7 @@ Only the last one should result in test changes.
 
 #### Test State, Not Interactions
 
-> With _state testing_, you observe the system itself to see what it looks like after invoking with it. With i_nteraction testing_, you instead check that the system took an expected sequence of actions on its collaborators in response to invoking it.
+> With _state testing_, you observe the system itself to see what it looks like after invoking with it. With _interaction testing_, you instead check that the system took an expected sequence of actions on its collaborators in response to invoking it.
 
 The former is preferred because the latter is more brittle.
 
