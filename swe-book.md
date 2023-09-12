@@ -516,3 +516,49 @@ Beware creating helper methods, used at the end of every test, that assert on ma
 - Don't put logic in tests.
 - Write clear failure messages.
 - Follow DAMP over DRY when sharing  code for tests.
+
+## [Chapter 13: Test Doubles](https://abseil.io/resources/swe-book/html/ch13.html)
+
+### The Impact of Test Doubles on Software Development
+
+### Test Doubles at Google
+
+### Basic Concepts
+
+#### An Example Test Double
+#### Seams
+#### Mocking Frameworks
+
+### Techniques for Using Test Doubles
+
+#### Faking
+#### Stubbing
+#### Interaction Testing
+
+### Real Implementations
+
+#### Prefer Realism Over Isolation
+#### How to Decide When to Use a Real Implementation
+
+### Faking
+
+#### Why Are Fakes Important?
+#### When Should Fakes Be Written?
+#### The Fidelity of Fakes
+#### Fakes Should Be Tested
+#### What to Do If a Fake Is Not Available
+
+### Stubbing
+
+#### The Dangers of Overusing Stubbing
+#### When Is Stubbing Appropriate?
+
+### Interaction Testing
+
+#### Prefer State Testing Over Interaction Testing
+#### When Is Interaction Testing Appropriate?
+#### Best Practices for Interaction Testing
+
+### Conclusion
+
+### TL;DRs
