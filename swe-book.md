@@ -521,13 +521,33 @@ Beware creating helper methods, used at the end of every test, that assert on ma
 
 ### The Impact of Test Doubles on Software Development
 
+> To use test doubles, a codebase needs to be designed to be _testable_ - it should be possible for tests to swap out real implementations with test doubles.
+
+> Unit tests that use test doubles often need to be supplemented by larger-scope tests that exercise the real implementation.
+
 ### Test Doubles at Google
+
+> One lesson we learned the hard way is the danger of overusing mocking frameworks, which allow you to easily create test doubles.
 
 ### Basic Concepts
 
 #### An Example Test Double
+
+> Although this test double doesn't look very useful, using it in a test still allows us to test some of the logic in the `makePayment()` method. For example, we can validate that the method behaves properly when the credit card is expired because the code path that the test exercises doesn't rely on the behavior of the credit card service.
+
 #### Seams
+
+> Code is said to be _testable_ if it is written in a way that makes it possible to write unit tests for the code.  A seam is a way to make code testable by allowing for the use of test doubles - it makes it possible to use different dependencies for the system under test rather than the dependencies used in a production environment.
+
+> (...) when a class utilizes [dependency injection](https://en.wikipedia.org/wiki/Dependency_injection), any classes it needs to use (i.e., the class's _dependencies_) are passed to it rather than instantiated directly, making it possible for these dependencies to be substituted in tests.
+
+> Writing testable code requires an upfront investment. (...) Code written without testing in mind typically needs to be refactored or rewritten before you can add appropriate tests.
+
 #### Mocking Frameworks
+
+> A _mocking framework_ is a  software  library that makes it easier to create test doubles within tests; it allows you to replace an object with a _mock_, which is a test double whose behavior is specified inline in a test.
+
+> Although mocking frameworks facilitate easier usage of test doubles, they come with some significant caveats given that their overuse will often make a codebase more difficult to maintain.
 
 ### Techniques for Using Test Doubles
 
