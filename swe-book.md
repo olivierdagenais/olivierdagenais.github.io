@@ -551,9 +551,25 @@ Beware creating helper methods, used at the end of every test, that assert on ma
 
 ### Techniques for Using Test Doubles
 
+> There are three primary techniques for using test doubles.
+
 #### Faking
+
+> A [fake](http://xunitpatterns.com/Fake%20Object.html) is a lightweight implementation of an API that behaves similar to the real implementation but isn't suitable for production; for example, an in-memory database.
+
+> Using a fake is often the ideal technique when you need to use a test double, but a fake might not exist for an object you need to use in a test, and writing one can be challenging because you need to ensure that it has similar behavior to the real implementation, now and in the future.
+
 #### Stubbing
+
+> [Stubbing](http://xunitpatterns.com/Test%20Stub.html) is the process of giving behavior to a function that otherwise has no behavior on its own—you specify to the function exactly what values to return (that is, you stub the return values).
+
+> Stubbing is typically done through mocking frameworks to reduce boilerplate that would otherwise be needed for manually creating new classes that hardcode return values.
+
 #### Interaction Testing
+
+> [Interaction testing](http://xunitpatterns.com/Behavior%20Verification.html) is a way to validate how a function is called without actually calling the implementation of the function.  A test should fail if a function isn't called the correct way—for example, if the function isn't called at all, it's called too many times, or it's called with the wrong arguments.
+
+> Similar to stubbing, interaction testing is typically done through mocking frameworks.  This reduces boilerplate compared to manually creating new classes that contain code to keep track of how often a function is called and which arguments were passed in.
 
 ### Real Implementations
 
