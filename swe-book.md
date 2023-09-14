@@ -573,8 +573,22 @@ Beware creating helper methods, used at the end of every test, that assert on ma
 
 ### Real Implementations
 
+> Although test doubles can be  invaluable testing tools, our first choice for tests is to use the real implementations of the system under test's dependencies; that is, the same implementations that are used in production code.
+
 #### Prefer Realism Over Isolation
+
+> We prefer realistic tests because they give more confidence that the system under test is working properly.
+
+> Using real implementations can cause your test to fail if there is a bug in the real implementation. This is good! You _want_ your tests to fail in such cases because it indicates that your code won't work properly in production.
+
 #### How to Decide When to Use a Real Implementation
+
+> A real implementation is preferred if it is fast, deterministic, and has simple dependencies.
+
+> (...) you need to take the following considerations into account:
+> 1. Execution time: use real implementation until it is too slow to use, also build & test in parallel if you can
+> 2. Determinism: use real implementation unless it is flaky
+> 3. Dependency construction; consider the same object graph (and injection) than production for authenticity
 
 ### Faking
 
