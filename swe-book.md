@@ -592,11 +592,35 @@ Beware creating helper methods, used at the end of every test, that assert on ma
 
 ### Faking
 
+> If using a real implementation is not feasible within a test, the best option is often to use a fake in its place (...) because it behaves similarly to the real implementation (...)
+
 #### Why Are Fakes Important?
+
+> (...) they execute quickly and allow you to effectively test your code without the drawbacks of using real implementations.
+
 #### When Should Fakes Be Written?
+
+> A fake requires more effort and more domain experience to create because it needs to behave similarly to the real implementation. (...) the team that owns the real implementation should write and maintain a fake.
+
+Fakes are worth the investment if hundreds of users would use them, less so for a handful of users.
+
 #### The Fidelity of Fakes
+
+> If the behavior of a fake doesn’t match the behavior of the real implementation, a test using that fake is not useful (...)
+
+> (...) the fake must have perfect fidelity to the real implementation, but _only from the perspective of the test_.
+
+> It is best to have the fake fail fast in \[the case of rare edge cases]; for example, raise an error if an unsupported code path is executed. 
+
 #### Fakes Should Be Tested
+
+> A fake without tests might initially provide realistic behavior, but without tests, this behavior can diverge over time as the real implementation evolves.
+
 #### What to Do If a Fake Is Not Available
+
+> If a fake is not available, first ask the owners of the API to create one.
+
+> If the owners of an API are unwilling or unable to create a fake, you might be able to write your own. One way to do this is to wrap all calls to the API in a single class and then create a fake version of the class that doesn’t talk to the API.
 
 ### Stubbing
 
