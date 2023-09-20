@@ -606,7 +606,7 @@ Fakes are worth the investment if hundreds of users would use them, less so for 
 
 #### The Fidelity of Fakes
 
-> If the behavior of a fake doesn’t match the behavior of the real implementation, a test using that fake is not useful (...)
+> If the behavior of a fake doesn't match the behavior of the real implementation, a test using that fake is not useful (...)
 
 > (...) the fake must have perfect fidelity to the real implementation, but _only from the perspective of the test_.
 
@@ -620,12 +620,22 @@ Fakes are worth the investment if hundreds of users would use them, less so for 
 
 > If a fake is not available, first ask the owners of the API to create one.
 
-> If the owners of an API are unwilling or unable to create a fake, you might be able to write your own. One way to do this is to wrap all calls to the API in a single class and then create a fake version of the class that doesn’t talk to the API.
+> If the owners of an API are unwilling or unable to create a fake, you might be able to write your own. One way to do this is to wrap all calls to the API in a single class and then create a fake version of the class that doesn't talk to the API.
 
 ### Stubbing
 
+> (...) stubbing  is a way for a test to hardcode behavior for a function that otherwise has no behavior on its own.
+
 #### The Dangers of Overusing Stubbing
+
+> (...) overuse of stubbing can result in major losses in productivity for engineers who need to maintain these tests.
+> 1. Tests become unclear (due to extra code)
+> 2. Tests become brittle (implementation details leak into tests)
+> 3. Tests become less effective (stubs may differ from real implementation)
+
 #### When Is Stubbing Appropriate?
+
+> A test that requires many functions to be stubbed can be a sign that stubbing is being overused, or that the system under test is too complex and should be refactored.
 
 ### Interaction Testing
 
