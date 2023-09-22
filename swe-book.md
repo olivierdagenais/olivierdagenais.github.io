@@ -624,7 +624,7 @@ Fakes are worth the investment if hundreds of users would use them, less so for 
 
 ### Stubbing
 
-> (...) stubbing  is a way for a test to hardcode behavior for a function that otherwise has no behavior on its own.
+> (...) stubbing is a way for a test to hardcode behavior for a function that otherwise has no behavior on its own.
 
 #### The Dangers of Overusing Stubbing
 
@@ -640,8 +640,20 @@ Fakes are worth the investment if hundreds of users would use them, less so for 
 ### Interaction Testing
 
 #### Prefer State Testing Over Interaction Testing
+
+> In contrast to interaction testing, it is preferred to test code through [state testing](http://xunitpatterns.com/State%20Verification.html).
+
+If you're not careful, you end up exposing details of the implementation to your tests and make them very brittle.
+
 #### When Is Interaction Testing Appropriate?
+
+> (If you) cannot perform state testing because you are unable to use a real implementation or a fake (e.g., if the real implementation is too slow and no fake exists).
+
+> If you are not able to perform state testing in a unit test, strongly consider supplementing your test suite with larger-scoped tests that do perform state testing.
+
 #### Best Practices for Interaction Testing
+
+> Prefer to perform interaction testing only for _state-changing_ functions (that have side-effects on the world, like sending an e-mail)
 
 ### Conclusion
 
