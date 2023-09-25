@@ -655,6 +655,15 @@ If you're not careful, you end up exposing details of the implementation to your
 
 > Prefer to perform interaction testing only for _state-changing_ functions (that have side-effects on the world, like sending an e-mail)
 
+> Avoid overspecification (focus on testing behaviours over methods, one behaviour per test)
+
 ### Conclusion
 
+Test doubles are meant to make tests run faster, but be careful to not make tests unclear, brittle and/or less effective.
+
 ### TL;DRs
+
+> - A real implementation should be preferred over a test double.
+> - A fake is often the ideal solution if a real implementation can’t be used in a test.
+> - Overuse of stubbing leads to tests that are unclear and brittle.
+> - Interaction testing should be avoided when possible: it leads to tests that are brittle because it exposes implementation  details of the system under test.
