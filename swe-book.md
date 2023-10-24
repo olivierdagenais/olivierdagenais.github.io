@@ -385,6 +385,96 @@ Regarding upgrades to dependencies, such as compilers and libraries...
 * Delegate where possible; don't DIY (Do It Yourself).
 * Pay particular attention to the focus, direction, and velocity of your team.
 
+
+## [Chapter 9: Code Review](https://abseil.io/resources/swe-book/html/ch09.html)
+
+### Code Review Flow
+
+> The primary end goal of a code review is to get another engineer to consent to the change, which we denote by tagging the change as "looks good to me" (LGTM).
+
+> It's important to remember (and accept) that code itself is a liability.   It might be a necessary liability, but by itself, code is simply a maintenance task to someone somewhere down the line.
+
+> As much as a code review of entirely new code should not come out of the blue, the code review process itself should also not be viewed as an opportunity to revisit previous decisions.
+
+### How Code Review Works at Google
+
+> There are three aspects of review that require "approval" for any given change at Google:
+> - A correctness and comprehension check from another engineer that the code is appropriate and does what the author claims it does. (...)
+> - Approval from one of the code owners that the code is appropriate for this particular part of the codebase (and can be checked into a particular directory). (...)
+> - Approval from someone with language "readability" that the code conforms to the language's style and best practices, checking whether the code is written in the manner we expect. (...)
+
+There's also a bit about ownership/stewardship, driven by `OWNERS` files in the repository's tree structure.
+
+### Code Review Benefits
+
+> (The "code review every change") mandate does have a cost and effect on engineering velocity given that it does slow down the introduction of new code into a codebase and can impact time-to-production for any given code change.
+
+#### Code Correctness
+
+> Having another set of eyes look over a change helps ensure that the change does what was intended.  Reviewers typically look for whether a change has proper testing, is properly designed, and functions correctly and efficiently.
+
+> The investment in the time for code review saved time otherwise spent in testing, debugging, and performing regressions, provided that the code review process itself was streamlined to keep it lightweight.
+
+> A reviewer shouldn't propose alternatives because of personal opinion. Reviewers can propose alternatives, but only if they improve comprehension (by being less complex, for example) or functionality (by being more efficient, for example). In general, engineers are encouraged to approve changes that improve the codebase rather than wait for consensus on a more "perfect" solution. This focus tends to speed up code reviews.
+
+> As tooling becomes stronger, many correctness checks are performed automatically through techniques such as static analysis and automated testing (though tooling might never completely obviate the value for human-based inspection of code(...)). 
+
+> (...) code review does not need to be "perfect" to achieve results.
+
+> (...) more importance is attached to ensuring that a code change is understandable and makes sense over time and as the codebase itself scales.
+
+#### Comprehension of Code
+
+> A code review is often the first test of whether a given change is understandable to a broader audience.
+
+> It is often useful to find a reviewer who has a different perspective from the author, especially a reviewer who might need, as part of their job, to maintain or use the code being proposed within the change.
+
+#### Code Consistency
+
+>  Code (...) needs to conform to some standards of consistency so that it can be understood and maintained. (...) A code review (...) should act to ensure code _health_.
+
+> Consistency sometimes clashes with functionality; a readability reviewer may prefer a less complex change that may not be functionally "better" but is easier to understand.
+
+> With a more consistent codebase, it is easier for engineers to step in and review code on someone else's projects.
+
+#### Psychological and Cultural Benefits
+
+> Code review also has important cultural benefits: it reinforces to software engineers that code is not "theirs" but in fact part of a collective enterprise. (...) The code review process forces an author to not only let others have input, but to compromise for the sake of the greater good.
+
+> Code review, when it works best, provides not only a challenge to an engineer's assumptions, but also does so in a prescribed, neutral manner, acting to temper any criticism which might otherwise be directed to the author if provided in an unsolicited manner.
+
+> (...) the process of code review often provides a much gentler introduction for most engineers to the expectations of the team.
+
+> Often, the process involves an exchange of ideas and knowledge sharing (...), which benefits both the reviewer and the reviewee.
+
+> The process of initiating a code review also forces all authors to take a little extra care with their changes. (...) Without code review, it's natural that many of us would cut corners, even with the full intention of correcting such defects later. (...) The little moment of reflection that comes before sending off your change is the perfect time to read through your change and make sure you're not missing anything.
+
+#### Knowledge Sharing
+
+> One of the most important, but underrated, benefits of code review is in knowledge sharing. (...) The review process allows reviewers to impart domain knowledge to the author, allowing the reviewer(s) to offer suggestions, new techniques, or advisory information to the author.
+
+> Part of the code review process of feedback and confirmation involves asking questions on why the change is done in a particular way.
+
+### Code Review Best Practices
+
+#### Be Polite and Professional
+#### Write Small Changes
+#### Write Good Change Descriptions
+#### Keep Reviewers to a Minimum
+#### Automate Where Possible
+
+### Types of Code Reviews
+
+#### Greenfield Code Reviews
+#### Behavioral Changes, Improvements, and Optimizations
+#### Bug Fixes and Rollbacks
+#### Refactorings and Large-Scale Changes
+
+### Conclusion
+
+### TL;DRs
+
+
 ## [Chapter 12: Unit Testing](https://abseil.io/resources/swe-book/html/ch12.html)
 
 > We use the term _unit test_ to refer to tests of relatively narrow scope, such as of a single class or method. Unit tests are usually small in size, but this isn't always the case.
@@ -664,6 +754,6 @@ Test doubles are meant to make tests run faster, but be careful to not make test
 ### TL;DRs
 
 > - A real implementation should be preferred over a test double.
-> - A fake is often the ideal solution if a real implementation can’t be used in a test.
+> - A fake is often the ideal solution if a real implementation can't be used in a test.
 > - Overuse of stubbing leads to tests that are unclear and brittle.
 > - Interaction testing should be avoided when possible: it leads to tests that are brittle because it exposes implementation  details of the system under test.
