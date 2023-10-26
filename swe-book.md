@@ -455,9 +455,22 @@ There's also a bit about ownership/stewardship, driven by `OWNERS` files in the 
 
 > Part of the code review process of feedback and confirmation involves asking questions on why the change is done in a particular way.
 
+> [An] engineer's primary task is still programming, of course, but a large chunk of their time is still spent in code review.
+
 ### Code Review Best Practices
 
+> Keeping the code review process running smoothly requires a number of best practices to ensure that code review is worth the effort put into the process.
+
 #### Be Polite and Professional
+
+> It is critically important to keep all feedback and criticism firmly in the professional realm.
+
+> In general, reviewers should defer to authors on particular approaches and only point out alternatives if the author's approach is deficient. (...) Reviewers should be careful about jumping to conclusions based on a code author's particular approach. It's better to ask questions on why something was done the way it was before assuming that approach is wrong.
+
+> Reviewers should be prompt with their feedback.
+
+> It's important to treat each reviewer comment within a code review as a TODO item; a particular comment might not need to be accepted without question, but it should at least be addressed. If you disagree with a reviewer's comment, let them know, and let them know why and don’t mark a comment as resolved until each side has had a chance to offer alternatives.
+
 #### Write Small Changes
 #### Write Good Change Descriptions
 #### Keep Reviewers to a Minimum
