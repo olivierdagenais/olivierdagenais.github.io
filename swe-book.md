@@ -469,23 +469,82 @@ There's also a bit about ownership/stewardship, driven by `OWNERS` files in the 
 
 > Reviewers should be prompt with their feedback.
 
-> It's important to treat each reviewer comment within a code review as a TODO item; a particular comment might not need to be accepted without question, but it should at least be addressed. If you disagree with a reviewer's comment, let them know, and let them know why and don’t mark a comment as resolved until each side has had a chance to offer alternatives.
+> It's important to treat each reviewer comment within a code review as a TODO item; a particular comment might not need to be accepted without question, but it should at least be addressed. If you disagree with a reviewer's comment, let them know, and let them know why and don't mark a comment as resolved until each side has had a chance to offer alternatives.
 
 #### Write Small Changes
+
+> Probably the most important practice to keep the code review process nimble is to keep changes small. A code review should ideally be easy to digest and focus on a single issue, both for the reviewer and the author. (...) Smaller changes also prevent engineers from wasting time waiting for reviews on larger changes, reducing downtime. These small changes have benefits further down in the software development process as well. It is far easier to determine the source of a bug within a change if that particular change is small enough to narrow it down.
+
+> A set of small, incremental code changes can be easier to digest individually, but more difficult to comprehend within a larger scheme. (...) Consider the optimization for small changes just that: an optimization, and allow your process to accommodate the occasional larger change.
+
+> "Small" changes should generally be limited to about 200 lines of code. A small change should be easy on a reviewer and, almost as important, not be so cumbersome that additional changes are delayed waiting for an extensive review. (...) A small initial review also can prevent much more expensive wasted effort on an incorrect approach further down the line.
+
+> Because code reviews are typically small, it's common for almost all code reviews at Google to be reviewed by one and only one person. Were that not the case - if a team were expected to weigh in on all changes to a common codebase - there is no way the process itself would scale.
+
+> Keeping changes small also allows the "approval" reviewers to more quickly approve any given changes. They can quickly inspect whether the primary code reviewer did due diligence and focus purely on whether this change augments the codebase while maintaining code health over time.
+
 #### Write Good Change Descriptions
+
+> A change description should indicate its type of change on the first line, as a summary. The first line is prime real estate and is used to provide summaries within the code review tool itself, to act as the subject line in any associated emails, and to become the visible line Google engineers see in a history summary within Code Search, so that first line is important.
+
+> Although the first line should be a summary of the entire change, the description should still go into detail on what is being changed and why. A description of "Bug fix" is not helpful to a reviewer or a future code archeologist. If several related modifications were made in the change, enumerate them within a list (while still keeping it on message and small). The description is the historical record for this change, and tools such as Code Search allow you to find who wrote what line in any particular change in the codebase. Drilling down into the original change is often useful when trying to fix a bug.
+
+> If, during the code review process, a new decision is reached, update the change description, or add appropriate comments within the implementation. A code review is not just something that you do in the present time; it is something you do to record what you did for posterity.
+
 #### Keep Reviewers to a Minimum
+
+> Most code reviews at Google are reviewed by precisely one reviewer.
+
+> There is a tendency within the industry, and within individuals, to try to get additional input (and unanimous consent) from a cross-section of engineers. (...) The cost of additional reviewers quickly outweighs their value.
+
+> In certain cases, it can be useful to get a particular change reviewed by multiple people, but even in those cases, those reviewers should focus on different aspects of the same change.
+
 #### Automate Where Possible
+
+> Opportunities to automate mechanical human tasks should be explored; investments in proper tooling reap dividends.
+
+> One of the most important technological improvements regarding automation over the past few years is automatic static analysis of a given code change. Rather than require authors to run tests, linters, or formatters, the current Google code review tooling provides most of that utility automatically through what is known as _presubmits_. A presubmit process is run when a change is initially sent to a reviewer. Before that change is sent, the presubmit process can detect a variety of problems with the existing change, reject the current change (and prevent sending an awkward email to a reviewer), and ask the original author to fix the change first. Such automation not only helps out with the code review process itself, it also allows the reviewers to focus on more important concerns than formatting.
 
 ### Types of Code Reviews
 
+> Code changes at Google generally fall into one of the following buckets (though there is sometimes overlap).
+
 #### Greenfield Code Reviews
+
+> A greenfield review is the most important time to evaluate whether the code will stand the test of time: that it will be easier to maintain as time and scale change the underlying assumptions of the code. (...) code is a liability, so the introduction of entirely new code should generally solve a real problem rather than simply provide yet another alternative. (...) A code review is not the time to debate design decisions already made in the past (and by the same token, a code review is not the time to introduce the design of a proposed API).
+
+> To ensure that code is sustainable, a greenfield review should ensure that an API matches an agreed design (which may require reviewing a design document) and is tested fully, with all API endpoints having some form of unit test, and that those tests fail when the code's assumptions change. (...) The code should also have proper owners (one of the first reviews in a new project is often of a single OWNERS file for the new directory), be sufficiently commented, and provide supplemental documentation, if needed.  A greenfield review might also necessitate the introduction of a project into the continuous integration system. 
+
 #### Behavioral Changes, Improvements, and Optimizations
+
+> (...) the guidelines that apply to a greenfield review also apply: is this change necessary, and does this change improve the codebase? Some of the best modifications to a codebase are actually deletions! Getting rid of dead or obsolete code is one of the best ways to improve the overall code health of a codebase.
+
+> (...) optimizations should of course ensure that they don't affect those tests and might need to include performance benchmarks for the reviewers to consult.
+
 #### Bug Fixes and Rollbacks
+
+> Inevitably, you will need to submit a change for a bug fix to your codebase. _When doing so, avoid the temptation to address other issues._ Not only does this risk increasing the size of the code review, it also makes it more difficult to perform regression testing or for others to roll back your change. A bug fix should focus solely on fixing the indicated bug and (usually) updating associated tests to catch the error that occurred in the first place.
+
+> Addressing the bug with a revised test is often necessary. The bug surfaced because existing tests were either inadequate, or the code had certain assumptions that were not met. As a reviewer of a bug fix, it is important to ask for updates to unit tests if applicable.
+
+> It also becomes critically important that any change that could cause a potential rollback (and that includes all changes!) be as small and atomic as possible so that a rollback, if needed, does not cause further breakages on other dependencies that can be difficult to untangle.
+
 #### Refactorings and Large-Scale Changes
+
+> Many changes at Google are automatically generated: the author of the change isn't a person, but a machine. (...) even machine-generated changes require review.
 
 ### Conclusion
 
+> Code review acts as the glue connecting engineers with one another, and the code review process is the primary developer workflow upon which almost all other processes must hang, from testing to static analysis to CI. A code review process must scale appropriately, and for that reason, best practices, including small changes and rapid feedback and iteration, are important to maintain developer satisfaction and appropriate production velocity.
+
 ### TL;DRs
+
+> - Code review has many benefits, including ensuring code correctness, comprehension, and consistency across a codebase.
+> - Always check your assumptions through someone else; optimize for the reader.
+> - Provide the opportunity for critical feedback while remaining professional.
+> - Code review is important for knowledge sharing throughout an organization.
+> - Automation is critical for scaling the process.
+> - The code review itself provides a historical record. 
 
 
 ## [Chapter 12: Unit Testing](https://abseil.io/resources/swe-book/html/ch12.html)
