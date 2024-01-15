@@ -829,3 +829,39 @@ Test doubles are meant to make tests run faster, but be careful to not make test
 > - A fake is often the ideal solution if a real implementation can't be used in a test.
 > - Overuse of stubbing leads to tests that are unclear and brittle.
 > - Interaction testing should be avoided when possible: it leads to tests that are brittle because it exposes implementation  details of the system under test.
+
+## [Chapter 20: Static Analysis](https://abseil.io/resources/swe-book/html/ch20.html)
+
+### Characteristics of Effective Static Analysis
+
+#### Scalability
+
+#### Usability
+
+### Key Lessons in Making Static Analysis Work
+
+#### Focus on Developer Happiness
+
+#### Make Static Analysis a Part of the Core Developer Workflow
+
+#### Empower Users to Contribute
+
+### Tricorder: Google’s Static Analysis Platform
+
+#### Integrated Tools
+
+#### Integrated Feedback Channels
+
+#### Suggested Fixes
+
+#### Per-Project Customization
+
+#### Presubmits
+
+#### Compiler Integration
+
+#### Analysis While Editing and Browsing Code
+
+### Conclusion
+
+### TL;DRs
