@@ -832,36 +832,92 @@ Test doubles are meant to make tests run faster, but be careful to not make test
 
 ## [Chapter 20: Static Analysis](https://abseil.io/resources/swe-book/html/ch20.html)
 
+> Static analysis refers to programs analyzing source code to find potential issues such as bugs, antipatterns, and other issues that can be diagnosed _without executing the program_. (...) Through static analysis at Google, we codify best practices, help keep code current to modern API versions, and prevent or reduce technical debt.  Examples of these analyses include verifying that naming conventions are upheld, flagging the use of deprecated APIs, or pointing out simpler but equivalent expressions that make code easier to read.
+
 ### Characteristics of Effective Static Analysis
 
 #### Scalability
 
+> Instead of analyzing entire large projects, we focus analyses on files affected by a pending code change, and typically show analysis results only for edited files or lines. (...) Google static analysis infrastructure avoids bottlenecking analysis results by showing them directly to relevant engineers.
+
 #### Usability
+
+> (...) we generally focus on newly introduced warnings; existing issues in otherwise working code are typically only worth highlighting (and fixing) if they are particularly important (security issues, significant bug fixes, etc.)
+
+> If the analysis author can save time (e.g., by providing a fix that can be automatically applied to the code in question), the cost in the trade-off goes down.
+
+> A further strength of homogenizing everything in one workflow is that a dedicated tools team can update tools along with workflow and code, allowing analysis tools to evolve with the source code in tandem.
 
 ### Key Lessons in Making Static Analysis Work
 
 #### Focus on Developer Happiness
 
+> (...) we also keep track of how well analysis tools are performing. If you don't measure this, you can't fix problems. We only deploy analysis tools with low false-positive rates (...)
+
+> Furthermore, _perception_ is a key aspect of the false-positive rate. If a static analysis tool is producing warnings that are technically correct but misinterpreted by users as false positives (e.g., due to confusing messages), users will react the same as if those warnings were in fact false positives.
+
 #### Make Static Analysis a Part of the Core Developer Workflow
+
+> At Google, we integrate static analysis into the core workflow via integration with code review tooling. Essentially all code committed at Google is reviewed before being committed; because developers are already in a change mindset when they send code for review, improvements suggested by static analysis tools can be made without too much disruption. (...) static analysis can save reviewer time by highlighting common issues automatically; static analysis tools help the code review process (and the reviewers) scale.
 
 #### Empower Users to Contribute
 
-### Tricorder: Google’s Static Analysis Platform
+> Static analysis is an opportunity to leverage expertise and apply it at scale by having domain experts write new analysis tools or individual checks within a tool.
+
+### Tricorder: Google's Static Analysis Platform
+
+> (...) the key difference between Tricorder and previous attempts was our relentless focus on having Tricorder deliver only valuable results to its users.
+
+> There are four criteria for new Tricorder checks:
+> 1. Be understandable
+> 2. Be actionable and easy to fix
+> 3. Produce less than 10% effective false positives
+> 4. Have the potential for significant impact on code quality
 
 #### Integrated Tools
 
+> [Error Prone](http://errorprone.info/) and [clang-tidy](https://clang.llvm.org/extra/clang-tidy/) extend the compiler to identify AST antipatterns for Java and C++, respectively.
+
+> Other analyzers showcase relationships between disparate files in a corpus.
+
+> (...) many projects have enabled a binary size checker that warns when changes significantly affect a binary size.
+
 #### Integrated Feedback Channels
+
+> With Tricorder, we display the option to click a "Not useful" button on an analysis result; this click provides the option to file a bug directly against the analyzer writer about why the result is not useful with information about analysis result prepopulated.
 
 #### Suggested Fixes
 
+> Automated fixes serve as an additional documentation source when the message is unclear and, as mentioned earlier, reduce the cost to addressing static analysis issues. (...) We take the approach that style issues in particular should be fixed automatically; for example, by formatters that automatically reformat source code files.
+
 #### Per-Project Customization
+
+Don't allow users to customize analysis just for them; ask them why they would want to "customize" and it will usually turn up as a defect/improvement.
 
 #### Presubmits
 
+> Because developers can choose to ignore static analysis warnings displayed in code review, Google additionally has the ability to add an analysis that blocks committing a pending code change, which we call a _presubmit check_.
+
 #### Compiler Integration
+
+> When possible, we try to push static analysis into the compiler.
+
+> To enable a new check, we first need to clean up all instances of that problem in the codebase so that we don't break the build for existing projects just because the compiler has evolved.
+
+I remember reading a blog post that claims it's this discipline in keeping code tidy that causes Google to break so many things and kill off projects so aggressively.
+
+> We also aim to never issue compiler warnings. We have found repeatedly that developers ignore compiler warnings. We either enable a compiler check as an error (and break the build) or don't show it in compiler output.
 
 #### Analysis While Editing and Browsing Code
 
+(...) IDE analyses require quick analysis times (typically less than 1 second and ideally less than 100 ms), and so some tools are not suitable to integrate here. (...) IDE integration tends to be messier than plugging into the review process.
+
 ### Conclusion
 
+> Static analysis can be a great tool to improve a codebase, find bugs early, and allow more expensive processes (such as human review and testing) to focus on issues that are not mechanically verifiable.
+
 ### TL;DRs
+
+> 1. Focus on developer happiness.
+> 2. Make static analysis part of the core developer workflow.
+> 3. Empower users to contribute.
