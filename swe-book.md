@@ -921,3 +921,27 @@ I remember reading a blog post that claims it's this discipline in keeping code 
 > 1. Focus on developer happiness.
 > 2. Make static analysis part of the core developer workflow.
 > 3. Empower users to contribute.
+
+## [Chapter 23: Continuous Integration](https://abseil.io/resources/swe-book/html/ch23.html)
+
+### CI Concepts
+
+#### Fast Feedback Loops
+
+#### Automation
+
+#### Continuous Testing
+
+#### CI Challenges
+
+#### Hermetic Testing
+
+### CI at Google
+
+#### CI Case Study: Google Takeout
+
+#### But I Can't Afford CI
+
+### Conclusion
+
+### TL;DRs
