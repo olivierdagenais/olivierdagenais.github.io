@@ -924,11 +924,36 @@ I remember reading a blog post that claims it's this discipline in keeping code 
 
 ## [Chapter 23: Continuous Integration](https://abseil.io/resources/swe-book/html/ch23.html)
 
+> _Continuous Integration_, or CI, is generally  defined as "a software development practice where members of a team integrate their work frequently [...] Each integration is verified by an automated build (including test) to detect integration errors as quickly as possible."
+
+> Whereas a traditional continuous build tests changes in your binary, an extension of this might test changes to upstream microservices. The dependency is just shifted from your function call stack to an HTTP request or Remote Procedure Calls (RPC).
+
+> So, perhaps a better definition for CI in today's world, particularly when developing at scale, is the following:
+> _Continuous Integration (2): the continuous assembling and testing of our entire complex and rapidly evolving ecosystem._
+
+> These outcomes are driven by a powerful guarantee: verifiable - and timely - proof that the application is good to progress to the next stage.
+
 ### CI Concepts
 
 #### Fast Feedback Loops
 
+> To minimize the cost of bugs, CI encourages us to use _fast feedback loops_.
+
+> _Canarying_ - or deploying to a small percentage of production first - can help minimize issues that do make it to production, with a subset-of-production initial feedback loop preceding all-of-production.
+
+> _Experiments and feature flags_ are extremely powerful feedback loops.  They reduce deployment risk by isolating changes within modular components that can be dynamically toggled in production.
+
+> Visibility into test history empowers engineers to share and collaborate on feedback, an essential requirement for disparate teams to diagnose and learn from integration failures between their systems.
+
 #### Automation
+
+> Intuitively, because we automate processes by defining them as code, peer review when changes are checked in will reduce the probability of error.
+
+##### Continuous Build
+
+> The _Continuous Build_ (CB) integrates the latest code changes at head4 and runs an automated build and test.
+
+> After a change is submitted, the CB should run all relevant tests. If a change passes all tests, the CB marks it passing or "green" (...)
 
 #### Continuous Testing
 
