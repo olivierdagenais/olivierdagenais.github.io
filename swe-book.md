@@ -943,6 +943,8 @@ I remember reading a blog post that claims it's this discipline in keeping code 
 
 > _Experiments and feature flags_ are extremely powerful feedback loops.  They reduce deployment risk by isolating changes within modular components that can be dynamically toggled in production.
 
+###### Accessible and actionable feedback
+
 > Visibility into test history empowers engineers to share and collaborate on feedback, an essential requirement for disparate teams to diagnose and learn from integration failures between their systems.
 
 #### Automation
@@ -955,7 +957,28 @@ I remember reading a blog post that claims it's this discipline in keeping code 
 
 > After a change is submitted, the CB should run all relevant tests. If a change passes all tests, the CB marks it passing or "green" (...)
 
+##### Continuous Delivery
+
+> The first step in Continuous Delivery (CD; discussed more fully in Continuous Delivery) is _release automation_, which continuously assembles the latest code and configuration from head into release candidates.
+
+> We then define CD as follows:
+> _Continuous Delivery (CD): a continuous assembling of release candidates, followed by the promotion and testing of those candidates throughout a series of environments—sometimes reaching production and sometimes not._
+
 #### Continuous Testing
+
+> one of our key objectives in CI is determining _what_ to test _when_ in [the] progression [of code changes from local development to production].
+
+###### Why presubmit isn't enough
+
+> (...) why not just run all tests on presubmit? The main reason is that it's too expensive.
+
+###### Presubmit versus post-submit
+
+> So, which tests _should_ be run on presubmit?  Our general rule of thumb is: only fast, reliable ones. You can accept some loss of coverage on presubmit, but that means you need to catch any issues that slip by on post-submit, and accept some number of rollbacks.
+
+##### Release candidate testing
+
+##### Production testing
 
 #### CI Challenges
 
