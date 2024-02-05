@@ -986,7 +986,7 @@ I remember reading a blog post that claims it's this discipline in keeping code 
 
 #### CI Challenges
 
-- unstable tests
+- unstable/flaky tests
 - slow tests
 - conflicting tests
 - too many tests
@@ -996,9 +996,34 @@ I remember reading a blog post that claims it's this discipline in keeping code 
 - resource constraints
 - failure management, such as automatically detecting & disabling flaky tests and creating work items to address them
 
+
 #### Hermetic Testing
 
+> Hermetic tests: tests run against a test environment (i.e., application servers and resources) that is entirely self-contained (i.e., no external dependencies like production backends).
+
+> Hermetic tests have two important properties: greater determinism (i.e., stability) and isolation.
+
+> Record/replay systems record live backend responses, cache them, and replay them in a hermetic test environment.
+
+>  hermetic backends can also be more expensive because they use more resources and are slower to set up. Many teams use combinations of hermetic and live backends in their test environments.
+
 ### CI at Google
+
+> We run a massive continuous build, called the Test Automation Platform (TAP), of our entire codebase.
+
+Features of TAP:
+1. Presubmit optimization
+    1. Teams identify a "fast" subset of their tests that is going to run on presubmit.
+    2. "Larger and slower tests" will execute after a change has been submitted, likely in batches of changes.
+    3. Teams have a "build cop" whose priority is to fix broken builds, preferably by rolling back a breaking change.
+2. Culprit finding
+    1. Batches of changes where one or more tests failed are automatically split up (divide and conquer binary search).
+    2. Humans can also perform binary search, aided by tools.
+3. Failure management
+    1. TAP can automatically roll back changes.
+4. Resource constraints
+    1. A global dependency graph is used to optimize which tests are run based on downstream dependencies.
+    2. TAP will prioritize test runs with fewer number of tests (smaller blast radius), so contibutors are rewarded for smaller changes with faster results.
 
 #### CI Case Study: Google Takeout
 
