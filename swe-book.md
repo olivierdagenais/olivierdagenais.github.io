@@ -978,9 +978,23 @@ I remember reading a blog post that claims it's this discipline in keeping code 
 
 ##### Release candidate testing
 
+> As CD builds RCs, it will run larger tests against the entire candidate. We test a release candidate by promoting it through a series of test environments and testing it at each deployment. This can include a combination of sandboxed, temporary environments and shared test environments, like dev or staging. It's common to include some manual QA testing of the RC in shared environments, too.
+
 ##### Production testing
 
+> Our continuous, automated testing process goes all the way to the final deployed environment: production.  We should run the same suite of tests against production (sometimes called _probers_) that we did against the release candidate earlier on to verify: 1) the working state of production, according to our tests, and 2) the relevance of our tests, according to production.
+
 #### CI Challenges
+
+- unstable tests
+- slow tests
+- conflicting tests
+- too many tests
+- selecting the optimal tests to run at presubmit
+- how to run the tests at presubmit
+- culprit finding and failure isolation
+- resource constraints
+- failure management, such as automatically detecting & disabling flaky tests and creating work items to address them
 
 #### Hermetic Testing
 
