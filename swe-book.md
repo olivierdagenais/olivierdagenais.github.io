@@ -1037,10 +1037,19 @@ Features of TAP:
     1. Periodically run the post-submit tests in production to detect breaking changes in integrations.
 4. Keeping it green
     1. Failure management: create work items for failing tests & disable them
-5. It would be nice for integrations to inclde Takeout testing, but that seemed too difficult.
+5. It would be nice for integrations to include Takeout testing, but that seemed too difficult.
 
 #### But I Can't Afford CI
 
+You can't afford to NOT have CI: it "shifts left", so that you discover and fix problems earlier, when they are easier and less costly (whether in time, money, reputation, etc.).
+
 ### Conclusion
 
+CI is like any other tool: it's better than nothing and can be improved alongside the projects it supports.
+
 ### TL;DRs
+
+> - A CI system decides what tests to use, and when.
+> - CI systems become progressively more necessary as your codebase ages and grows in scale.
+> - CI should optimize quicker, more reliable tests on presubmit and slower, less deterministic tests on post-submit.
+> - Accessible, actionable feedback allows a CI system to become more efficient.
