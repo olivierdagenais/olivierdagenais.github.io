@@ -1027,6 +1027,18 @@ Features of TAP:
 
 #### CI Case Study: Google Takeout
 
+1. Continuously broken dev deploys
+    1. Use hermetic testing for all integrations in pre-submit.
+    2. Re-use hermetic pre-submit testing environmnet for periodic post-submit testing.
+2. Indecipherable test logs
+    1. Run tests in related groups.
+    2. Report test results in a structured fashion, with links to further details as needed.
+3. Debugging "all of Google"
+    1. Periodically run the post-submit tests in production to detect breaking changes in integrations.
+4. Keeping it green
+    1. Failure management: create work items for failing tests & disable them
+5. It would be nice for integrations to inclde Takeout testing, but that seemed too difficult.
+
 #### But I Can't Afford CI
 
 ### Conclusion
