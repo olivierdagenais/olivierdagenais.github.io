@@ -953,7 +953,7 @@ I remember reading a blog post that claims it's this discipline in keeping code 
 
 ##### Continuous Build
 
-> The _Continuous Build_ (CB) integrates the latest code changes at head4 and runs an automated build and test.
+> The _Continuous Build_ (CB) integrates the latest code changes at head and runs an automated build and test.
 
 > After a change is submitted, the CB should run all relevant tests. If a change passes all tests, the CB marks it passing or "green" (...)
 
