@@ -547,6 +547,47 @@ There's also a bit about ownership/stewardship, driven by `OWNERS` files in the 
 > - The code review itself provides a historical record. 
 
 
+## [Chapter 10: Documentation](https://abseil.io/resources/swe-book/html/ch10.html)
+
+### What Qualifies as Documentation?
+
+### Why Is Documentation Needed?
+
+### Documentation Is Like Code
+
+### Know Your Audience
+
+#### Types of Audiences
+
+### Documentation Types
+
+#### Reference Documentation
+#### Design Docs
+#### Tutorials
+#### Conceptual Documentation
+#### Landing Pages
+
+### Documentation Reviews
+
+### Documentation Philosophy
+
+#### WHO, WHAT, WHEN, WHERE, and WHY
+#### The Beginning, Middle, and End
+#### The Parameters of Good Documentation
+#### Deprecating Documents
+
+### When Do You Need Technical Writers?
+
+### Conclusion
+
+### TL;DRs
+
+> - Documentation is hugely important over time and scale.
+> - Documentation changes should leverage the existing developer workflow.
+> - Keep documents focused on one purpose.
+> - Write for your audience, not yourself. 
+
+
 ## [Chapter 12: Unit Testing](https://abseil.io/resources/swe-book/html/ch12.html)
 
 > We use the term _unit test_ to refer to tests of relatively narrow scope, such as of a single class or method. Unit tests are usually small in size, but this isn't always the case.
