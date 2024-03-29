@@ -549,9 +549,15 @@ There's also a bit about ownership/stewardship, driven by `OWNERS` files in the 
 
 ## [Chapter 10: Documentation](https://abseil.io/resources/swe-book/html/ch10.html)
 
+> At Google, our most successful efforts have been when documentation is _treated like code_ and incorporated into the traditional engineering workflow, making it easier for engineers to write and maintain simple documents.
+
 ### What Qualifies as Documentation?
 
+> When we refer to "documentation," we're talking about every  supplemental text that an engineer needs to write to do their job: not only standalone documents, but code comments as well.
+
 ### Why Is Documentation Needed?
+
+
 
 ### Documentation Is Like Code
 
