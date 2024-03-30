@@ -557,9 +557,28 @@ There's also a bit about ownership/stewardship, driven by `OWNERS` files in the 
 
 ### Why Is Documentation Needed?
 
+> Code and APIs become more comprehensible, reducing mistakes. Project teams are more focused when their design goals and team objectives are clearly stated. Manual processes are easier to follow when the steps are clearly outlined. Onboarding new members to a team or code base takes much less effort if the process is clearly documented.
 
+>  It helps answer questions like these:
+> - Why were these design decisions made?
+> - Why did we implement this code in this manner?
+> - Why did _I_ implement this code in this manner, if you're looking at your own code two years later?
+
+> Even to the writer, documentation provides the following benefits:
+> - It helps formulate an API.
+> - It provides a road map for maintenance and a historical record.
+> - It makes your code look more professional and drive traffic.
+> - It will prompt fewer questions from other users.
+
+> Much like testing, the effort you put into writing good documents will reap benefits many times over its lifetime.
 
 ### Documentation Is Like Code
+
+> Writing documentation is not much different than writing code. Like a programming language, it has rules, a particular syntax, and style decisions, often to accomplish a similar purpose as that within code: enforce consistency, improve clarity, and avoid (comprehension) errors.
+
+> Documents without owners become stale and difficult to maintain.
+
+> Documentation is often so tightly coupled to code that it should, as much as possible, be treated as code.
 
 ### Know Your Audience
 
