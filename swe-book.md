@@ -578,15 +578,48 @@ There's also a bit about ownership/stewardship, driven by `OWNERS` files in the 
 
 > Documents without owners become stale and difficult to maintain.
 
-> Documentation is often so tightly coupled to code that it should, as much as possible, be treated as code.
+> Documentation is often so tightly coupled to code that it should, as much as possible, be treated as _code_.
+
+Case Study: Google transitioned from a wiki to putting documentation in source control, alongside the code, with owners and reviews.
 
 ### Know Your Audience
 
+> One of the most important mistakes that engineers make when writing documentation is to write only for themselves.
+
+> Always try to identify a primary audience and write to that audience.
+
 #### Types of Audiences
+
+> Chances are, you have multiple audiences based on one or more of the following criteria:
+> 
+> - Experience level
+> - Domain knowledge
+> - Purpose
+
+> Write descriptively enough to explain complex topics to people unfamiliar with the topic, but don't lose or annoy experts.
+
+> Implementation details are important to a team member for maintenance purposes; end users should not need to read such information.
 
 ### Documentation Types
 
+> A document should have, in general, a singular purpose, and stick to it.
+
 #### Reference Documentation
+
+> By reference documentation, we mean anything that documents the usage of code within the codebase.
+
+##### File comments
+
+> Generally, a file comment should begin with an outline of what's contained in the code you are reading. It should identify the code's main use cases and intended audience.
+
+##### Class comments
+
+> All public classes (and structs) at Google must contain a class comment describing the class/struct, important methods of that class, and the purpose of the class.
+
+##### Function comments
+
+All free functions, or public methods of a class, at Google must also contain a function comment  describing what the function _does_.  Function comments should stress the _active_ nature of their use, beginning with an indicative verb describing what the function does and what is returned.
+
 #### Design Docs
 #### Tutorials
 #### Conceptual Documentation
