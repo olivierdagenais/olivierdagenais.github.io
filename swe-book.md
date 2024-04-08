@@ -618,14 +618,39 @@ Case Study: Google transitioned from a wiki to putting documentation in source c
 
 ##### Function comments
 
-All free functions, or public methods of a class, at Google must also contain a function comment  describing what the function _does_.  Function comments should stress the _active_ nature of their use, beginning with an indicative verb describing what the function does and what is returned.
+> All free functions, or public methods of a class, at Google must also contain a function comment describing what the function _does_.  Function comments should stress the _active_ nature of their use, beginning with an indicative verb describing what the function does and what is returned.
 
 #### Design Docs
+
+> A good design document should cover the goals of the design, its implementation strategy, and propose key design decisions with an emphasis on their individual trade-offs. The best design documents suggest design goals and cover alternative designs, denoting their strong and weak points.
+
 #### Tutorials
+
+> Most projects deserve a “Hello World” document that assumes nothing and gets the engineer to make something "real" happen.
+
+> Most tutorials require you to perform a number of steps, in order. In those cases, number those steps explicitly. If the focus of the tutorial is on the _user_ (say, for external developer documentation), then number each action that a user needs to undertake. Don't number actions that the system may take in response to such user actions.
+
+> Combine all atomic user operations into single steps so that the user knows they need to do something at each step in the process. Also, if your tutorial has user-visible input or output, denote that on separate lines (often using the convention of a **`monospaced bold`** font).
+
 #### Conceptual Documentation
+
+> (...) we need conceptual documentation to provide overviews of the APIs or systems. (...)  In almost all cases, a conceptual document is meant to augment, not replace, a reference documentation set.
+
+> A concept document needs to be useful to a broad audience: both experts and novices alike. Moreover, it needs to emphasize _clarity_, so it often needs to sacrifice completeness (something best reserved for a reference) and (sometimes) strict accuracy. That's not to say a conceptual document should intentionally be inaccurate; it just means that it should focus on common usage and leave rare usages or side effects for reference documentation.
+
 #### Landing Pages
 
+> (...) ensure that a landing page clearly identifies its purpose, and then include only links to other pages for more information. If something on a landing page is doing more than being a traffic cop, it is not doing its job. If you have a separate setup document, link to that from the landing page as a separate document. If you have too many links on the landing page (your page should not scroll multiple screens), consider breaking up the pages by taxonomy, under different sections.
+
 ### Documentation Reviews
+
+> If you want to "test" whether your documentation works, you should generally have someone else review it.
+
+> A technical document benefits from three different types of reviews, each emphasizing different aspects:
+> - A technical review, for accuracy.
+> - An audience review, for clarity.
+> - A writing review, for consistency.
+
 
 ### Documentation Philosophy
 
