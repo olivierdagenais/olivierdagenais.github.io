@@ -651,17 +651,46 @@ Case Study: Google transitioned from a wiki to putting documentation in source c
 > - An audience review, for clarity.
 > - A writing review, for consistency.
 
-
 ### Documentation Philosophy
 
 #### WHO, WHAT, WHEN, WHERE, and WHY
+
+> Try to address the other questions in the first two paragraphs of any document:
+> - WHO was discussed previously: that's the audience. But sometimes you also need to explicitly call out and address the audience in a document.
+> - WHAT identifies the purpose of this document (...) Sometimes, merely writing the WHAT helps you frame the document appropriately.
+> - WHEN identifies when this document was created, reviewed, or updated.
+> - WHERE is often implicit as well, but decide where the document should live. Usually, the preference should be under some sort of version control, ideally _with the source code it documents_.
+> - WHY sets up the purpose for the document. Summarize what you expect someone to take away from the document after reading it.
+
 #### The Beginning, Middle, and End
+
+> All documents - indeed, all parts of documents—have a beginning, middle, and end.  Although it sounds amazingly silly, most documents should often have, at a minimum, those three sections.
+
+> Usually, the solution is to introduce and summarize the point within an introductory paragraph, and then use the rest of the section to make your case in a more detailed fashion.
+
 #### The Parameters of Good Documentation
+
+> There are usually three aspects of good documentation: completeness, accuracy, and clarity.  You rarely get all three within the same document (...)
+
+> In each case, a "good document" is defined as the document that is doing _its intended job_. As a result, you rarely want a document doing more than one job.
+
+> Focus on the needs of the audience. Often, less is more.
+
 #### Deprecating Documents
+
+> Just like old code can cause problems, so can old documents.  Over time, documents become stale, obsolete, or (often) abandoned. (...) Even for unowned documents, someone adding a note that "This no longer works!" is more helpful than saying nothing and leaving something that seems authoritative but no longer works.
 
 ### When Do You Need Technical Writers?
 
+> We learned that most engineering teams can write documentation for themselves (their team) perfectly fine; it's only when they are writing documents for another audience that they tend to need help because it's difficult to write to another audience.
+
+> A technical writer is better able to stand in as a person unfamiliar with the domain. In fact, it's one of their critical roles: to challenge the assumptions your team makes about the utility of your project. 
+
 ### Conclusion
+
+> For comparison, engineers have gradually accepted that testing is necessary for any code change, no matter how small. As well, testing tooling is robust, varied and plugged into an engineering workflow at various points. Documentation is not ingrained at nearly the same level.
+
+> For any piece of code that you expect to live more than a few months, the extra cycles you put in documenting that code will not only help others, it will help you maintain that code as well.
 
 ### TL;DRs
 
