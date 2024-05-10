@@ -161,16 +161,36 @@ Regarding upgrades to dependencies, such as compilers and libraries...
 ### Philosophy
 
 > Every expert was once a novice: an organization's success depends on growing and investing in its people.
+
 > Written knowledge has scaling advantages, but so does targeted human help. A human expert can synthesize their expanse of knowledge. They can assess what information is applicable to the individual's use case, determine whether the documentation is still relevant, and know where to find it. Or, if they don't know where to find the answers, they might know who does.
 
 ### Setting the Stage: Psychological Safety
 
+> Psychological safety is critical to promoting a learning environment.
+
+> An enormous part of learning is being able to try things and feeling safe to fail. In a healthy environment, people feel comfortable asking questions, being wrong, and learning new things.
+
 #### Mentorship
+
+> One important way of building psychological safety is to assign Nooglers a mentor—someone who is not their team member, manager, or tech lead—whose responsibilities explicitly include answering questions and helping the Noogler ramp up.
+
 #### Psychological Safety in Large Groups
+
+> (...) one-to-one solutions don't scale well. Group solutions are more scalable, but they are also scarier.
+
+> 1. No feigned surprise
+> 2. No "well-actuallys"
+> 3. No back-seat driving
+> 4. No subtle "-isms"
 
 ### Growing Your Knowledge
 
+> It is important to recognize that you always have something to learn.
+
 #### Ask Questions
+
+> If you take away only a single thing from this chapter, it is this: always be learning; always be asking questions.
+
 #### Understand Context
 
 ### Scaling Your Questions: Ask the Community
