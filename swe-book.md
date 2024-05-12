@@ -12,7 +12,7 @@ Noteworthy excerpts from the book.
 
 Regarding upgrades to dependencies, such as compilers and libraries...
 
->  We've also learned that having a dedicated group of experts execute the change scales better than asking for more maintenance effort from every user: experts spend some time learning the whole problem in depth and then apply that expertise to every subproblem. Forcing users to respond to churn means that every affected team does a worse job ramping up, solves their immediate problem, and then throws away that now-useless knowledge. Expertise scales better.
+> We've also learned that having a dedicated group of experts execute the change scales better than asking for more maintenance effort from every user: experts spend some time learning the whole problem in depth and then apply that expertise to every subproblem. Forcing users to respond to churn means that every affected team does a worse job ramping up, solves their immediate problem, and then throws away that now-useless knowledge. Expertise scales better.
 
 ### Policies That Scale Well
 
@@ -85,17 +85,17 @@ Regarding upgrades to dependencies, such as compilers and libraries...
 #### Humility, Respect, and Trust in Practice
 
 1. Lose the ego
-    1. > "The appearance of conforming gets you a long way."
+ 1. > "The appearance of conforming gets you a long way."
 2. Learn to give _and_ take criticism
-    1. > To repeat ourselves: _you are not your code_.
-    2. > Notice how you're using humility to make the question about you, not them. They're not wrong; you're just having trouble understanding the code. The suggestion is merely offered up as a way to clarify things for poor little you while possibly helping the project's long-term sustainability goals. You're also not demanding anything—you're giving your collaborator the ability to peacefully reject the suggestion. The discussion stays focused on the code itself, not on anyone's value or coding skills.
+ 1. > To repeat ourselves: _you are not your code_.
+ 2. > Notice how you're using humility to make the question about you, not them. They're not wrong; you're just having trouble understanding the code. The suggestion is merely offered up as a way to clarify things for poor little you while possibly helping the project's long-term sustainability goals. You're also not demanding anything—you're giving your collaborator the ability to peacefully reject the suggestion. The discussion stays focused on the code itself, not on anyone's value or coding skills.
 3. Fail fast and iterate
-    1. > "Why would I fire you? I just spent $10 million training you!"
-    2. > At Google, one of our favorite mottos is that "Failure is an option."
+ 1. > "Why would I fire you? I just spent $10 million training you!"
+ 2. > At Google, one of our favorite mottos is that "Failure is an option."
 
 #### Blameless Post-Mortem Culture
 
-> The key to learning from your mistakes is to document your failures by performing a root-cause  analysis and writing up a "postmortem," as it's called at Google (and many other companies).
+> The key to learning from your mistakes is to document your failures by performing a root-cause analysis and writing up a "postmortem," as it's called at Google (and many other companies).
 
 > A proper postmortem should always contain an explanation of what was learned and what is going to change as a result of the learning experience.
 
@@ -150,9 +150,9 @@ Regarding upgrades to dependencies, such as compilers and libraries...
 
 > - Lack of psychological safety
 > - Information islands
->     - Information fragmentation
->     - Information duplication
->     - Information skew
+> - Information fragmentation
+> - Information duplication
+> - Information skew
 > - Single point of failure (SPOF)
 > - All-or-nothing expertise
 > - Parroting
@@ -191,19 +191,58 @@ Regarding upgrades to dependencies, such as compilers and libraries...
 
 > If you take away only a single thing from this chapter, it is this: always be learning; always be asking questions.
 
+> On the receiving end, patience and kindness when answering questions fosters an environment in which people feel safe looking for help. (...) Targeted help allows engineers to be productive faster, which in turn makes their entire team more productive.
+
 #### Understand Context
+
+> Learning is not just about understanding new things; it also includes developing an understanding of the decisions behind the design and implementation of existing things.
+
+> Consider the principle of "Chesterton's fence": before removing or changing something, first understand why it's there.
+
+> After you've understood the context and purpose of the code, consider whether your change still makes sense. If it does, go ahead and make it; if it doesn't, document your reasoning for future readers.
 
 ### Scaling Your Questions: Ask the Community
 
+> Getting one-to-one help is high bandwidth but necessarily limited in scale. And as a learner, it can be difficult to remember every detail. Do your future self a favor: when you learn something from a one-to-one discussion, _write it down_.
+
+> Chances are that future newcomers will have the same questions you had. Do them a favor, too, and _share what you write down_.
+
 #### Group Chats
+
+> (...) group chats are great, because you can ask your question to many people at once and have a quick back-and-forth conversation with whoever is available. As a bonus, other members of the group chat can learn from the question and answer, and many forms of group chat can be automatically archived and searched later.
+
 #### Mailing Lists
+
+> When you find an answer to a question you asked on a mailing list, it can be tempting to get on with your work. Don't do it! You never know when someone will need the same information in the future, so it's a best practice to post the answer back to the list.
+
+> Mailing lists are not without their trade-offs. They're well suited for complicated questions that require a lot of context, but they're clumsy for the quick back-and-forth exchanges at which group chats excel.
+
 #### YAQS: Question-and-Answer Platform
+
+> YAQS ("Yet Another Question System") is a Google-internal version of a Stack Overflow–like website (...)
 
 ### Scaling Your Knowledge: You Always Have Something to Teach
 
+> Expertise is a multidimensional vector of what you know: everyone has varying levels of expertise across different areas. This is one of the reasons why diversity is critical to organizational success: different people bring different perspectives and expertise to the table.
+
 #### Office Hours
+
+> Office hours are a regularly scheduled (typically weekly) event during which one or more people make themselves available to answer questions (in person) about a particular topic.
+
 #### Tech Talks and Classes
+
+> Tech talks typically consist of a speaker presenting directly to an audience. Classes, on the other hand, can have a lecture component but often center on in-class exercises and therefore require more active participation from attendees. As a result, instructor-led classes are typically more demanding and expensive to create and maintain than tech talks and are reserved for the most important or difficult topics.
+
 #### Documentation
+
+> Documentation is written knowledge whose primary goal is to help its readers learn something.
+
+##### Updating documentation
+
+##### Creating documentation
+
+##### Promting documentation
+
 #### Code
 
 ### Scaling Your Organization's Knowledge
@@ -299,7 +338,7 @@ Regarding upgrades to dependencies, such as compilers and libraries...
 
 > The best way to show your team that you don't trust it is to treat team members like kids (...)
 
-> (...) what about the costs of having a workforce that behaves like children or that has to waste valuable time formally requesting cheap office supplies? Surely  that's more  expensive than the price of a few pens and USB cables.
+> (...) what about the costs of having a workforce that behaves like children or that has to waste valuable time formally requesting cheap office supplies? Surely that's more expensive than the price of a few pens and USB cables.
 
 ### Positive Patterns
 
@@ -325,11 +364,11 @@ Regarding upgrades to dependencies, such as compilers and libraries...
 
 > As a leader, your job is to inspire, but inspiration is a 24/7 job. Your visible attitude about absolutely everything - no matter how trivial - is unconsciously noticed and spreads infectiously to your team.
 
-> The person asking for advice typically doesn't want _you_ to solve their problem, but rather to help them solve it, and the easiest way to do this is to ask this person questions. (...)  try to help the person solve the problem on their own by trying to refine and explore the problem.
+> The person asking for advice typically doesn't want _you_ to solve their problem, but rather to help them solve it, and the easiest way to do this is to ask this person questions. (...) try to help the person solve the problem on their own by trying to refine and explore the problem.
 
 #### Be a Catalyst
 
-> One of the most common things a team leader does is to build consensus.  This might mean that you drive the process from start to finish, or you just give it a gentle push in the right direction to speed it up.
+> One of the most common things a team leader does is to build consensus. This might mean that you drive the process from start to finish, or you just give it a gentle push in the right direction to speed it up.
 
 #### Remove Roadblocks
 
@@ -345,7 +384,7 @@ Regarding upgrades to dependencies, such as compilers and libraries...
 
 #### Set Clear Goals
 
-> If you're going to get your team moving rapidly in one direction, you need to make sure that every team member understands and agrees on what the direction is. (...)  If you're going to have clear goals, you need to set clear priorities and help your team decide how it should make trade-offs when the time comes.
+> If you're going to get your team moving rapidly in one direction, you need to make sure that every team member understands and agrees on what the direction is. (...) If you're going to have clear goals, you need to set clear priorities and help your team decide how it should make trade-offs when the time comes.
 
 > The easiest way to set a clear goal and get your team pulling the product in the same direction is to create a concise mission statement for the team.
 
@@ -374,17 +413,17 @@ Regarding upgrades to dependencies, such as compilers and libraries...
 ### Other Tips and Tricks
 
 1. Delegate, but get your hands dirty
-    > (...) one of the easiest ways to gain the team's respect and get up to speed on what they're doing is to get your hands dirty—usually by taking on a grungy task that no one else wants to do.
+ > (...) one of the easiest ways to gain the team's respect and get up to speed on what they're doing is to get your hands dirty—usually by taking on a grungy task that no one else wants to do.
 1. Seek to replace yourself
-    > (...)  if you want a member of your team to replace you, you need to hire people capable of replacing you, which we usually sum up by saying that you need to "hire people smarter than you."
+ > (...) if you want a member of your team to replace you, you need to hire people capable of replacing you, which we usually sum up by saying that you need to "hire people smarter than you."
 1. Know when to make waves
-    Don't delay taking action on a difficult situation, especially if there's discomfort to address it.
+ Don't delay taking action on a difficult situation, especially if there's discomfort to address it.
 1. Shield your team from chaos
-    > (...) the chaos had always been present, but my previous manager had shielded me and the rest of my team from it.
+ > (...) the chaos had always been present, but my previous manager had shielded me and the rest of my team from it.
 1. Give your team air cover
-    > Share as much information as you can with your team, but don't distract them with organizational craziness that is extremely unlikely to ever actually affect them.
+ > Share as much information as you can with your team, but don't distract them with organizational craziness that is extremely unlikely to ever actually affect them.
 1. Let your team know when they're doing well
-    > Just as you let someone know when they screw up, be sure to let them know when they do well, and be sure to let them (and the rest of the team) know when they knock one out of the park.
+ > Just as you let someone know when they screw up, be sure to let them know when they do well, and be sure to let them (and the rest of the team) know when they knock one out of the park.
 1. It's easy to say "yes" to something that's easy to undo
 
 ### People Are Like Plants
@@ -393,7 +432,7 @@ Regarding upgrades to dependencies, such as compilers and libraries...
 
 #### Intrinsic Versus Extrinsic Motivation
 
-> There are two types of motivation: _extrinsic_, which originates from outside forces (such as monetary compensation), and _intrinsic_, which comes from within.  In his book _Drive_, Dan Pink explains that the way to make people the happiest and most productive isn't to motivate them extrinsically (e.g., throw piles of cash at them); rather, you need to work to increase their intrinsic motivation. Dan claims you can increase intrinsic motivation by giving people three things: autonomy, mastery, and purpose.
+> There are two types of motivation: _extrinsic_, which originates from outside forces (such as monetary compensation), and _intrinsic_, which comes from within. In his book _Drive_, Dan Pink explains that the way to make people the happiest and most productive isn't to motivate them extrinsically (e.g., throw piles of cash at them); rather, you need to work to increase their intrinsic motivation. Dan claims you can increase intrinsic motivation by giving people three things: autonomy, mastery, and purpose.
 
 ### Conclusion
 
@@ -412,7 +451,7 @@ Regarding upgrades to dependencies, such as compilers and libraries...
 
 > The primary end goal of a code review is to get another engineer to consent to the change, which we denote by tagging the change as "looks good to me" (LGTM).
 
-> It's important to remember (and accept) that code itself is a liability.   It might be a necessary liability, but by itself, code is simply a maintenance task to someone somewhere down the line.
+> It's important to remember (and accept) that code itself is a liability. It might be a necessary liability, but by itself, code is simply a maintenance task to someone somewhere down the line.
 
 > As much as a code review of entirely new code should not come out of the blue, the code review process itself should also not be viewed as an opportunity to revisit previous decisions.
 
@@ -431,7 +470,7 @@ There's also a bit about ownership/stewardship, driven by `OWNERS` files in the 
 
 #### Code Correctness
 
-> Having another set of eyes look over a change helps ensure that the change does what was intended.  Reviewers typically look for whether a change has proper testing, is properly designed, and functions correctly and efficiently.
+> Having another set of eyes look over a change helps ensure that the change does what was intended. Reviewers typically look for whether a change has proper testing, is properly designed, and functions correctly and efficiently.
 
 > The investment in the time for code review saved time otherwise spent in testing, debugging, and performing regressions, provided that the code review process itself was streamlined to keep it lightweight.
 
@@ -451,7 +490,7 @@ There's also a bit about ownership/stewardship, driven by `OWNERS` files in the 
 
 #### Code Consistency
 
->  Code (...) needs to conform to some standards of consistency so that it can be understood and maintained. (...) A code review (...) should act to ensure code _health_.
+> Code (...) needs to conform to some standards of consistency so that it can be understood and maintained. (...) A code review (...) should act to ensure code _health_.
 
 > Consistency sometimes clashes with functionality; a readability reviewer may prefer a less complex change that may not be functionally "better" but is easier to understand.
 
@@ -533,7 +572,7 @@ There's also a bit about ownership/stewardship, driven by `OWNERS` files in the 
 
 > A greenfield review is the most important time to evaluate whether the code will stand the test of time: that it will be easier to maintain as time and scale change the underlying assumptions of the code. (...) code is a liability, so the introduction of entirely new code should generally solve a real problem rather than simply provide yet another alternative. (...) A code review is not the time to debate design decisions already made in the past (and by the same token, a code review is not the time to introduce the design of a proposed API).
 
-> To ensure that code is sustainable, a greenfield review should ensure that an API matches an agreed design (which may require reviewing a design document) and is tested fully, with all API endpoints having some form of unit test, and that those tests fail when the code's assumptions change. (...) The code should also have proper owners (one of the first reviews in a new project is often of a single OWNERS file for the new directory), be sufficiently commented, and provide supplemental documentation, if needed.  A greenfield review might also necessitate the introduction of a project into the continuous integration system. 
+> To ensure that code is sustainable, a greenfield review should ensure that an API matches an agreed design (which may require reviewing a design document) and is tested fully, with all API endpoints having some form of unit test, and that those tests fail when the code's assumptions change. (...) The code should also have proper owners (one of the first reviews in a new project is often of a single OWNERS file for the new directory), be sufficiently commented, and provide supplemental documentation, if needed. A greenfield review might also necessitate the introduction of a project into the continuous integration system. 
 
 #### Behavioral Changes, Improvements, and Optimizations
 
@@ -573,13 +612,13 @@ There's also a bit about ownership/stewardship, driven by `OWNERS` files in the 
 
 ### What Qualifies as Documentation?
 
-> When we refer to "documentation," we're talking about every  supplemental text that an engineer needs to write to do their job: not only standalone documents, but code comments as well.
+> When we refer to "documentation," we're talking about every supplemental text that an engineer needs to write to do their job: not only standalone documents, but code comments as well.
 
 ### Why Is Documentation Needed?
 
 > Code and APIs become more comprehensible, reducing mistakes. Project teams are more focused when their design goals and team objectives are clearly stated. Manual processes are easier to follow when the steps are clearly outlined. Onboarding new members to a team or code base takes much less effort if the process is clearly documented.
 
->  It helps answer questions like these:
+> It helps answer questions like these:
 > - Why were these design decisions made?
 > - Why did we implement this code in this manner?
 > - Why did _I_ implement this code in this manner, if you're looking at your own code two years later?
@@ -638,7 +677,7 @@ Case Study: Google transitioned from a wiki to putting documentation in source c
 
 ##### Function comments
 
-> All free functions, or public methods of a class, at Google must also contain a function comment describing what the function _does_.  Function comments should stress the _active_ nature of their use, beginning with an indicative verb describing what the function does and what is returned.
+> All free functions, or public methods of a class, at Google must also contain a function comment describing what the function _does_. Function comments should stress the _active_ nature of their use, beginning with an indicative verb describing what the function does and what is returned.
 
 #### Design Docs
 
@@ -654,7 +693,7 @@ Case Study: Google transitioned from a wiki to putting documentation in source c
 
 #### Conceptual Documentation
 
-> (...) we need conceptual documentation to provide overviews of the APIs or systems. (...)  In almost all cases, a conceptual document is meant to augment, not replace, a reference documentation set.
+> (...) we need conceptual documentation to provide overviews of the APIs or systems. (...) In almost all cases, a conceptual document is meant to augment, not replace, a reference documentation set.
 
 > A concept document needs to be useful to a broad audience: both experts and novices alike. Moreover, it needs to emphasize _clarity_, so it often needs to sacrifice completeness (something best reserved for a reference) and (sometimes) strict accuracy. That's not to say a conceptual document should intentionally be inaccurate; it just means that it should focus on common usage and leave rare usages or side effects for reference documentation.
 
@@ -684,13 +723,13 @@ Case Study: Google transitioned from a wiki to putting documentation in source c
 
 #### The Beginning, Middle, and End
 
-> All documents - indeed, all parts of documents—have a beginning, middle, and end.  Although it sounds amazingly silly, most documents should often have, at a minimum, those three sections.
+> All documents - indeed, all parts of documents—have a beginning, middle, and end. Although it sounds amazingly silly, most documents should often have, at a minimum, those three sections.
 
 > Usually, the solution is to introduce and summarize the point within an introductory paragraph, and then use the rest of the section to make your case in a more detailed fashion.
 
 #### The Parameters of Good Documentation
 
-> There are usually three aspects of good documentation: completeness, accuracy, and clarity.  You rarely get all three within the same document (...)
+> There are usually three aspects of good documentation: completeness, accuracy, and clarity. You rarely get all three within the same document (...)
 
 > In each case, a "good document" is defined as the document that is doing _its intended job_. As a result, you rarely want a document doing more than one job.
 
@@ -698,7 +737,7 @@ Case Study: Google transitioned from a wiki to putting documentation in source c
 
 #### Deprecating Documents
 
-> Just like old code can cause problems, so can old documents.  Over time, documents become stale, obsolete, or (often) abandoned. (...) Even for unowned documents, someone adding a note that "This no longer works!" is more helpful than saying nothing and leaving something that seems authoritative but no longer works.
+> Just like old code can cause problems, so can old documents. Over time, documents become stale, obsolete, or (often) abandoned. (...) Even for unowned documents, someone adding a note that "This no longer works!" is more helpful than saying nothing and leaving something that seems authoritative but no longer works.
 
 ### When Do You Need Technical Writers?
 
@@ -739,7 +778,7 @@ Because tests are meant to improce productivity, it is important that they NOT b
 
 ### Preventing Brittle Tests
 
-> (...) a  brittle test is one that fails in the face of an unrelated change to production code that does not introduce any real bugs.
+> (...) a brittle test is one that fails in the face of an unrelated change to production code that does not introduce any real bugs.
 
 (a flaky test is one that fails intermittently, without any changes to production code)
 
@@ -761,7 +800,7 @@ Only the last one should result in test changes.
 
 > Testing only these contracts means that you're free to do whatever internal refactoring of the system you want without having to worry about making tedious changes to tests.
 
-> Defining an appropriate scope for a unit  and hence what should be considered the public API is more art than science (...)
+> Defining an appropriate scope for a unit and hence what should be considered the public API is more art than science (...)
 
 > At Google, we've found that engineers sometimes need to be persuaded that testing via public APIs is better than testing against implementation details. (...) Testing against public APIs won't completely prevent brittleness, but it's the most important thing you can do to ensure that your tests fail only in the event of meaningful changes to your system.
 
@@ -823,11 +862,11 @@ Rather than declaring "constants" of special instances (which might be tricky to
 
 #### Shared Setup
 
-Beware configuring values in test setup methods that are used in tests.  Only configure default values that aren't used in tests.
+Beware configuring values in test setup methods that are used in tests. Only configure default values that aren't used in tests.
 
 #### Shared Helpers and Validation
 
-Beware creating helper methods, used at the end of every test, that assert on many things at once.  They make the tests more brittle and less focused on specific behaviours.  Assertion helpers are OK.
+Beware creating helper methods, used at the end of every test, that assert on many things at once. They make the tests more brittle and less focused on specific behaviours. Assertion helpers are OK.
 
 #### Defining Test Infrastructure
 
@@ -850,7 +889,7 @@ Beware creating helper methods, used at the end of every test, that assert on ma
 - Name tests after the behavior being tested.
 - Don't put logic in tests.
 - Write clear failure messages.
-- Follow DAMP over DRY when sharing  code for tests.
+- Follow DAMP over DRY when sharing code for tests.
 
 ## [Chapter 13: Test Doubles](https://abseil.io/resources/swe-book/html/ch13.html)
 
@@ -872,7 +911,7 @@ Beware creating helper methods, used at the end of every test, that assert on ma
 
 #### Seams
 
-> Code is said to be _testable_ if it is written in a way that makes it possible to write unit tests for the code.  A seam is a way to make code testable by allowing for the use of test doubles - it makes it possible to use different dependencies for the system under test rather than the dependencies used in a production environment.
+> Code is said to be _testable_ if it is written in a way that makes it possible to write unit tests for the code. A seam is a way to make code testable by allowing for the use of test doubles - it makes it possible to use different dependencies for the system under test rather than the dependencies used in a production environment.
 
 > (...) when a class utilizes [dependency injection](https://en.wikipedia.org/wiki/Dependency_injection), any classes it needs to use (i.e., the class's _dependencies_) are passed to it rather than instantiated directly, making it possible for these dependencies to be substituted in tests.
 
@@ -880,7 +919,7 @@ Beware creating helper methods, used at the end of every test, that assert on ma
 
 #### Mocking Frameworks
 
-> A _mocking framework_ is a  software  library that makes it easier to create test doubles within tests; it allows you to replace an object with a _mock_, which is a test double whose behavior is specified inline in a test.
+> A _mocking framework_ is a software library that makes it easier to create test doubles within tests; it allows you to replace an object with a _mock_, which is a test double whose behavior is specified inline in a test.
 
 > Although mocking frameworks facilitate easier usage of test doubles, they come with some significant caveats given that their overuse will often make a codebase more difficult to maintain.
 
@@ -902,13 +941,13 @@ Beware creating helper methods, used at the end of every test, that assert on ma
 
 #### Interaction Testing
 
-> [Interaction testing](http://xunitpatterns.com/Behavior%20Verification.html) is a way to validate how a function is called without actually calling the implementation of the function.  A test should fail if a function isn't called the correct way—for example, if the function isn't called at all, it's called too many times, or it's called with the wrong arguments.
+> [Interaction testing](http://xunitpatterns.com/Behavior%20Verification.html) is a way to validate how a function is called without actually calling the implementation of the function. A test should fail if a function isn't called the correct way—for example, if the function isn't called at all, it's called too many times, or it's called with the wrong arguments.
 
-> Similar to stubbing, interaction testing is typically done through mocking frameworks.  This reduces boilerplate compared to manually creating new classes that contain code to keep track of how often a function is called and which arguments were passed in.
+> Similar to stubbing, interaction testing is typically done through mocking frameworks. This reduces boilerplate compared to manually creating new classes that contain code to keep track of how often a function is called and which arguments were passed in.
 
 ### Real Implementations
 
-> Although test doubles can be  invaluable testing tools, our first choice for tests is to use the real implementations of the system under test's dependencies; that is, the same implementations that are used in production code.
+> Although test doubles can be invaluable testing tools, our first choice for tests is to use the real implementations of the system under test's dependencies; that is, the same implementations that are used in production code.
 
 #### Prefer Realism Over Isolation
 
@@ -1001,11 +1040,11 @@ Test doubles are meant to make tests run faster, but be careful to not make test
 > - A real implementation should be preferred over a test double.
 > - A fake is often the ideal solution if a real implementation can't be used in a test.
 > - Overuse of stubbing leads to tests that are unclear and brittle.
-> - Interaction testing should be avoided when possible: it leads to tests that are brittle because it exposes implementation  details of the system under test.
+> - Interaction testing should be avoided when possible: it leads to tests that are brittle because it exposes implementation details of the system under test.
 
 ## [Chapter 20: Static Analysis](https://abseil.io/resources/swe-book/html/ch20.html)
 
-> Static analysis refers to programs analyzing source code to find potential issues such as bugs, antipatterns, and other issues that can be diagnosed _without executing the program_. (...) Through static analysis at Google, we codify best practices, help keep code current to modern API versions, and prevent or reduce technical debt.  Examples of these analyses include verifying that naming conventions are upheld, flagging the use of deprecated APIs, or pointing out simpler but equivalent expressions that make code easier to read.
+> Static analysis refers to programs analyzing source code to find potential issues such as bugs, antipatterns, and other issues that can be diagnosed _without executing the program_. (...) Through static analysis at Google, we codify best practices, help keep code current to modern API versions, and prevent or reduce technical debt. Examples of these analyses include verifying that naming conventions are upheld, flagging the use of deprecated APIs, or pointing out simpler but equivalent expressions that make code easier to read.
 
 ### Characteristics of Effective Static Analysis
 
@@ -1097,7 +1136,7 @@ I remember reading a blog post that claims it's this discipline in keeping code 
 
 ## [Chapter 23: Continuous Integration](https://abseil.io/resources/swe-book/html/ch23.html)
 
-> _Continuous Integration_, or CI, is generally  defined as "a software development practice where members of a team integrate their work frequently [...] Each integration is verified by an automated build (including test) to detect integration errors as quickly as possible."
+> _Continuous Integration_, or CI, is generally defined as "a software development practice where members of a team integrate their work frequently [...] Each integration is verified by an automated build (including test) to detect integration errors as quickly as possible."
 
 > Whereas a traditional continuous build tests changes in your binary, an extension of this might test changes to upstream microservices. The dependency is just shifted from your function call stack to an HTTP request or Remote Procedure Calls (RPC).
 
@@ -1114,7 +1153,7 @@ I remember reading a blog post that claims it's this discipline in keeping code 
 
 > _Canarying_ - or deploying to a small percentage of production first - can help minimize issues that do make it to production, with a subset-of-production initial feedback loop preceding all-of-production.
 
-> _Experiments and feature flags_ are extremely powerful feedback loops.  They reduce deployment risk by isolating changes within modular components that can be dynamically toggled in production.
+> _Experiments and feature flags_ are extremely powerful feedback loops. They reduce deployment risk by isolating changes within modular components that can be dynamically toggled in production.
 
 ###### Accessible and actionable feedback
 
@@ -1147,7 +1186,7 @@ I remember reading a blog post that claims it's this discipline in keeping code 
 
 ###### Presubmit versus post-submit
 
-> So, which tests _should_ be run on presubmit?  Our general rule of thumb is: only fast, reliable ones. You can accept some loss of coverage on presubmit, but that means you need to catch any issues that slip by on post-submit, and accept some number of rollbacks.
+> So, which tests _should_ be run on presubmit? Our general rule of thumb is: only fast, reliable ones. You can accept some loss of coverage on presubmit, but that means you need to catch any issues that slip by on post-submit, and accept some number of rollbacks.
 
 ##### Release candidate testing
 
@@ -1155,7 +1194,7 @@ I remember reading a blog post that claims it's this discipline in keeping code 
 
 ##### Production testing
 
-> Our continuous, automated testing process goes all the way to the final deployed environment: production.  We should run the same suite of tests against production (sometimes called _probers_) that we did against the release candidate earlier on to verify: 1) the working state of production, according to our tests, and 2) the relevance of our tests, according to production.
+> Our continuous, automated testing process goes all the way to the final deployed environment: production. We should run the same suite of tests against production (sometimes called _probers_) that we did against the release candidate earlier on to verify: 1) the working state of production, according to our tests, and 2) the relevance of our tests, according to production.
 
 #### CI Challenges
 
@@ -1178,7 +1217,7 @@ I remember reading a blog post that claims it's this discipline in keeping code 
 
 > Record/replay systems record live backend responses, cache them, and replay them in a hermetic test environment.
 
->  hermetic backends can also be more expensive because they use more resources and are slower to set up. Many teams use combinations of hermetic and live backends in their test environments.
+> hermetic backends can also be more expensive because they use more resources and are slower to set up. Many teams use combinations of hermetic and live backends in their test environments.
 
 ### CI at Google
 
@@ -1186,30 +1225,30 @@ I remember reading a blog post that claims it's this discipline in keeping code 
 
 Features of TAP:
 1. Presubmit optimization
-    1. Teams identify a "fast" subset of their tests that is going to run on presubmit.
-    2. "Larger and slower tests" will execute after a change has been submitted, likely in batches of changes.
-    3. Teams have a "build cop" whose priority is to fix broken builds, preferably by rolling back a breaking change.
+ 1. Teams identify a "fast" subset of their tests that is going to run on presubmit.
+ 2. "Larger and slower tests" will execute after a change has been submitted, likely in batches of changes.
+ 3. Teams have a "build cop" whose priority is to fix broken builds, preferably by rolling back a breaking change.
 2. Culprit finding
-    1. Batches of changes where one or more tests failed are automatically split up (divide and conquer binary search).
-    2. Humans can also perform binary search, aided by tools.
+ 1. Batches of changes where one or more tests failed are automatically split up (divide and conquer binary search).
+ 2. Humans can also perform binary search, aided by tools.
 3. Failure management
-    1. TAP can automatically roll back changes.
+ 1. TAP can automatically roll back changes.
 4. Resource constraints
-    1. A global dependency graph is used to optimize which tests are run based on downstream dependencies.
-    2. TAP will prioritize test runs with fewer number of tests (smaller blast radius), so contibutors are rewarded for smaller changes with faster results.
+ 1. A global dependency graph is used to optimize which tests are run based on downstream dependencies.
+ 2. TAP will prioritize test runs with fewer number of tests (smaller blast radius), so contibutors are rewarded for smaller changes with faster results.
 
 #### CI Case Study: Google Takeout
 
 1. Continuously broken dev deploys
-    1. Use hermetic testing for all integrations in pre-submit.
-    2. Re-use hermetic pre-submit testing environmnet for periodic post-submit testing.
+ 1. Use hermetic testing for all integrations in pre-submit.
+ 2. Re-use hermetic pre-submit testing environmnet for periodic post-submit testing.
 2. Indecipherable test logs
-    1. Run tests in related groups.
-    2. Report test results in a structured fashion, with links to further details as needed.
+ 1. Run tests in related groups.
+ 2. Report test results in a structured fashion, with links to further details as needed.
 3. Debugging "all of Google"
-    1. Periodically run the post-submit tests in production to detect breaking changes in integrations.
+ 1. Periodically run the post-submit tests in production to detect breaking changes in integrations.
 4. Keeping it green
-    1. Failure management: create work items for failing tests & disable them
+ 1. Failure management: create work items for failing tests & disable them
 5. It would be nice for integrations to include Takeout testing, but that seemed too difficult.
 
 #### But I Can't Afford CI
