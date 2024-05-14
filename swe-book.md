@@ -239,16 +239,51 @@ Regarding upgrades to dependencies, such as compilers and libraries...
 
 ##### Updating documentation
 
+> The first time you learn something is the best time to see ways that the existing documentation and training materials can be improved. (...) At this stage, if you find a mistake or omission in the documentation, fix it!
+
 ##### Creating documentation
 
-##### Promting documentation
+> As your proficiency grows, write your own documentation and update existing docs. (...) Any sufficiently undiscoverable or unsearchable documentation might as well not exist.
+
+> Finally, make sure there's a mechanism for feedback. (...) leaving a comment automatically files a bug for the documentation owner (...)
+
+##### Promoting documentation
+
+> Writing documentation takes time and effort that could be spent on coding, and the benefits that result from that work are not immediate and are mostly reaped by others.
+
+> Writing documentation also helps your team and organization scale.
 
 #### Code
+
+> At a meta level, code _is_ knowledge, so the very act of writing code can be considered a form of knowledge transcription.
+
+> Code documentation is one way to share knowledge; clear documentation not only benefits consumers of the library, but also future maintainers.
+
+> Code reviews are often a learning opportunity for both author(s) and reviewer(s). For example, a reviewer's suggestion might introduce the author to a new testing pattern, or a reviewer might learn of a new library by seeing the author use it in their code.
 
 ### Scaling Your Organization's Knowledge
 
 #### Cultivating a Knowledge-Sharing Culture
+
+> Organizational culture is the squishy human thing that many companies treat as an afterthought.
+
+##### Respect
+
+> The bad behavior of just a few individuals can make an entire team or community unwelcoming. (...) Knowledge sharing can and should be done with kindness and respect.
+
+##### Incentives and recognition
+
+> Good culture must be actively nurtured, and encouraging a culture of knowledge sharing requires a commitment to recognizing and rewarding it at a systemic level.
+
+>  At the highest levels, examples of leadership include the following:
+> - Growing future leaders by serving as mentors to junior staff, helping them develop both technically and in their Google role
+> - Sustaining and developing the software community at Google via code and design reviews, engineering education and development, and expert guidance to others in the field
+
+> A system in which people can formally and easily recognize their peers is a powerful tool for encouraging peers to keep doing the awesome things they do. It's not the bonus that matters: it's the peer acknowledgement.
+
 #### Establishing Canonical Sources of Information
+
+
 #### Staying in the Loop
 
 ### Readability: Standardized Mentorship Through Code Review
