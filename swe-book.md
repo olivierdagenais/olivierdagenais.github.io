@@ -275,7 +275,7 @@ Regarding upgrades to dependencies, such as compilers and libraries...
 
 > Good culture must be actively nurtured, and encouraging a culture of knowledge sharing requires a commitment to recognizing and rewarding it at a systemic level.
 
->  At the highest levels, examples of leadership include the following:
+> At the highest levels, examples of leadership include the following:
 > - Growing future leaders by serving as mentors to junior staff, helping them develop both technically and in their Google role
 > - Sustaining and developing the software community at Google via code and design reviews, engineering education and development, and expert guidance to others in the field
 
@@ -283,17 +283,70 @@ Regarding upgrades to dependencies, such as compilers and libraries...
 
 #### Establishing Canonical Sources of Information
 
+> Canonical sources of information are centralized, company-wide corpuses of information that provide a way to standardize and propagate expert knowledge.
+
+> The more complex a topic, the more critical it is that canonical content has explicit owners.
+
+> When considering how much effort to invest in this resource, consider your audience.
+
+##### Developer guides
+
+> Google has a broad and deep set of official guidance for engineers, including style guides, official software engineering best practices, guides for code review and testing, and Tips of the Week (TotW).
+
+> (...) a human expert already familiar with a guideline can send a link to a fellow engineer, who then can read the reference and learn more.
+
+##### go/ links
+
+> go/ links are Google's internal URL shortener.
+
+##### Codelabs
+
+> Google codelabs are guided, hands-on tutorials that teach engineers new concepts or processes by combining explanations, working best-practice example code, and code exercises.
+
+##### Static analysis
+
+> Static analysis tools are a powerful way to share best practices that can be checked programmatically.
+
+> Setting up static analysis tools requires an upfront investment, but as soon as they are in place, they scale efficiently. (...) the time and effort that would have gone into manually teaching the (now automated) best practice can instead be used to teach something else.
 
 #### Staying in the Loop
 
+##### Newsletters
+
+> (Company-wide newsletters) are a good way to communicate information that is of interest to engineers but isn't mission critical. For this type of update, we've found that newsletters get better engagement when they are sent less frequently and contain more useful, interesting content.
+
+##### Communities
+
+> These open channels make it easier to learn from others outside your immediate circle and avoid information islands and duplication.
+
 ### Readability: Standardized Mentorship Through Code Review
 
+> At Google, "readability" refers to more than just code readability; it is a standardized, Google-wide mentorship process for disseminating programming language best practices.
+
 #### What Is the Readability Process?
+
+> Code review is mandatory at Google. Every changelist (CL) requires _readability approval_, which indicates that someone who has _readability certification_ for that language has approved the CL. 
+
+> Readability brings increased responsibility: engineers with readability are trusted to continue to apply their knowledge to their own code and to act as reviewers for other engineers' code.
+
 #### Why Have This Process?
+
+> Code is read far more than it is written, and this effect is magnified at Google's scale and in our (very large) monorepo.
+
+> This enables readers to focus on what the code does rather than being distracted by why it looks different than code that they're used to.
 
 ### Conclusion
 
+> In most cases, investments into easier knowledge sharing reap manyfold dividends over the life of a company.
+
 ### TL;DRs
+
+> * _Psychological safety_ is the foundation for fostering a knowledge-sharing environment.
+> * Start small: ask questions and write things down.
+> * Make it easy for people to get the help they need from both human experts and documented references.
+> * At a systemic level, encourage and reward those who take time to teach and broaden their expertise beyond just themselves, their team, or their organization.
+> * There is no silver bullet: empowering a knowledge-sharing culture requires a combination of multiple strategies, and the exact mix that works best for your organization will likely change over time. 
+
 
 ## [Chapter 5: How to Lead a Team](https://abseil.io/resources/swe-book/html/ch05.html)
 
