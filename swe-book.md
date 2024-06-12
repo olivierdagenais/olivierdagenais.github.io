@@ -150,9 +150,9 @@ Regarding upgrades to dependencies, such as compilers and libraries...
 
 > - Lack of psychological safety
 > - Information islands
-> - Information fragmentation
-> - Information duplication
-> - Information skew
+>     - Information fragmentation
+>     - Information duplication
+>     - Information skew
 > - Single point of failure (SPOF)
 > - All-or-nothing expertise
 > - Parroting
