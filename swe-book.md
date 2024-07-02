@@ -533,6 +533,35 @@ Regarding upgrades to dependencies, such as compilers and libraries...
 * Pay particular attention to the focus, direction, and velocity of your team.
 
 
+## [Chapter 7: Measuring Engineering Productivity](https://abseil.io/resources/swe-book/html/ch07.html)
+
+### Why Should We Measure Engineering Productivity?
+
+### Triage: Is It Even Worth Measuring?
+
+### Selecting Meaningful Metrics with Goals and Signals
+
+### Goals
+
+### Signals
+
+### Metrics
+
+### Using Data to Validate Metrics
+
+### Taking Action and Tracking Results
+
+### Conclusion
+
+### TL;DRs
+
+> * Before measuring productivity, ask whether the result is actionable, regardless of whether the result is positive or negative. If you can't do anything with the result, it is likely not worth measuring.
+> * Select meaningful metrics using the GSM framework. A good metric is a reasonable proxy to the signal you're trying to measure, and it is traceable back to your original goals.
+> * Select metrics that cover all parts of productivity (QUANTS). By doing this, you ensure that you aren't improving one aspect of productivity (like developer velocity) at the cost of another (like code quality).
+> * Qualitative metrics are metrics, too! Consider having a survey mechanism for tracking longitudinal metrics about engineers' beliefs. Qualitative metrics should also align with the quantitative metrics; if they do not, it is likely the quantitative metrics that are incorrect.
+> * Aim to create recommendations that are built into the developer workflow and incentive structures. Even though it is sometimes necessary to recommend additional training or documentation, change is more likely to occur if it is built into the developer's daily habits. 
+
+
 ## [Chapter 9: Code Review](https://abseil.io/resources/swe-book/html/ch09.html)
 
 ### Code Review Flow
