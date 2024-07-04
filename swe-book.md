@@ -537,21 +537,80 @@ Regarding upgrades to dependencies, such as compilers and libraries...
 
 ### Why Should We Measure Engineering Productivity?
 
+> Presumably, to increase the scope of your business, you'll need to also increase the size of your engineering organization. However, as organizations grow in size linearly, communication costs grow quadratically. (...) There is another way to address our scaling problem, though: _we could make each individual more productive_. If we can increase the productivity of individual engineers in the organization, we can increase the scope of our business without the commensurate increase in communication overhead.
+
 ### Triage: Is It Even Worth Measuring?
+
+> Even if it is not slow, tracking progress might change engineers' behavior, possibly in ways that mask the underlying issues.
+
+Questions to ask to justify the evaluation:
+
+> 1. What result are you expecting, and why?
+> 1. If the data supports your expected result, what action will be taken?
+> 1. If we get a negative result, will appropriate action be taken?
+> 1. Who is going to decide to take action on the result, and when would they do it?
+
+> There are many good reasons to not measure the impact of a tool or process on productivity. Here are some examples that we've seen:
+> 1. You can't afford to change the process/tools right now
+> 1. Any results will soon be invalidated by other factors
+> 1. The results will be used only as vanity metrics to support something you were going to do anyway
+> 1. The only metrics available are not precise enough to measure the problem and can be confounded by other factors
+
+> (...) success means giving a stakeholder the data they need to make a decision.
 
 ### Selecting Meaningful Metrics with Goals and Signals
 
+> At Google, we use the Goals/Signals/Metrics (GSM) framework to guide metrics creation.
+
+> A _goal_ is a desired end result.
+> A _signal_ is how you might know that you've achieved the end result.
+> A _metric_ is proxy for a signal.  It is the thing we actually can measure.
+
+> (...) GSM forces us to think about which metrics will actually help us achieve our goals, rather than simply what we have readily available.
+
+> For each metric, we should be able to trace back to the signal that it is meant to be a proxy for and to the goal it is trying to measure.
+
 ### Goals
+
+> A goal should be written in terms of a desired property, without reference to any metric.
+
+> (...) our research team has found that in many cases, people forget to include all the possible _trade-offs within productivity_, which could lead to mismeasurement.
+
+> (...) our research team divides productivity into five core components. These five components are in trade-off with one another, and we encourage teams to consider goals in each of these components to ensure that they are not inadvertently improving one while driving others downward. To help people remember all five components, we use the mnemonic "QUANTS":
+> - **Qu**ality of the code
+> - **A**ttention from engineers
+> - I**n**tellectual complexity
+> - **T**empo and velocity
+> - **S**atisfaction
+
+Contrast this to [Microsoft's "SPACE"](https://aka.ms/spacepaper):
+> - **S**atisfaction and well-being
+> - **P**erformance (quality, impact)
+> - **A**ctivity (count of actions or outputs)
+> - **C**ommunication and collaboration (documentation, integration, reviews, onboarding)
+> - **E**fficiency and flow (handoffs, interruptions, distractions)
 
 ### Signals
 
+>  Not all signals are measurable, but that's acceptable at this stage. (...) Every goal should have at least one signal, but they might have more.
+
 ### Metrics
+
+> Metrics are where we finally determine how we will measure the signal. Metrics are not the signal themselves; they are the measurable proxy of the signal. Because they are a proxy, they might not be a perfect measurement. For this reason, some signals might have multiple metrics as we try to triangulate on the underlying signal.
+
+> (...) it's still possible that the metrics selected are not telling the complete story because they are not capturing the desired signal
 
 ### Using Data to Validate Metrics
 
+Sometimes the metrics are incorrect or suboptimal, so it helps to double-check them, such as pairing events from logs with surveys.
+
 ### Taking Action and Tracking Results
 
+> Recall our original goal in this chapter: we want to take action and improve productivity. (...) it does no good to tell engineers to change their process or way of thinking if the tools do not support them in doing so.
+
 ### Conclusion
+
+> (...) rather than relying on each team to chart its own course to increase productivity, a centralized team can focus on broad-based solutions to complex problems. (...) it is important for experts to understand the data being analyzed given that many of the trade-offs involved in changing engineering processes are difficult to measure accurately and often have unintended consequences.
 
 ### TL;DRs
 
