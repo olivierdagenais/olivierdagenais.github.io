@@ -1218,6 +1218,68 @@ Test doubles are meant to make tests run faster, but be careful to not make test
 > - Overuse of stubbing leads to tests that are unclear and brittle.
 > - Interaction testing should be avoided when possible: it leads to tests that are brittle because it exposes implementation details of the system under test.
 
+## [Chapter 18: Build Systems and Build Philosophy](https://abseil.io/resources/swe-book/html/ch18.html)
+
+> engineers love the build system
+
+### Purpose of a Build System
+
+> (...) they transform the source code written by engineers into executable binaries that can be read by machines.
+
+> A good build system will generally try to optimize for two important properties:
+> - fast
+> - correct
+
+### What Happens Without a Build System?
+
+> Build systems allow your development to scale.
+
+#### But All I Need Is a Compiler!
+
+Only for small projects that only use one programming language and no dependencies.
+
+#### Shell Scripts to the Rescue?
+
+They don't scale for all the needs of a modern system, including troubleshooting, caching, dependency management.
+
+### Modern Build Systems
+
+> Fortunately, all of the problems we started running into have already been solved many times over by existing general-purpose build systems.
+
+#### It's All About Dependencies
+
+> (...) managing dependencies is perhaps the most fundamental job of a build system.
+
+#### Task-Based Build Systems
+
+> The shell scripts we started developing in the previous section were an example of a primitive *task-based build system*. (...) Most major build systems in use today, such as Ant, Maven, Gradle, Grunt, and Rake, are task based.
+
+##### The dark side of task-based build systems
+
+> (...) task-based build systems can become difficult to work with as their build scripts grow more complex. (...) Because the system has no idea what the scripts are doing, performance suffers, as it must be very conservative in how it schedules and executes build steps.
+
+###### Difficulty of parallelizing build steps
+
+> There's no way in general for the system to know (if two or more tasks are safe to run in parallel), so either it has to risk these conflicts (leading to rare but very difficult-to-debug build problems), or it has to restrict the entire build to running on a single thread in a single process.
+
+###### Difficulty performing incremental builds
+
+> Because tasks can do anything, there's no way in general to check whether they've already been done. (...) To guarantee correctness, the system typically must rerun every task during each build.
+
+> Figuring out when a task needs to be rerun is surprisingly subtle, and is a job better handled by machines than humans.
+
+###### Difficulty maintaining and debugging scripts
+
+> Though they often receive less scrutiny, build scripts are code just like the system being built, and are easy places for bugs to hide.
+
+> To solve the problem, we need to take some power out of the hands of engineers and put it back in the hands of the system and reconceptualize the role of the system not as running tasks, but as producing artifacts.
+
+#### Artifact-Based Build Systems
+
+> Rather than being an imperative set of commands in a Turing-complete scripting language describing how to produce an output, buildfiles in Blaze are a *declarative manifest* describing a set of artifacts to build, their dependencies, and a limited set of options that affect how they're built. (...) Because the build system now has full control over what tools are being run when, it can make much stronger guarantees that allow it to be far more efficient while still guaranteeing correctness.
+
+
+
 ## [Chapter 20: Static Analysis](https://abseil.io/resources/swe-book/html/ch20.html)
 
 > Static analysis refers to programs analyzing source code to find potential issues such as bugs, antipatterns, and other issues that can be diagnosed _without executing the program_. (...) Through static analysis at Google, we codify best practices, help keep code current to modern API versions, and prevent or reduce technical debt. Examples of these analyses include verifying that naming conventions are upheld, flagging the use of deprecated APIs, or pointing out simpler but equivalent expressions that make code easier to read.
