@@ -1276,8 +1276,37 @@ They don't scale for all the needs of a modern system, including troubleshooting
 
 #### Artifact-Based Build Systems
 
-> Rather than being an imperative set of commands in a Turing-complete scripting language describing how to produce an output, buildfiles in Blaze are a *declarative manifest* describing a set of artifacts to build, their dependencies, and a limited set of options that affect how they're built. (...) Because the build system now has full control over what tools are being run when, it can make much stronger guarantees that allow it to be far more efficient while still guaranteeing correctness.
+> This is exactly the approach taken by Blaze and the other *artifact-based* build systems descended from it (which include Bazel, Pants, and Buck). (...) Rather than being an imperative set of commands in a Turing-complete scripting language describing how to produce an output, buildfiles in Blaze are a *declarative manifest* describing a set of artifacts to build, their dependencies, and a limited set of options that affect how they're built. (...) Because the build system now has full control over what tools are being run when, it can make much stronger guarantees that allow it to be far more efficient while still guaranteeing correctness.
 
+##### A functional perspective
+
+> It's easy to make an analogy between artifact-based build systems and functional programming.
+
+> (...) it's not surprising that it works well to base a build system around the tenets of functional programming.
+
+##### Getting concrete with Bazel
+
+> Bazel is the open source version of Google's internal build tool, Blaze, and is a good example of an artifact-based build system.
+
+#### Other nifty Bazel tricks
+
+##### Tools as dependencies
+
+> Bazel (...) \[treats] tools as dependencies to each target.
+
+> Bazel \[solves platform independence] by using [toolchains](https://bazel.build/extending/toolchains).
+
+##### Extending the build system
+
+> Bazel allows its supported target types to be extended by [adding custom rules](https://bazel.build/extending/rules).
+
+> The system isn't foolproof given that there's no way to stop an action developer from doing something like introducing a nondeterministic process as part of their action.
+
+##### Isolating the environment
+
+> On supported systems, every action is isolated from every other action via a filesystem sandbox. Effectively, each action can see only a restricted view of the filesystem that includes the inputs it has declared and any outputs it has produced. This is enforced by systems such as LXC on Linux, the same technology behind Docker. (...) Bazel also uses sandboxes to restrict actions from communicating via the network.
+
+##### Making external dependencies deterministic
 
 
 ## [Chapter 20: Static Analysis](https://abseil.io/resources/swe-book/html/ch20.html)
