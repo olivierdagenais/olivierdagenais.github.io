@@ -1381,6 +1381,33 @@ They don't scale for all the needs of a modern system, including troubleshooting
 
 > (...) Bazel does not automatically download transitive dependencies. (...) Bazel's alternative is to require a global file that lists every single one of the repository's external dependencies and an explicit version used for that dependency throughout the repository.
 
+###### Caching build results using external dependencies
+
+> Some organizations might also choose to make some of their own code available as artifacts, allowing other pieces of code to depend on them as third-party rather than internal dependencies. This can theoretically speed up builds if artifacts are slow to build but quick to download.
+
+> A better way to solve the problem of artifacts taking a long time to build is to use a build system that supports remote caching, as described earlier.
+
+###### Security and reliability of external dependencies
+
+> Depending on artifacts from third-party sources is inherently risky. (availability and security)
+
+One mitigation is to mirror artifacts and "blocking your build system from accessing third-party artifact repositories (...)"
+
+> Another alternative that completely sidesteps the issue is to *vendor* your project's dependencies. (...) This effectively means that all of the project's external dependencies are converted to internal dependencies. Google uses this approach internally (...)
+
+### Conclusion
+
+> (...) one of the more surprising lessons that Google has learned is that *limiting engineers' power and flexibility can improve their productivity*. (...) Googlers love that this system mostly works on its own and lets them focus on the interesting parts of writing their applications instead of grappling with build logic.
+
+> This reframing of the build as centering around artifacts instead of tasks is what allows our builds to scale to an organization the size of Google.
+
+### TL;DRs
+
+> - A fully featured build system is necessary to keep developers productive as an organization scales.
+> - Power and flexibility come at a cost. Restricting the build system appropriately makes it easier on developers.
+> - Build systems organized around artifacts tend to scale better and be more reliable than build systems organized around tasks.
+> - When defining artifacts and dependencies, it's better to aim for fine-grained modules. Fine-grained modules are better able to take advantage of parallelism and incremental builds.
+> - External dependencies should be versioned explicitly under source control. Relying on "latest" versions is a recipe for disaster and unreproducible builds.
 
 
 ## [Chapter 20: Static Analysis](https://abseil.io/resources/swe-book/html/ch20.html)
