@@ -1308,6 +1308,80 @@ They don't scale for all the needs of a modern system, including troubleshooting
 
 ##### Making external dependencies deterministic
 
+> Bazel and some other build systems address this problem by requiring a workspace-wide manifest file that lists a *cryptographic hash* for every external dependency in the workspace.
+
+> (...) we recommend that, for any nontrivial project, you mirror all of its dependencies onto servers or services that you trust and control.
+
+#### Distributed Builds
+
+> The only way to make \[completing a build in a reasonable amount of time] work is with a build system that supports *distributed builds* wherein the units of work being done by the system are spread across an arbitrary and scalable number of machines.
+
+##### Remote caching
+
+> Whenever a user needs to build an artifact, whether directly or as a dependency, the system first checks with the remote cache to see if that artifact already exists there. If so, it can download the artifact instead of building it. If not, the system builds the artifact itself and uploads the result back to the cache.
+
+> For a remote caching system to work, the build system must guarantee that builds are completely reproducible. (...) Note that this requires that each artifact in the cache be keyed on both its target and a hash of its inputs (...)
+
+> Of course, for there to be any benefit from a remote cache, downloading an artifact needs to be faster than building it.
+
+##### Remote execution
+
+> The true goal is to support *remote execution*, in which the actual work of doing the build can be spread across any number of workers.
+
+> (...) we can build on top of the distributed cache described previously by having each worker write its results to and read its dependencies from the cache. (...) Note that we also need a separate means of exporting the local changes in the user's source tree so that workers can apply those changes before building.
+
+> For this to work, all of the parts of the artifact-based build systems described earlier need to come together. Build environments must be completely self-describing so that we can spin up workers without human intervention. Build processes themselves must be completely self-contained because each step might be executed on a different machine. Outputs must be completely deterministic so that each worker can trust the results it receives from other workers. Such guarantees are extremely difficult for a task-based system to provide, which makes it nigh-impossible to build a reliable remote execution system on top of one.
+
+###### Distributed builds at Google
+
+> Since 2008, Google has been using a distributed build system that employs both remote caching and remote execution (...)
+
+#### Time, Scale, Trade-Offs
+
+> (...) migration from an existing task-based system can be difficult and is not always worth it if the build isn't already showing problems in terms of speed or correctness.
+
+
+### Dealing with Modules and Dependencies
+
+#### Using Fine-Grained Modules and the 1:1:1 Rule
+
+> For languages like Java that have a strong built-in notion of packaging, each directory usually contains a single package, target, and *BUILD* file (...)
+
+> The advantages \[of smaller build targets] become even more compelling after testing enters the picture, as finer-grained targets mean that the build system can be much smarter about running only a limited subset of tests that could be affected by any given change. Because Google believes in the systemic benefits of using smaller targets, we've made some strides in mitigating the downside by investing in tooling to automatically manage *BUILD* files to avoid burdening developers.
+
+#### Minimizing Module Visibility
+
+> Each team's internal implementation targets will be restricted to only directories owned by the team, and most *BUILD* files will have only one target that isn't private.
+
+#### Managing Dependencies
+
+> The downside of breaking a codebase into fine-grained modules is that you need to manage the dependencies among those modules (though tools can help automate this).
+
+##### Internal dependencies
+
+> (...) there's no notion of "version" for internal dependencies—a target and all of its internal dependencies are always built at the same commit/revision in the repository.
+
+> As usual, enforcing strict transitive dependencies involved a trade-off. It made build files more verbose, as frequently used libraries now need to be listed explicitly in many places rather than pulled in incidentally, and engineers needed to spend more effort adding dependencies to *BUILD* files.
+
+##### External dependencies
+
+> External dependencies are those on artifacts that are built and stored outside of the build system. (...) One of the biggest differences between external and internal dependencies is that external dependencies have *versions*, and those versions exist independently of the project's source code.
+
+###### Automatic versus manual dependency management
+
+> Automatically managed dependencies \[via using version ranges] can be convenient for small projects, but they're usually a recipe for disaster on projects of nontrivial size or that are being worked on by more than one engineer.
+
+> In contrast, because manually managed dependencies require a change in source control, they can be easily discovered and rolled back, and it's possible to check out an older version of the repository to build with older dependencies. (...) At even moderate scales, the overhead of manual version management is well worth it for the stability it provides.
+
+###### The One-Version Rule
+
+> Google has found \[using multiple versions of a given artifact/dependency] to cause a lot of problems in practice, so we enforce a strict [*One-Version Rule*](https://oreil.ly/OFa9V) for all third-party dependencies in our internal codebase.
+
+###### Transitive external dependencies
+
+> (...) Bazel does not automatically download transitive dependencies. (...) Bazel's alternative is to require a global file that lists every single one of the repository's external dependencies and an explicit version used for that dependency throughout the repository.
+
+
 
 ## [Chapter 20: Static Analysis](https://abseil.io/resources/swe-book/html/ch20.html)
 
