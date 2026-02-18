@@ -1502,6 +1502,51 @@ I remember reading a blog post that claims it's this discipline in keeping code 
 > 2. Make static analysis part of the core developer workflow.
 > 3. Empower users to contribute.
 
+## [Chapter 21: Dependency Management](https://abseil.io/resources/swe-book/html/ch21.html)
+
+### Why Is Dependency Management So Difficult?
+
+#### Conflicting Requirements and Diamond Dependencies
+
+### Importing Dependencies
+
+#### Compatibility Promises
+
+#### Considerations When Importing
+
+#### How Google Handles Importing Dependencies
+
+### Dependency Management, In Theory
+
+#### Nothing Changes (aka The Static Dependency Model)
+
+#### Semantic Versioning
+
+#### Bundled Distribution Models
+
+#### Live at Head
+
+### The Limitations of SemVer
+
+#### SemVer Might Overconstrain
+
+#### SemVer Might Overpromise
+
+#### Motivations
+
+#### Minimum Version Selection
+
+#### So, Does SemVer Work?
+
+### Dependency Management with Infinite Resources
+
+#### Exporting Dependencies
+
+### Conclusion
+
+### TL;DRs
+
+
 ## [Chapter 23: Continuous Integration](https://abseil.io/resources/swe-book/html/ch23.html)
 
 > _Continuous Integration_, or CI, is generally defined as "a software development practice where members of a team integrate their work frequently [...] Each integration is verified by an automated build (including test) to detect integration errors as quickly as possible."
@@ -1520,6 +1565,7 @@ I remember reading a blog post that claims it's this discipline in keeping code 
 > To minimize the cost of bugs, CI encourages us to use _fast feedback loops_.
 
 > _Canarying_ - or deploying to a small percentage of production first - can help minimize issues that do make it to production, with a subset-of-production initial feedback loop preceding all-of-production.
+
 
 > _Experiments and feature flags_ are extremely powerful feedback loops. They reduce deployment risk by isolating changes within modular components that can be dynamically toggled in production.
 
